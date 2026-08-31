@@ -974,6 +974,24 @@ RQ-01 DOCX → Markdown migration pilot:
 
 Not yet started.
 
+Migration-control methodology:
+
+Створено два candidate artifacts:
+
+- [`Migration Fidelity Protocol v1`](../methodology/migration/migration-fidelity-protocol-v1.md),
+  пов’язаний з OQ-059;
+- [`Migration Discrepancy Taxonomy v1`](../methodology/migration/migration-discrepancy-taxonomy-v1.md),
+  пов’язаний з OQ-060.
+
+Independent methodology review завершено з результатом:
+
+**METHODOLOGY REVIEW: REVISE AND RE-REVIEW**
+
+Accepted findings F-01–F-05 є обов’язковими revision inputs. Controlled
+revision виконано; обидва artifacts залишаються `candidate` і потребують
+нового immutable review baseline, independent re-review та adjudication до
+початку RQ-01 pilot. Git commit candidate version сам по собі не є approval.
+
 # 18. Migration Restrictions
 
 Until migration validation is complete, Codex must not:
@@ -993,10 +1011,10 @@ Migration and intellectual revision remain separate.
 Following the established Part 01 migration baseline and the accepted first
 Codex Repository Comprehension Gate, the remaining pre-pilot controls are:
 
-- define and approve the RQ-01 migration fidelity threshold preserved as
-  OQ-059;
-- define and approve the migration discrepancy classification preserved as
-  OQ-060.
+Методологічний design для OQ-059 та OQ-060 залишається у статусі `candidate`.
+Поточний pre-pilot control — завершити controlled revision, зафіксувати exact
+candidate в immutable Git review baseline, провести independent re-review та
+отримати traceable approval decision.
 
 The post-migration source-of-truth hierarchy preserved as OQ-062 also remains
 unresolved and must be settled before canonical promotion.

@@ -44,6 +44,91 @@ governance:
     silent_reconciliation_allowed: false
     record_material_discrepancies: true
 
+migration_control_artifacts:
+  fidelity_protocol:
+    artifact_id: "SKS-MIG-FID-001"
+    version: "v1"
+    status: "candidate"
+    repository_path: "methodology/migration/migration-fidelity-protocol-v1.md"
+    open_question: "OQ-059"
+    reviewed_candidate_sha256: "01F9248BD4B9001D3B2BCB33BAF54131F181F169F280DCE9CA0ACEFE5D69C365"
+    review_status: "revise_and_re_review"
+    approval_status: "pending_re_review"
+
+  discrepancy_taxonomy:
+    artifact_id: "SKS-MIG-DISC-001"
+    version: "v1"
+    status: "candidate"
+    repository_path: "methodology/migration/migration-discrepancy-taxonomy-v1.md"
+    open_question: "OQ-060"
+    reviewed_candidate_sha256: "A3E2BE1D738CFDB07DBB6288A4D4B34179AE2B5044085E52BA1BAC1971505F0E"
+    review_status: "revise_and_re_review"
+    approval_status: "pending_re_review"
+
+  relationship:
+    protocol_uses_taxonomy: true
+    taxonomy_defines_fidelity_verdict_independently: false
+    pilot_entry_authorized: false
+    canonical_promotion_authorized: false
+
+  controlled_values:
+    rq01_pilot_entry_verdicts:
+      - pass
+      - fail
+    fidelity_verdicts:
+      - pass
+      - pass_with_non_blocking_discrepancies
+      - fail
+    discrepancy_severity:
+      - S0
+      - S1
+      - S2
+      - S3
+      - S4
+      - S5
+    record_kind:
+      - migration_discrepancy
+      - source_issue
+      - intellectual_issue
+    record_status:
+      - detected
+      - classified
+      - correction_required
+      - corrected
+      - verified
+      - disposition_pending
+      - adjudication_required
+      - deferred
+      - resolved
+    disposition_status:
+      - proposed
+      - accepted
+      - rejected
+      - superseded
+    intellectual_issue_status:
+      - observed
+      - recorded
+      - deferred
+      - handed_off
+
+  review_rounds:
+    - review_id: "migration-methodology-review-001"
+      reviewed_baseline_kind: "content_hash_only_untracked"
+      immutable_git_baseline: false
+      protocol_sha256: "01F9248BD4B9001D3B2BCB33BAF54131F181F169F280DCE9CA0ACEFE5D69C365"
+      taxonomy_sha256: "A3E2BE1D738CFDB07DBB6288A4D4B34179AE2B5044085E52BA1BAC1971505F0E"
+      decision: "revise_and_re_review"
+      decision_status: "accepted_as_required_revision_input"
+      approval_effect: "none"
+
+  current_revision:
+    status: "ready_for_immutable_review_baseline"
+    protocol_sha256: "F9E436C7CDE669B960F4DE1F3D8337575DFD5792962A972406F78EDF3274279C"
+    taxonomy_sha256: "C94DA8F0E71EE265311F1DB72FF1CB7D81660826C3946910D8322830E7CC9F9D"
+    immutable_git_baseline: false
+    approval_status: "not_approved"
+    rq01_pilot_entry_authorized: false
+
 paths:
   part_root: "knowledge-books/strategy/part-01"
 
@@ -492,13 +577,13 @@ process_progress:
   completed:
     - "Commit migration package and source DOCX baseline."
     - "Run Codex read-only repository comprehension test; externally adjudicated PASS WITH FINDINGS — ACCEPTED."
+    - "Створено candidate Migration Fidelity Protocol v1 для OQ-059."
+    - "Створено candidate Migration Discrepancy Taxonomy v1 для OQ-060."
 
   current:
-    - "Resolve repository/bootstrap discrepancies only."
+    - "Зафіксувати revised methodology candidates в immutable Git review baseline і передати exact hashes на independent re-review."
 
   pending:
-    - "Define and approve the RQ-01 fidelity audit procedure preserved as OQ-059."
-    - "Define and approve the migration discrepancy classification preserved as OQ-060."
     - "Define the post-migration source-of-truth hierarchy preserved as OQ-062 before canonical promotion."
     - "Begin controlled RQ-01 DOCX-to-Markdown migration pilot."
 

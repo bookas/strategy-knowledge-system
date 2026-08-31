@@ -1619,7 +1619,7 @@ Structured knowledge design.
 # OQ-059 — What Is the Correct Migration Fidelity Threshold?
 
 **Priority:** P1  
-**Status:** Open
+**Status:** Partially Resolved
 
 ## Question
 
@@ -1643,6 +1643,20 @@ What constitutes a sufficient DOCX → Markdown fidelity PASS?
 
 Need clear handling of formatting that has no semantic importance.
 
+## Результат методологічного проєктування v1
+
+Створено candidate artifact:
+
+[`Migration Fidelity Protocol v1`](../methodology/migration/migration-fidelity-protocol-v1.md)
+
+Protocol визначає десять обов’язкових fidelity categories, evidence package,
+correction і re-review rules, reviewer independence, три fidelity verdicts та
+окремий RQ-01 Pilot Entry Gate.
+
+Питання має статус `Partially Resolved`, оскільки operational threshold уже
+визначено, але artifact ще потребує окремого review/approval і перевірки в
+RQ-01 pilot. До approval OQ-059 залишається pre-pilot blocking question.
+
 ## Revisit
 
 Before RQ-01 migration pilot.
@@ -1652,7 +1666,7 @@ Before RQ-01 migration pilot.
 # OQ-060 — How Should Migration Discrepancies Be Classified?
 
 **Priority:** P2  
-**Status:** Open
+**Status:** Partially Resolved
 
 ## Question
 
@@ -1665,6 +1679,21 @@ Should migration findings distinguish:
 - structural ambiguity;
 - source inconsistency;
 - apparent intellectual error?
+
+## Результат методологічного проєктування v1
+
+Створено candidate artifact:
+
+[`Migration Discrepancy Taxonomy v1`](../methodology/migration/migration-discrepancy-taxonomy-v1.md)
+
+Taxonomy визначає класи A–O, severity S0–S5, correction authority, required
+record fields, disposition vocabulary та критичну межу між representation
+error і Potential Intellectual Issue.
+
+Питання має статус `Partially Resolved`, оскільки класифікацію вже
+операціоналізовано, але artifact ще потребує окремого review/approval і
+перевірки на фактичних discrepancies RQ-01 pilot. До approval OQ-060
+залишається pre-pilot blocking question.
 
 ## Revisit
 
