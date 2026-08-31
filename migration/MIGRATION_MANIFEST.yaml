@@ -1,0 +1,490 @@
+ # migration/MIGRATION_MANIFEST.yaml
+
+manifest:
+  project: "Strategy Knowledge System"
+  area: "Strategy Knowledge Book"
+  part: "Part 01 — Strategy"
+  purpose: "Machine-readable migration inventory for source research artifacts."
+  migration_stage: "context-transfer"
+  status: "in-progress"
+
+governance:
+  migration_principle:
+    - preservation
+    - faithful_representation
+    - structural_normalization
+    - validation
+    - improvement
+
+  source_priority_during_migration:
+    - original_research_artifact
+    - migration_summary
+    - conversation_recollection
+
+  canonical_policy:
+    current_historical_baseline: "DOCX"
+    intended_future_working_format: "Markdown"
+    markdown_is_canonical_immediately_after_conversion: false
+    canonical_promotion_requires_fidelity_validation: true
+
+  intellectual_revision_during_migration: false
+
+  discrepancy_policy:
+    silent_reconciliation_allowed: false
+    record_material_discrepancies: true
+
+paths:
+  part_root: "knowledge-books/strategy/part-01"
+
+  source_docx:
+    current: "knowledge-books/strategy/part-01/source-docx/current"
+    meta: "knowledge-books/strategy/part-01/source-docx/meta"
+    superseded: "knowledge-books/strategy/part-01/source-docx/superseded"
+
+  future_markdown:
+    chapters: "knowledge-books/strategy/part-01/chapters"
+    reviews: "knowledge-books/strategy/part-01/reviews"
+    registers: "knowledge-books/strategy/part-01/registers"
+    migration: "knowledge-books/strategy/part-01/migration"
+
+migration_status_values:
+  - not_started
+  - copied
+  - conversion_pending
+  - converted
+  - fidelity_review
+  - fidelity_pass
+  - fidelity_fail
+  - canonical_candidate
+  - canonical
+
+artifact_status_values:
+  - current
+  - meta
+  - superseded
+
+artifacts:
+
+  - id: "STR-P01-RQ01"
+    title: "Nature of Strategy"
+    artifact_type: "research_question"
+    rq: "RQ-01"
+    version: "v1"
+    status: "current"
+
+    source:
+      format: "docx"
+      filename: "Strategy_Knowledge_Book_Part01_RQ01_Nature_v1.docx"
+      repository_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ01_Nature_v1.docx"
+
+    target:
+      format: "markdown"
+      repository_path: "knowledge-books/strategy/part-01/chapters/RQ01_Nature.md"
+
+    migration:
+      status: "not_started"
+      pilot: true
+      fidelity_audit_required: true
+      fidelity_audit_status: "not_started"
+      canonical_status: "historical_docx_baseline"
+
+  - id: "STR-P01-RQ02"
+    title: "Function of Strategy"
+    artifact_type: "research_question"
+    rq: "RQ-02"
+    version: "v1"
+    status: "current"
+
+    source:
+      format: "docx"
+      filename: "Strategy_Knowledge_Book_Part01_RQ02_Function_v1.docx"
+      repository_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ02_Function_v1.docx"
+
+    target:
+      format: "markdown"
+      repository_path: "knowledge-books/strategy/part-01/chapters/RQ02_Function.md"
+
+    migration:
+      status: "not_started"
+      pilot: false
+      fidelity_audit_required: true
+      fidelity_audit_status: "not_started"
+      canonical_status: "historical_docx_baseline"
+
+  - id: "STR-P01-RQ03"
+    title: "Object, Levels & Strategic Agency"
+    artifact_type: "research_question"
+    rq: "RQ-03"
+    version: "v1.1"
+    status: "current"
+
+    source:
+      format: "docx"
+      filename: "Strategy_Knowledge_Book_Part01_RQ03_Object_Levels_Strategic_Agency_v1_1.docx"
+      repository_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ03_Object_Levels_Strategic_Agency_v1_1.docx"
+
+    target:
+      format: "markdown"
+      repository_path: "knowledge-books/strategy/part-01/chapters/RQ03_Object_Levels_Strategic_Agency.md"
+
+    migration:
+      status: "not_started"
+      pilot: false
+      fidelity_audit_required: true
+      fidelity_audit_status: "not_started"
+      canonical_status: "historical_docx_baseline"
+
+    supersedes:
+      - "STR-P01-RQ03-OLD"
+
+  - id: "STR-P01-RQ04"
+    title: "Boundaries of Strategy"
+    artifact_type: "research_question"
+    rq: "RQ-04"
+    version: "v1"
+    status: "current"
+
+    source:
+      format: "docx"
+      filename: "Strategy_Knowledge_Book_Part01_RQ04_Boundaries_of_Strategy_v1.docx"
+      repository_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ04_Boundaries_of_Strategy_v1.docx"
+
+    target:
+      format: "markdown"
+      repository_path: "knowledge-books/strategy/part-01/chapters/RQ04_Boundaries_of_Strategy.md"
+
+    migration:
+      status: "not_started"
+      pilot: false
+      fidelity_audit_required: true
+      fidelity_audit_status: "not_started"
+      canonical_status: "historical_docx_baseline"
+
+  - id: "STR-P01-RQ05"
+    title: "Choice, Scarcity & Trade-offs"
+    artifact_type: "research_question"
+    rq: "RQ-05"
+    version: "v1"
+    status: "current"
+
+    source:
+      format: "docx"
+      filename: "Strategy_Knowledge_Book_Part01_RQ05_Choice_Scarcity_Tradeoffs_v1.docx"
+      repository_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ05_Choice_Scarcity_Tradeoffs_v1.docx"
+
+    target:
+      format: "markdown"
+      repository_path: "knowledge-books/strategy/part-01/chapters/RQ05_Choice_Scarcity_Tradeoffs.md"
+
+    migration:
+      status: "not_started"
+      pilot: false
+      fidelity_audit_required: true
+      fidelity_audit_status: "not_started"
+      canonical_status: "historical_docx_baseline"
+
+  - id: "STR-P01-RQ06"
+    title: "Strategic Go / No-Go"
+    artifact_type: "research_question"
+    rq: "RQ-06"
+    version: "v1"
+    status: "current"
+
+    source:
+      format: "docx"
+      filename: "Strategy_Knowledge_Book_Part01_RQ06_Strategic_Go_NoGo_v1.docx"
+      repository_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ06_Strategic_Go_NoGo_v1.docx"
+
+    target:
+      format: "markdown"
+      repository_path: "knowledge-books/strategy/part-01/chapters/RQ06_Strategic_Go_NoGo.md"
+
+    migration:
+      status: "not_started"
+      pilot: false
+      fidelity_audit_required: true
+      fidelity_audit_status: "not_started"
+      canonical_status: "historical_docx_baseline"
+
+  - id: "STR-P01-RQ07"
+    title: "Diagnosis & Starting Point"
+    artifact_type: "research_question"
+    rq: "RQ-07"
+    version: "v1"
+    status: "current"
+
+    source:
+      format: "docx"
+      filename: "Strategy_Knowledge_Book_Part01_RQ07_Diagnosis_Starting_Point_v1.docx"
+      repository_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ07_Diagnosis_Starting_Point_v1.docx"
+
+    target:
+      format: "markdown"
+      repository_path: "knowledge-books/strategy/part-01/chapters/RQ07_Diagnosis_Starting_Point.md"
+
+    migration:
+      status: "not_started"
+      pilot: false
+      fidelity_audit_required: true
+      fidelity_audit_status: "not_started"
+      canonical_status: "historical_docx_baseline"
+
+  - id: "STR-P01-RQ08"
+    title: "Causal Logic"
+    artifact_type: "research_question"
+    rq: "RQ-08"
+    version: "v1"
+    status: "current"
+
+    source:
+      format: "docx"
+      filename: "Strategy_Knowledge_Book_Part01_RQ08_Causal_Logic_v1.docx"
+      repository_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ08_Causal_Logic_v1.docx"
+
+    target:
+      format: "markdown"
+      repository_path: "knowledge-books/strategy/part-01/chapters/RQ08_Causal_Logic.md"
+
+    migration:
+      status: "not_started"
+      pilot: false
+      fidelity_audit_required: true
+      fidelity_audit_status: "not_started"
+      canonical_status: "historical_docx_baseline"
+
+  - id: "STR-P01-RQ09"
+    title: "Strategic Coherence & Alignment"
+    artifact_type: "research_question"
+    rq: "RQ-09"
+    version: "v1"
+    status: "current"
+
+    source:
+      format: "docx"
+      filename: "Strategy_Knowledge_Book_Part01_RQ09_Strategic_Coherence_Alignment_v1.docx"
+      repository_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ09_Strategic_Coherence_Alignment_v1.docx"
+
+    target:
+      format: "markdown"
+      repository_path: "knowledge-books/strategy/part-01/chapters/RQ09_Strategic_Coherence_Alignment.md"
+
+    migration:
+      status: "not_started"
+      pilot: false
+      fidelity_audit_required: true
+      fidelity_audit_status: "not_started"
+      canonical_status: "historical_docx_baseline"
+
+  - id: "STR-P01-RQ10"
+    title: "Uncertainty, Emergence & Adaptation"
+    artifact_type: "research_question"
+    rq: "RQ-10"
+    version: "v1"
+    status: "current"
+
+    source:
+      format: "docx"
+      filename: "Strategy_Knowledge_Book_Part01_RQ10_Uncertainty_Emergence_Adaptation_v1.docx"
+      repository_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ10_Uncertainty_Emergence_Adaptation_v1.docx"
+
+    target:
+      format: "markdown"
+      repository_path: "knowledge-books/strategy/part-01/chapters/RQ10_Uncertainty_Emergence_Adaptation.md"
+
+    migration:
+      status: "not_started"
+      pilot: false
+      fidelity_audit_required: true
+      fidelity_audit_status: "not_started"
+      canonical_status: "historical_docx_baseline"
+
+  - id: "STR-P01-RQ11"
+    title: "Strategy Quality & Failure"
+    artifact_type: "research_question"
+    rq: "RQ-11"
+    version: "v1"
+    status: "current"
+
+    source:
+      format: "docx"
+      filename: "Strategy_Knowledge_Book_Part01_RQ11_Strategy_Quality_Failure_v1.docx"
+      repository_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ11_Strategy_Quality_Failure_v1.docx"
+
+    target:
+      format: "markdown"
+      repository_path: "knowledge-books/strategy/part-01/chapters/RQ11_Strategy_Quality_Failure.md"
+
+    migration:
+      status: "not_started"
+      pilot: false
+      fidelity_audit_required: true
+      fidelity_audit_status: "not_started"
+      canonical_status: "historical_docx_baseline"
+
+  - id: "STR-P01-META-REVALIDATION-AUDIT"
+    title: "Retrospective Revalidation & AI System Audit"
+    artifact_type: "meta_review"
+    version: "v1"
+    status: "meta"
+
+    source:
+      format: "docx"
+      filename: "Strategy_Knowledge_Book_Part01_Retrospective_Revalidation_AI_System_Audit_v1.docx"
+      repository_path: "knowledge-books/strategy/part-01/source-docx/meta/Strategy_Knowledge_Book_Part01_Retrospective_Revalidation_AI_System_Audit_v1.docx"
+
+    target:
+      format: "markdown"
+      repository_path: "knowledge-books/strategy/part-01/reviews/Retrospective_Revalidation_AI_System_Audit.md"
+
+    migration:
+      status: "not_started"
+      fidelity_audit_required: true
+      fidelity_audit_status: "not_started"
+      canonical_status: "historical_docx_baseline"
+
+  - id: "STR-P01-META-REV-PHASE1"
+    title: "Revalidation Phase 1 Findings"
+    artifact_type: "meta_review"
+    version: "v1"
+    status: "meta"
+
+    source:
+      format: "docx"
+      filename: "Strategy_Knowledge_Book_Part01_Revalidation_Phase1_Findings_v1.docx"
+      repository_path: "knowledge-books/strategy/part-01/source-docx/meta/Strategy_Knowledge_Book_Part01_Revalidation_Phase1_Findings_v1.docx"
+
+    target:
+      format: "markdown"
+      repository_path: "knowledge-books/strategy/part-01/reviews/Revalidation_Phase1_Findings.md"
+
+    migration:
+      status: "not_started"
+      fidelity_audit_required: true
+      fidelity_audit_status: "not_started"
+      canonical_status: "historical_docx_baseline"
+
+  - id: "STR-P01-META-ARCH-REVIEW"
+    title: "Architecture Review Phase 2"
+    artifact_type: "architecture_review"
+    version: "v1"
+    status: "meta"
+
+    source:
+      format: "docx"
+      filename: "Strategy_Knowledge_Book_Part01_Architecture_Review_Phase2_v1.docx"
+      repository_path: "knowledge-books/strategy/part-01/source-docx/meta/Strategy_Knowledge_Book_Part01_Architecture_Review_Phase2_v1.docx"
+
+    target:
+      format: "markdown"
+      repository_path: "knowledge-books/strategy/part-01/reviews/Architecture_Review_Phase2.md"
+
+    migration:
+      status: "not_started"
+      fidelity_audit_required: true
+      fidelity_audit_status: "not_started"
+      canonical_status: "historical_docx_baseline"
+
+  - id: "STR-P01-META-OSQF"
+    title: "Organizational Strategy Question Framework"
+    artifact_type: "translation_framework"
+    version: "v0.1"
+    status: "meta"
+
+    source:
+      format: "docx"
+      filename: "Strategy_Knowledge_Book_Part01_Organizational_Strategy_Question_Framework_v0_1.docx"
+      repository_path: "knowledge-books/strategy/part-01/source-docx/meta/Strategy_Knowledge_Book_Part01_Organizational_Strategy_Question_Framework_v0_1.docx"
+
+    target:
+      format: "markdown"
+      repository_path: "knowledge-books/strategy/part-01/reviews/Organizational_Strategy_Question_Framework_v0_1.md"
+
+    migration:
+      status: "not_started"
+      fidelity_audit_required: true
+      fidelity_audit_status: "not_started"
+      canonical_status: "historical_docx_baseline"
+
+  - id: "STR-P01-RQ03-OLD"
+    title: "Object, Levels & Strategic Agency"
+    artifact_type: "research_question"
+    rq: "RQ-03"
+    version: "v1"
+    status: "superseded"
+
+    source:
+      format: "docx"
+      filename: "Strategy_Knowledge_Book_Part01_RQ03_Object_Levels_Strategic_Agency_v1.docx"
+      repository_path: "knowledge-books/strategy/part-01/source-docx/superseded/Strategy_Knowledge_Book_Part01_RQ03_Object_Levels_Strategic_Agency_v1.docx"
+
+    target:
+      format: null
+      repository_path: null
+
+    migration:
+      status: "copied"
+      fidelity_audit_required: false
+      fidelity_audit_status: "not_required"
+      canonical_status: "superseded_historical_artifact"
+
+    superseded_by:
+      - "STR-P01-RQ03"
+
+migration_package:
+  files:
+    - path: "migration/MIGRATION_PLAN.md"
+      role: "migration procedure and sequencing"
+      expected_status: "created"
+
+    - path: "migration/PROJECT_CONTEXT.md"
+      role: "stable project context"
+      expected_status: "created"
+
+    - path: "migration/PROJECT_STATE.md"
+      role: "migration-time project state snapshot"
+      expected_status: "created"
+
+    - path: "migration/METHODOLOGY_STATE.md"
+      role: "preserved methodology snapshot"
+      expected_status: "created"
+
+    - path: "migration/ARCHITECTURE_DECISIONS.md"
+      role: "architecture decision register"
+      expected_status: "created"
+
+    - path: "migration/OPEN_QUESTIONS.md"
+      role: "consolidated unresolved-question register"
+      expected_status: "created"
+
+    - path: "migration/MIGRATION_MANIFEST.yaml"
+      role: "machine-readable migration inventory"
+      expected_status: "created"
+
+next_gate:
+  name: "Migration Package Integrity Review"
+
+  checks:
+    - "All migration package files exist."
+    - "All current DOCX source artifacts listed in this manifest exist at declared repository paths."
+    - "The superseded RQ-03 v1 artifact exists in the superseded directory."
+    - "No original source DOCX has been modified as part of migration."
+    - "Manifest filenames match actual filenames exactly."
+    - "Manifest paths match actual repository structure."
+    - "No Markdown research chapter has been declared canonical."
+    - "Known open questions and architecture decisions remain preserved."
+    - "Repository instructions are internally consistent."
+    - "Migration and intellectual revision remain separated."
+
+  after_pass:
+    - "Commit migration package and source DOCX baseline."
+    - "Run Codex read-only repository comprehension test."
+    - "Resolve repository/bootstrap discrepancies only."
+    - "Define RQ-01 fidelity audit procedure."
+    - "Begin controlled RQ-01 DOCX-to-Markdown migration pilot."
+
+  prohibited_before_pass:
+    - "Bulk DOCX-to-Markdown migration."
+    - "Part 01 intellectual revision."
+    - "Canonical promotion of converted chapters."
+    - "Native Part 02 research."
+    - "Automatic resolution of Open Questions."
