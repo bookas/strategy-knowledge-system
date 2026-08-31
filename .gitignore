@@ -1,0 +1,43 @@
+# OS / editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Temporary / backup files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# Microsoft Office lock/temp files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Logs
+*.log
+
+# Local scratch / generated temporary workspace
+tmp/
+temp/
+scratch/
+
+# Environment / secrets
+.env
+.env.*
+*.secret
+secrets/
+
+# Local Codex / AI scratch if created later
+.codex-local/
+.ai-scratch/
