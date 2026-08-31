@@ -5,8 +5,19 @@ manifest:
   area: "Strategy Knowledge Book"
   part: "Part 01 — Strategy"
   purpose: "Machine-readable migration inventory for source research artifacts."
-  migration_stage: "context-transfer"
+  migration_stage: "post-comprehension-pre-pilot"
   status: "in-progress"
+
+  baseline:
+    commit: "c0116d3"
+    subject: "Establish Part 01 migration baseline"
+    status: "established"
+
+  comprehension_gate:
+    name: "First Codex Repository Comprehension Gate"
+    status: "completed"
+    result: "PASS WITH FINDINGS"
+    external_adjudication: "ACCEPTED"
 
 governance:
   migration_principle:
@@ -460,8 +471,10 @@ migration_package:
       role: "machine-readable migration inventory"
       expected_status: "created"
 
-next_gate:
+completed_gate:
   name: "Migration Package Integrity Review"
+  status: "completed"
+  completion_evidence: "c0116d3 — Establish Part 01 migration baseline"
 
   checks:
     - "All migration package files exist."
@@ -475,14 +488,21 @@ next_gate:
     - "Repository instructions are internally consistent."
     - "Migration and intellectual revision remain separated."
 
-  after_pass:
+process_progress:
+  completed:
     - "Commit migration package and source DOCX baseline."
-    - "Run Codex read-only repository comprehension test."
+    - "Run Codex read-only repository comprehension test; externally adjudicated PASS WITH FINDINGS — ACCEPTED."
+
+  current:
     - "Resolve repository/bootstrap discrepancies only."
-    - "Define RQ-01 fidelity audit procedure."
+
+  pending:
+    - "Define and approve the RQ-01 fidelity audit procedure preserved as OQ-059."
+    - "Define and approve the migration discrepancy classification preserved as OQ-060."
+    - "Define the post-migration source-of-truth hierarchy preserved as OQ-062 before canonical promotion."
     - "Begin controlled RQ-01 DOCX-to-Markdown migration pilot."
 
-  prohibited_before_pass:
+  prohibited_before_pre_pilot_controls:
     - "Bulk DOCX-to-Markdown migration."
     - "Part 01 intellectual revision."
     - "Canonical promotion of converted chapters."

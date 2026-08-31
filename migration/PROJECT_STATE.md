@@ -934,17 +934,25 @@ Initialized and connected to remote.
 
 Repository bootstrap:
 
-Partially completed.
+Part 01 migration baseline established at:
+
+`c0116d3 — Establish Part 01 migration baseline`
 
 Original DOCX corpus:
 
-Being transferred into repository.
+Transferred into the repository and preserved in the Part 01 migration baseline.
 
 Migration context:
 
-In progress.
+Context-transfer package created and committed in the Part 01 migration baseline.
 
-Files currently planned or created under `migration/`:
+First Codex Repository Comprehension Gate:
+
+Completed and externally adjudicated as:
+
+**PASS WITH FINDINGS — ACCEPTED**
+
+Files currently present under `migration/`:
 
 - `MIGRATION_PLAN.md`
 - `PROJECT_CONTEXT.md`
@@ -962,6 +970,10 @@ Bulk DOCX → Markdown migration:
 
 Not yet started.
 
+RQ-01 DOCX → Markdown migration pilot:
+
+Not yet started.
+
 # 18. Migration Restrictions
 
 Until migration validation is complete, Codex must not:
@@ -976,23 +988,22 @@ Until migration validation is complete, Codex must not:
 
 Migration and intellectual revision remain separate.
 
-# 19. Next Authorized Step
+# 19. Next Process Gate
 
-After this state snapshot is accepted, the next major project action is:
+Following the established Part 01 migration baseline and the accepted first
+Codex Repository Comprehension Gate, the remaining pre-pilot controls are:
 
-Create and validate:
+- define and approve the RQ-01 migration fidelity threshold preserved as
+  OQ-059;
+- define and approve the migration discrepancy classification preserved as
+  OQ-060.
 
-`METHODOLOGY_STATE.md`
+The post-migration source-of-truth hierarchy preserved as OQ-062 also remains
+unresolved and must be settled before canonical promotion.
 
-followed by:
-
-`ARCHITECTURE_DECISIONS.md`
-
-`OPEN_QUESTIONS.md`
-
-`MIGRATION_MANIFEST.yaml`
-
-Only after the intellectual context transfer is complete should the project proceed to controlled RQ-01 migration and fidelity testing.
+This state update does not authorize RQ-01 conversion. A controlled RQ-01
+migration pilot may begin only after its required pre-pilot controls are
+defined and approved.
 
 # 20. State Snapshot Summary
 
@@ -1017,7 +1028,16 @@ Part 01 final release:
 NOT YET COMPLETED
 
 Git migration:
-IN PROGRESS
+IN PROGRESS — PART 01 MIGRATION BASELINE ESTABLISHED AT `c0116d3`
+
+Migration context transfer:
+COMPLETED AT BASELINE LEVEL
+
+First Codex Repository Comprehension Gate:
+PASS WITH FINDINGS — ACCEPTED
+
+RQ-01 migration pilot:
+NOT YET STARTED
 
 Codex-native research:
 NOT YET STARTED

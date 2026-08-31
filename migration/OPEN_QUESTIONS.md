@@ -1,4 +1,4 @@
-v# Strategy Knowledge System — Open Questions Register
+# Strategy Knowledge System — Open Questions Register
 
 ## 1. Document Purpose
 
@@ -54,6 +54,9 @@ Cannot be answered universally without organizational context.
 
 **Under Review**  
 Currently being actively reconsidered.
+
+**Partially Resolved**
+A substantive part has been answered while a material remainder remains open.
 
 **Resolved**  
 Question has been sufficiently answered.
@@ -1763,7 +1766,7 @@ Publication architecture.
 # OQ-065 — What Should the First Codex Read-Only Audit Test?
 
 **Priority:** P1  
-**Status:** Open
+**Status:** Resolved
 
 ## Question
 
@@ -1783,9 +1786,22 @@ Codex should correctly report:
 - prohibited actions;
 - proposed next bootstrap step.
 
+## Resolution
+
+The first Codex Repository Comprehension Gate was completed against:
+
+`c0116d3 — Establish Part 01 migration baseline`
+
+External adjudication outcome:
+
+**PASS WITH FINDINGS — ACCEPTED**
+
+The accepted gate confirmed repository comprehension while preserving its
+reported bootstrap and pre-pilot findings for separate disposition.
+
 ## Revisit
 
-Immediately before first Codex repository session.
+Revisit only if the comprehension-gate requirements are materially changed.
 
 ---
 
@@ -1852,7 +1868,6 @@ The following questions are most likely to block near-term migration or Part 01 
 - OQ-059 — Migration Fidelity Threshold
 - OQ-060 — Migration Discrepancy Classification
 - OQ-062 — Post-migration Source-of-Truth hierarchy
-- OQ-065 — First Codex comprehension test
 
 ## Part 01 Release Blocking
 
