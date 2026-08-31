@@ -5,7 +5,7 @@ manifest:
   area: "Strategy Knowledge Book"
   part: "Part 01 — Strategy"
   purpose: "Machine-readable migration inventory for source research artifacts."
-  migration_stage: "post-comprehension-pre-pilot"
+  migration_stage: "post-final-methodology-review-pre-governance-consistency-review"
   status: "in-progress"
 
   baseline:
@@ -51,8 +51,9 @@ migration_control_artifacts:
     status: "candidate"
     repository_path: "methodology/migration/migration-fidelity-protocol-v1.md"
     open_question: "OQ-059"
-    current_reviewed_candidate_sha256: "F9E436C7CDE669B960F4DE1F3D8337575DFD5792962A972406F78EDF3274279C"
-    review_status: "second_controlled_revision"
+    current_reviewed_candidate_sha256: "CFD075517C19BF467E11382A75274B7A69A0E3C1D05F8B1A9F73C4632BBA6490"
+    review_status: "final_narrow_review_completed"
+    review_recommendation: "approve"
     approval_status: "not_approved"
 
   discrepancy_taxonomy:
@@ -61,8 +62,9 @@ migration_control_artifacts:
     status: "candidate"
     repository_path: "methodology/migration/migration-discrepancy-taxonomy-v1.md"
     open_question: "OQ-060"
-    current_reviewed_candidate_sha256: "C94DA8F0E71EE265311F1DB72FF1CB7D81660826C3946910D8322830E7CC9F9D"
-    review_status: "second_controlled_revision"
+    current_reviewed_candidate_sha256: "239FE10DFCC5831D2B01CEFDDEE8A04BF86D76DD73E4CB02717F5A0B703CDF72"
+    review_status: "final_narrow_review_completed"
+    review_recommendation: "approve"
     approval_status: "not_approved"
 
   relationship:
@@ -130,6 +132,8 @@ migration_control_artifacts:
 
   review_rounds:
     - review_id: "migration-methodology-review-001"
+      baseline_status: "historical_superseded_review_baseline"
+      superseded_by: "migration-methodology-review-002"
       reviewed_baseline_kind: "content_hash_only_untracked"
       immutable_git_baseline: false
       protocol_sha256: "01F9248BD4B9001D3B2BCB33BAF54131F181F169F280DCE9CA0ACEFE5D69C365"
@@ -139,6 +143,8 @@ migration_control_artifacts:
       approval_effect: "none"
 
     - review_id: "migration-methodology-review-002"
+      baseline_status: "historical_superseded_review_baseline"
+      superseded_by: "migration-methodology-review-003"
       reviewed_baseline_kind: "immutable_git_commit"
       immutable_git_baseline: true
       baseline_commit: "23166af810d950059aa0495e5699e195d9448059"
@@ -148,14 +154,41 @@ migration_control_artifacts:
       decision_status: "accepted_as_required_second_revision_input"
       approval_effect: "none"
 
+    - review_id: "migration-methodology-review-003"
+      baseline_status: "current_review_baseline"
+      reviewed_baseline_kind: "immutable_git_commit"
+      immutable_git_baseline: true
+      baseline_commit: "56d0f5391aa000560baad6d66a50a8b129d633ae"
+      baseline_subject: "Resolve remaining migration methodology review findings"
+      protocol_sha256: "CFD075517C19BF467E11382A75274B7A69A0E3C1D05F8B1A9F73C4632BBA6490"
+      taxonomy_sha256: "239FE10DFCC5831D2B01CEFDDEE8A04BF86D76DD73E4CB02717F5A0B703CDF72"
+      review_type: "final_narrow_methodology_re_review"
+      review_status: "completed"
+      protocol_recommendation: "approve"
+      taxonomy_recommendation: "approve"
+      decision: "revise_and_re_review"
+      decision_reason: "process_metadata_synchronization_only"
+      r2_f01: "resolved"
+      r2_f02: "resolved"
+      r2_f03: "resolved"
+      r2_f04: "metadata_synchronization_required"
+      r2_f05: "metadata_synchronization_required"
+      approval_effect: "none"
+
   current_revision:
-    status: "second_controlled_revision_in_progress"
+    status: "second_controlled_revision_completed"
     source_review_id: "migration-methodology-review-002"
     source_baseline_commit: "23166af810d950059aa0495e5699e195d9448059"
     source_baseline_immutable: true
     source_protocol_sha256: "F9E436C7CDE669B960F4DE1F3D8337575DFD5792962A972406F78EDF3274279C"
     source_taxonomy_sha256: "C94DA8F0E71EE265311F1DB72FF1CB7D81660826C3946910D8322830E7CC9F9D"
-    revised_candidate_immutable_git_baseline: false
+    revised_candidate_immutable_git_baseline: true
+    revised_candidate_baseline_commit: "56d0f5391aa000560baad6d66a50a8b129d633ae"
+    revised_protocol_sha256: "CFD075517C19BF467E11382A75274B7A69A0E3C1D05F8B1A9F73C4632BBA6490"
+    revised_taxonomy_sha256: "239FE10DFCC5831D2B01CEFDDEE8A04BF86D76DD73E4CB02717F5A0B703CDF72"
+    final_narrow_review_id: "migration-methodology-review-003"
+    final_narrow_review_status: "completed"
+    current_process_stage: "post_final_methodology_review_pre_governance_consistency_review"
     approval_status: "not_approved"
     rq01_pilot_entry_authorized: false
 
@@ -613,14 +646,17 @@ process_progress:
     - "Виконано first controlled methodology revision за findings F-01–F-05."
     - "Зафіксовано immutable candidate review baseline commit 23166af810d950059aa0495e5699e195d9448059."
     - "Проведено independent methodology re-review; result: REVISE AND RE-REVIEW."
+    - "Виконано second controlled methodology revision за findings R2-F01–R2-F05."
+    - "Зафіксовано immutable revised candidate baseline commit 56d0f5391aa000560baad6d66a50a8b129d633ae."
+    - "Проведено final narrow methodology re-review: Protocol APPROVE; Taxonomy APPROVE; metadata synchronization required."
 
   current:
-    - "Виконати second controlled methodology revision за accepted findings R2-F01–R2-F05."
+    - "Підготувати repository governance consistency review після factual process metadata synchronization."
 
   pending:
-    - "Зафіксувати second revised methodology candidates в immutable Git review baseline."
-    - "Провести independent methodology re-review round 2 для exact revised commit і hashes."
-    - "Отримати final adjudication та traceable methodology approval або новий revision decision."
+    - "Провести repository governance consistency review."
+    - "Отримати final methodology adjudication та traceable approval або новий revision decision."
+    - "Провести final adjudication OQ-059 та OQ-060, якщо це визначено governance process."
     - "Провести RQ-01 Pilot Entry Gate evaluation; conversion залишається неавторизованою до PASS."
     - "Define the post-migration source-of-truth hierarchy preserved as OQ-062 before canonical promotion."
 

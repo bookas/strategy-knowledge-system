@@ -998,10 +998,34 @@ Independent methodology re-review цього exact baseline завершено �
 
 **METHODOLOGY RE-REVIEW: REVISE AND RE-REVIEW**
 
-Accepted findings R2-F01–R2-F05 є inputs для поточної second controlled
-revision. Обидва artifacts залишаються `candidate`; methodology не approved,
-а RQ-01 pilot не authorized. Git commit candidate version сам по собі не є
-approval.
+Accepted findings R2-F01–R2-F05 були inputs для second controlled revision.
+Revision завершено та зафіксовано в immutable candidate baseline:
+
+`56d0f5391aa000560baad6d66a50a8b129d633ae`
+
+Final narrow methodology re-review цього baseline завершено. Review
+recommendations:
+
+- Migration Fidelity Protocol v1 — `APPROVE`;
+- Migration Discrepancy Taxonomy v1 — `APPROVE`.
+
+Final review verdict залишився `REVISE AND RE-REVIEW` виключно через stale
+process metadata R2-F04/R2-F05, яке синхронізується цією зміною. Review
+recommendation не є approval: обидва artifacts залишаються `candidate`,
+methodology не approved, а RQ-01 pilot не authorized. Git commit candidate
+version сам по собі не є approval.
+
+Completed methodology chronology:
+
+1. methodology design;
+2. first independent methodology review;
+3. first adjudication;
+4. controlled methodology revision #1;
+5. immutable candidate baseline `23166af`;
+6. independent methodology re-review;
+7. controlled methodology revision #2;
+8. immutable revised candidate baseline `56d0f53`;
+9. final narrow methodology re-review.
 
 # 18. Migration Restrictions
 
@@ -1023,14 +1047,16 @@ Following the established Part 01 migration baseline and the accepted first
 Codex Repository Comprehension Gate, the remaining pre-pilot controls are:
 
 Методологічний design для OQ-059 та OQ-060 залишається у статусі `candidate`.
-Поточний control — завершити second controlled revision за R2-F01–R2-F05.
+Second controlled revision, immutable baseline `56d0f53` і final narrow
+methodology re-review завершено. Поточний process stage — підготовка repository
+governance consistency review.
 
-Після цього ще потрібні:
+Наступні controls:
 
-1. immutable revised candidate baseline;
-2. independent methodology re-review round 2;
-3. final adjudication і traceable methodology approval або новий revision
+1. repository governance consistency review;
+2. final methodology adjudication і traceable approval або новий revision
    decision;
+3. final adjudication OQ-059/OQ-060, якщо це визначено governance process;
 4. окрема RQ-01 Pilot Entry Gate evaluation.
 
 The post-migration source-of-truth hierarchy preserved as OQ-062 also remains
