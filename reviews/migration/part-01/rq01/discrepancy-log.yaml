@@ -1,0 +1,88 @@
+log:
+  log_id: "RQ01-MIG-DISCREPANCY-LOG-001"
+  rq_id: "RQ-01"
+  status: "initialized_empty"
+  taxonomy:
+    artifact_id: "SKS-MIG-DISC-001"
+    version: "v1"
+    sha256: "239FE10DFCC5831D2B01CEFDDEE8A04BF86D76DD73E4CB02717F5A0B703CDF72"
+  protocol:
+    artifact_id: "SKS-MIG-FID-001"
+    version: "v1"
+    sha256: "CFD075517C19BF467E11382A75274B7A69A0E3C1D05F8B1A9F73C4632BBA6490"
+  source_identity:
+    repository_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ01_Nature_v1.docx"
+    git_baseline: "d4b40ca7981b41177cf862f18ba278774175f6ef"
+    migration_baseline: "c0116d3"
+    git_blob: "b86a93605a785f179c8c461e38d604056f9e2672"
+    sha256: "81639A1143B98E7CFC763910760613458A10BF83ED732CE360FF0DA11A05CD36"
+    size_bytes: 50707
+  candidate_identity:
+    repository_path: "knowledge-books/strategy/part-01/chapters/RQ01_Nature.md"
+    sha256: null
+    git_or_worktree_identity: null
+    canonical_status: "not_canonical"
+  authorization:
+    rq01_pilot_entry_authorized: false
+    canonical_promotion_authorized: false
+
+mandate_field_mapping:
+  taxonomy_class: "class"
+  fidelity_or_intellectual_issue: "record_kind"
+  proposed_route: "proposed_disposition"
+  correction_author: "correction_by"
+  verifier: "verification_by"
+  disposition: "proposed_disposition or accepted_disposition, according to disposition_status"
+  disposition_authority: "disposition_by plus authority evidence"
+  status: "record_status"
+  location: "source_location plus target_location"
+  description: "source_observation plus target_observation"
+
+entry_schema:
+  discrepancy_id: "string; required; unique within this log"
+  rq_id: "RQ-01"
+  record_kind: "migration_discrepancy | source_issue | intellectual_issue"
+  artifact_id: "STR-P01-RQ01"
+  source_path: "authoritative source repository path"
+  source_baseline_sha: "immutable Git baseline"
+  source_hash: "source SHA-256 or Git blob"
+  target_path: "candidate repository path"
+  source_identity: "source path, baseline and hash/blob identity"
+  candidate_identity: "candidate path plus SHA-256 or Git/worktree identity"
+  class: "A | B | C | D | E | F | G | H | I | J | K | L | M | N | O"
+  secondary_classes: "list; may be empty"
+  severity: "S0 | S1 | S2 | S3 | S4 | S5 | null for faithfully preserved source/intellectual issues"
+  fidelity_effect: "blocking | non_blocking | undetermined"
+  source_location: "source section, paragraph, list item, table/cell or other stable anchor"
+  target_location: "candidate heading, line, block, table/cell or other stable anchor"
+  source_observation: "factual observation in source"
+  target_observation: "factual observation in candidate"
+  migration_fidelity_risk: "specific representation risk; separate from intellectual quality"
+  evidence: "list of source/target observations, hashes, renderings or comparisons"
+  detected_by: "actor identity"
+  detected_date: "YYYY-MM-DD"
+  detection_stage: "conversion | operator_check | independent_review | re_review"
+  owner: "actor responsible for the next routed action"
+  correction_required: "boolean"
+  correction_authority: "automatic | operator_with_review | human_review | adjudication | controlled_revision_only"
+  correction_by: "actor identity or null"
+  correction_date: "YYYY-MM-DD or null"
+  verification_required: "boolean"
+  verification_by: "actor identity or null; cannot be material correction author"
+  verification_date: "YYYY-MM-DD or null"
+  proposed_disposition: "approved taxonomy routing or terminal disposition"
+  accepted_disposition: "accepted terminal/routing disposition or null"
+  disposition_type: "routing | terminal"
+  disposition_status: "proposed | accepted | rejected | superseded"
+  disposition_by: "actor identity or null"
+  disposition_date: "YYYY-MM-DD or null"
+  disposition_history: "append-only list of proposed, routing, downstream and terminal decisions"
+  record_status: "detected | classified | correction_required | corrected | verified | disposition_pending | adjudication_required | deferred | resolved"
+  resolution_evidence: "evidence of closure or null"
+  intellectual_issue_status: "observed | recorded | deferred | handed_off | null"
+  adjudication_required: "boolean"
+  adjudication_reference: "traceable decision reference or null"
+  downstream_decision_reference: "downstream decision reference or null"
+  controlled_revision_reference: "controlled revision reference or null"
+
+entries: []
