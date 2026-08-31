@@ -62,9 +62,11 @@ Historical Part 01 phase-readiness assessment:
 
 Це формулювання фіксує історичну phase readiness, а не чинну operational
 authorization. Поточні повноваження визначають live Manifest, цей Project State
-та застосовний Entry Gate. Migration-control methodology формально схвалено,
-але RQ-01 Pilot Entry Gate не пройдено, а RQ-01 conversion залишається
-неавторизованою.
+та застосовний Entry Gate. Migration-control methodology формально схвалено.
+RQ-01 Pilot Entry Gate формально пройдено з verdict `PASS`, і одну faithful
+source-language-preserving conversion авторизовано; conversion ще не виконано,
+candidate Markdown не створено, fidelity verdict не видано, а canonical
+promotion залишається неавторизованою.
 
 # 3. Part 01 Purpose
 
@@ -978,7 +980,11 @@ Not yet started.
 
 RQ-01 DOCX → Markdown migration pilot:
 
-Not yet started.
+Entry Gate: `PASS`; одна faithful source-language-preserving conversion
+авторизована Entry Gate Decision Record `rq01-pilot-entry-gate-001`.
+
+Execution ще не розпочато. Candidate Markdown не створено, fidelity verdict не
+видано, canonical promotion не авторизовано.
 
 Migration-control methodology:
 
@@ -1057,33 +1063,39 @@ Until migration validation is complete, Codex must not:
 
 Migration and intellectual revision remain separate.
 
-# 19. Next Process Gate
+# 19. Current Migration Gate State
 
 Following the established Part 01 migration baseline and the accepted first
-Codex Repository Comprehension Gate, the remaining pre-pilot controls are:
+Codex Repository Comprehension Gate, pre-pilot governance controls are complete:
 
 Методологію для OQ-059 та OQ-060 схвалено через Methodology Approval Record
 `methodology-approval-001`; обидва open questions adjudicated як sufficiently
 operationalized і мають статус `Resolved`. Governance consistency correction
 завершено та підтверджено narrow confirmation review з verdict `PASS`.
-Поточний process stage — підготовка окремої RQ-01 Pilot Entry Gate evaluation.
+Initial RQ-01 Entry Gate evaluation надало `CONDITIONAL PASS`, pre-conversion
+conditions було задоволено, а narrow Entry Gate confirmation надало `PASS`.
+Final adjudication від `2026-08-31` за Entry Gate Decision Record
+`rq01-pilot-entry-gate-001` формально встановило `PASS` і авторизувало одну
+faithful source-language-preserving conversion exact RQ-01 DOCX у exact
+noncanonical target `knowledge-books/strategy/part-01/chapters/RQ01_Nature.md`.
 
-Наступні controls:
+Поточний execution state:
 
-1. окрема RQ-01 Pilot Entry Gate evaluation;
-2. у разі `PASS` — окрема traceable authorization для faithful RQ-01 candidate
-   conversion у межах Entry Gate Decision Record.
+1. conversion авторизовано, але ще не виконано;
+2. candidate Markdown ще не створено;
+3. fidelity review ще не проведено і fidelity verdict не видано;
+4. canonical promotion не авторизовано.
 
 Post-migration source-of-truth hierarchy, збережена як OQ-062, також лишається
-невирішеною. Сам по собі цей open question не забороняє faithful RQ-01 candidate
-conversion після майбутнього чинного Pilot Entry Gate, але має бути вирішений
+невирішеною. Сам по собі цей open question не забороняє авторизовану faithful
+RQ-01 candidate conversion після чинного Pilot Entry Gate, але має бути вирішений
 до canonical promotion; до того часу candidate Markdown залишається
 noncanonical.
 
-Methodology approval не авторизує RQ-01 conversion. Воно дозволяє лише
-підготувати й провести окрему RQ-01 Pilot Entry Gate evaluation. Controlled
-RQ-01 migration pilot може початися лише після verdict `PASS` і traceable Entry
-Gate Decision Record.
+Methodology approval саме по собі не авторизувало RQ-01 conversion. Чинну вузьку
+authorization створило окреме adjudication через verdict `PASS` і traceable
+Entry Gate Decision Record. Воно не є fidelity verdict і не дозволяє canonical
+promotion або migration RQ-02–RQ-11.
 
 # 20. State Snapshot Summary
 
@@ -1117,7 +1129,7 @@ First Codex Repository Comprehension Gate:
 PASS WITH FINDINGS — ACCEPTED
 
 RQ-01 migration pilot:
-NOT YET STARTED
+AUTHORIZED — NOT YET STARTED; CANDIDATE NOT CREATED; NO FIDELITY VERDICT
 
 Codex-native research:
 NOT YET STARTED

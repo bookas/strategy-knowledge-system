@@ -5,7 +5,7 @@ manifest:
   area: "Strategy Knowledge Book"
   part: "Part 01 — Strategy"
   purpose: "Machine-readable migration inventory for source research artifacts."
-  migration_stage: "post-final-methodology-adjudication-pre-rq01-entry-gate"
+  migration_stage: "post-rq01-pilot-entry-gate-pre-conversion"
   status: "in-progress"
 
   baseline:
@@ -80,7 +80,8 @@ migration_control_artifacts:
     protocol_uses_taxonomy: true
     taxonomy_defines_fidelity_verdict_independently: false
     methodology_approved: true
-    pilot_entry_authorized: false
+    pilot_entry_authorized: true
+    pilot_entry_authorized_scope: "current RQ-01 pilot Entry Gate only"
     canonical_promotion_authorized: false
 
   controlled_values:
@@ -171,6 +172,92 @@ migration_control_artifacts:
       rq01_pilot_entry_authorized_by_this_record: false
       canonical_promotion_authorized_by_this_record: false
 
+  rq01_pilot_entry_gate_decision_records:
+    - decision_id: "rq01-pilot-entry-gate-001"
+      decision_type: "rq01_pilot_entry_gate_authorization"
+      rq_id: "RQ-01"
+      decision: "PASS"
+      decision_by: "Repository owner explicitly acting as repository-authorized adjudicator"
+      authority_basis: "Explicit RQ-01 PILOT ENTRY GATE — FINAL ADJUDICATION AND AUTHORIZATION mandate"
+      decision_date: "2026-08-31"
+      exact_git_commit: "075fc23e963e8a5a49401a259061ab44bece6ed1"
+      review_recommendation_is_authorization: false
+      adjudication_is_authorization_act: true
+      source:
+        path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ01_Nature_v1.docx"
+        sha256: "81639A1143B98E7CFC763910760613458A10BF83ED732CE360FF0DA11A05CD36"
+        git_blob: "b86a93605a785f179c8c461e38d604056f9e2672"
+        size_bytes: 50707
+      target:
+        path: "knowledge-books/strategy/part-01/chapters/RQ01_Nature.md"
+        status: "noncanonical_candidate_not_created"
+      methodology:
+        fidelity_protocol_sha256: "CFD075517C19BF467E11382A75274B7A69A0E3C1D05F8B1A9F73C4632BBA6490"
+        discrepancy_taxonomy_sha256: "239FE10DFCC5831D2B01CEFDDEE8A04BF86D76DD73E4CB02717F5A0B703CDF72"
+        methodology_approval_record: "methodology-approval-001"
+      preparation_artifacts:
+        discrepancy_log: "reviews/migration/part-01/rq01/discrepancy-log.yaml"
+        pilot_execution_plan: "reviews/migration/part-01/rq01/pilot-execution-plan.md"
+        committed_at_exact_git_commit: true
+        embedded_authorization_state: "pre-adjudication snapshot; live authorization is this Manifest decision record"
+      review_basis:
+        initial_entry_gate: "RQ-01 PILOT ENTRY GATE: CONDITIONAL PASS"
+        pre_conversion_conditions: "RQ-01 PRE-CONVERSION CONDITIONS: SATISFIED"
+        narrow_confirmation: "RQ-01 NARROW ENTRY GATE CONFIRMATION: PASS"
+        all_g1_through_g12_effectively_pass: true
+      gate_criteria:
+        G1: "PASS — clean immutable repository baseline"
+        G2: "PASS — approved methodology identity established"
+        G3: "PASS — unique authoritative RQ-01 source established"
+        G4: "PASS — source integrity and readability sufficient"
+        G5: "PASS — source complexity understood"
+        G6: "PASS — exact noncanonical target path identified"
+        G7: "PASS — independence model operationally satisfiable"
+        G8: "PASS — fidelity obligations concrete for RQ-01"
+        G9: "PASS — discrepancy routing operational"
+        G10: "PASS — evidence package can be produced"
+        G11: "PASS — no unresolved blocker prevents faithful conversion"
+        G12: "PASS — canonical-promotion boundary remains protected"
+      actors:
+        converter_role: "Codex Conversion Operator"
+        converter_execution_identity: "Має бути зафіксована в pilot evidence під час execution."
+        independent_reviewer_role: "fresh isolated Codex review context"
+        independent_reviewer_execution_identity: "Має бути зафіксована в pilot evidence під час execution і відрізнятися від converter."
+        adjudicator_role: "repository owner explicitly acting as adjudicator"
+        correction_verification_rule: "Material Correction Verifier має відрізнятися від автора material correction."
+      authorization_scope:
+        conversion_count: 1
+        operation: "Faithful source-language-preserving conversion exact approved RQ-01 DOCX у exact noncanonical target Markdown."
+        source_language_preservation_required: true
+        approved_methodology_required: true
+      prohibited_scope:
+        - "translation"
+        - "paraphrase"
+        - "theoretical improvement"
+        - "research update"
+        - "citation improvement"
+        - "correction of source intellectual defects"
+        - "new explanatory content"
+        - "canonical promotion"
+        - "deletion or replacement of source DOCX"
+        - "migration of RQ-02 through RQ-11"
+      canonical_status:
+        target_candidate: "not_canonical"
+        canonical_promotion_authorized: false
+      conditions_or_limits:
+        - "Source defects та intellectual issues зберігаються faithfully і маршрутизуються окремо."
+        - "Converter не видає independent fidelity verdict."
+        - "Фактичні converter і independent reviewer identities фіксуються до execution у pilot evidence."
+        - "Conversion не означає fidelity PASS або canonical promotion."
+      renewed_gate_trigger:
+        - "source SHA-256 changes"
+        - "source Git blob changes"
+        - "source version or path becomes ambiguous"
+        - "approved methodology materially changes"
+        - "target path or status materially changes"
+        - "independence requirements cannot be satisfied"
+        - "new BLOCKING governance finding appears"
+
   review_rounds:
     - review_id: "migration-methodology-review-001"
       baseline_status: "historical_superseded_review_baseline"
@@ -229,10 +316,11 @@ migration_control_artifacts:
     revised_taxonomy_sha256: "239FE10DFCC5831D2B01CEFDDEE8A04BF86D76DD73E4CB02717F5A0B703CDF72"
     final_narrow_review_id: "migration-methodology-review-003"
     final_narrow_review_status: "completed"
-    current_process_stage: "post_final_methodology_adjudication_pre_rq01_entry_gate"
+    current_process_stage: "post_rq01_pilot_entry_gate_pre_conversion"
     approval_status: "approved"
     approval_record_id: "methodology-approval-001"
-    rq01_pilot_entry_authorized: false
+    rq01_pilot_entry_authorized: true
+    rq01_pilot_entry_decision_id: "rq01-pilot-entry-gate-001"
 
 paths:
   part_root: "knowledge-books/strategy/part-01"
@@ -296,6 +384,8 @@ artifacts:
     migration:
       status: "not_started"
       pilot: true
+      pilot_entry_authorized: true
+      pilot_entry_decision_id: "rq01-pilot-entry-gate-001"
       fidelity_audit_required: true
       fidelity_audit_status: "not_started"
       canonical_status: "historical_docx_baseline"
@@ -707,15 +797,17 @@ process_progress:
     - "Проведено narrow governance confirmation review: PASS."
     - "Final methodology adjudication схвалило Protocol і Taxonomy exact baseline 755255560207f3f0f8ab925a5be895c340875ee3 через Methodology Approval Record methodology-approval-001."
     - "OQ-059 та OQ-060 adjudicated як sufficiently operationalized і переведено у статус Resolved."
+    - "RQ-01 Pilot Entry Gate evaluation завершено з CONDITIONAL PASS; pre-conversion conditions SATISFIED; narrow confirmation PASS."
+    - "Final RQ-01 Pilot Entry Gate adjudication за record rq01-pilot-entry-gate-001 надало PASS і вузьку authorization на одну faithful conversion; conversion ще не виконано."
 
   current:
-    - "Підготувати та провести окрему RQ-01 Pilot Entry Gate evaluation; conversion залишається неавторизованою до PASS."
+    - "Виконати одну авторизовану faithful source-language-preserving RQ-01 conversion в exact noncanonical target; candidate ще не створено."
 
   pending:
-    - "Провести RQ-01 Pilot Entry Gate evaluation; conversion залишається неавторизованою до PASS."
+    - "Після conversion сформувати Pre-Verdict Review Package та провести independent fidelity review; fidelity verdict ще не видано."
     - "Define the post-migration source-of-truth hierarchy preserved as OQ-062 before canonical promotion."
 
-  prohibited_before_pre_pilot_controls:
+  prohibited_during_authorized_rq01_pilot:
     - "Bulk DOCX-to-Markdown migration."
     - "Part 01 intellectual revision."
     - "Canonical promotion of converted chapters."
