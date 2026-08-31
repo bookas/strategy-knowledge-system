@@ -4,8 +4,8 @@ artifact_type: migration_control_methodology
 title: "Протокол перевірки точності міграції v1"
 version: "1.0"
 status: candidate
-review_status: revise_and_re_review
-approval_status: pending_re_review
+review_status: second_controlled_revision
+approval_status: not_approved
 language: uk
 open_question: OQ-059
 uses_taxonomy: "methodology/migration/migration-discrepancy-taxonomy-v1.md"
@@ -94,10 +94,11 @@ severity, статусів і dispositions.
 
 | Повноваження | Хто може надати | Мінімальна передумова | Чого не дозволяє |
 |---|---|---|---|
-| Permission to convert | Authority, названий у traceable RQ-01 Entry Gate Decision Record | `RQ-01 PILOT ENTRY GATE: PASS` із decision provenance | Не дозволяє довільні виправлення чи canonical promotion |
+| Methodology approval | Repository-authorized adjudicator або repository owner, який явно діє в adjudicator capacity | Methodology Approval Record для exact immutable Git commit і artifact hashes | Не є fidelity verdict, Entry Gate decision або canonical promotion |
+| Permission to convert | Repository-authorized adjudicator або repository owner, який явно діє в adjudicator capacity та названий у traceable RQ-01 Entry Gate Decision Record | `RQ-01 PILOT ENTRY GATE: PASS` із decision provenance | Не дозволяє довільні виправлення чи canonical promotion |
 | Permission to correct representation errors | Процес міграції в межах Taxonomy та цього Protocol | Зареєстрований discrepancy і допустимий correction authority | Не дозволяє виправляти source defects або intellectual issues |
-| Permission to declare fidelity verdict | Fidelity reviewer; для спірних випадків — adjudication | Завершений Pre-Verdict Review Package, review і Discrepancy Log | Не надає canonical status |
-| Permission to promote Markdown to canonical | Окремий canonical-promotion authority згідно з repository governance | Fidelity verdict, окремі promotion conditions і врегульований OQ-062 | Не випливає автоматично з конвертації або fidelity PASS |
+| Permission to declare fidelity verdict | Незалежний fidelity reviewer; source/version adjudicator вирішує лише передані йому ambiguity/conflict records | Завершений Pre-Verdict Review Package, review, Discrepancy Log та independence evidence | Не схвалює methodology, Entry Gate або canonical status |
+| Permission to promote Markdown to canonical | Окремий canonical-promotion authority, визначений repository governance після врегулювання OQ-062 | Fidelity verdict і окремі promotion conditions | Не випливає автоматично з methodology approval, Entry Gate або fidelity PASS |
 
 Одна дія не створює наступне повноваження автоматично.
 
@@ -118,13 +119,21 @@ Methodology Approval Record має містити щонайменше:
 
 - `approval_id`;
 - `artifact_id` і version;
-- immutable candidate Git SHA;
-- reviewed artifact SHA-256;
+- `exact_git_commit` — immutable candidate Git SHA;
+- `artifact_sha256` — exact reviewed artifact SHA-256;
 - decision — `approved`, `revise_and_re_review` або `rejected`;
 - `decision_by`;
+- `authority_basis` — repository-authorized adjudicator role або repository
+  owner explicitly acting in adjudicator capacity;
 - `decision_date`;
 - review/adjudication reference;
 - disposition accepted findings.
+
+Valid methodology approval може надати лише authority, визначений у
+`authority_basis`. Methodology author, reviser, independent methodology
+reviewer або fidelity reviewer не отримує approval authority лише через свою
+участь у роботі. Exact Git commit і hashes у record є обов’язковими; commit
+candidate version сам по собі не є approval.
 
 Самостійна зміна front matter або manifest з `candidate` на `approved` без
 такого record не має governance effect.
@@ -139,7 +148,7 @@ RQ-01 Entry Gate approval фіксується окремим Entry Gate Decisio
 - conversion operator;
 - fidelity reviewer;
 - verdict — `pass` або `fail`;
-- `decision_by` і `decision_date`;
+- `decision_by`, `authority_basis` і `decision_date`;
 - evidence/reference.
 
 Поле `pilot_entry_authorized: true` може з’явитися лише як відображення цього
@@ -517,7 +526,7 @@ relation або meaningful visual grouping.
 
 S0–S5 визначається Taxonomy і оцінює лише migration fidelity risk. Scale не
 оцінює conceptual quality або істинність source. Verdict враховує class,
-fidelity effect, record lifecycle і final accepted disposition.
+fidelity effect, record lifecycle і terminal accepted disposition.
 
 Загальне правило:
 
@@ -525,7 +534,8 @@ fidelity effect, record lifecycle і final accepted disposition.
 - S1 — не блокує після verification; може залишитися лише як accepted
   non-semantic discrepancy.
 - S2 — блокує до correction і re-review або до обґрунтованої reclassification.
-- S3 — блокує, доки migration fidelity risk не отримав accepted disposition.
+- S3 — блокує, доки migration fidelity risk не отримав terminal accepted
+  disposition.
 - S4 — завжди блокує; candidate містить підтверджене semantic corruption.
 - S5 — блокує conversion або fidelity verdict до adjudication source/version.
 
@@ -551,8 +561,9 @@ record із S0–S5.
 7. Correction не може розширюватися за межі зафіксованої discrepancy.
 8. Після correction зберігаються before/after evidence, actor, timestamp і
    correction authority.
-9. Proposed disposition не закриває record. Потрібні final accepted
-   disposition і provenance за спільною моделлю Taxonomy §7.
+9. Proposed або accepted routing disposition не закриває record. Для closure
+   потрібен terminal accepted disposition і provenance за спільною моделлю
+   Taxonomy §7.
 10. Protocol не вводить локальних aliases для lifecycle або disposition
     fields: використовується контрольована модель Taxonomy §§6–7.
 
@@ -574,7 +585,26 @@ record із S0–S5.
 
 Для RQ-01 pilot незалежний fidelity reviewer є обов’язковим.
 
-Reviewer:
+Fidelity reviewer disqualified, якщо це той самий actor, який:
+
+- виконав conversion, що перевіряється;
+- виконав material representation correction, яку перевіряє;
+- видав source/version adjudication, fidelity effect якого оцінюється.
+
+Conversion operator не може review власну conversion як незалежний fidelity
+reviewer. Actor, який виконав material correction, може документувати self-check,
+але не може бути значенням `verification_by` для цієї correction. Material є
+будь-яка S2–S4 correction або correction, що зачіпає content, structure of
+meaning, citation/reference, table/data чи formatting-with-meaning.
+
+Автор або material reviser цього Protocol/Taxonomy не є автоматично
+disqualified від fidelity review конкретної migration, якщо не виконується
+жодна migration-specific disqualification вище; methodology participation має
+бути disclosed. Водночас author/reviser не може виступати independent
+methodology reviewer для re-review тієї methodology, яку він створював або
+materially revised.
+
+Незалежний reviewer:
 
 - починає з того самого immutable source baseline;
 - не підміняє conversion operator під час формування первинного verdict;
@@ -584,6 +614,24 @@ Reviewer:
 - реєструє findings, але не виконує intellectual revision;
 - ескалює спірні S3–S5 до adjudication;
 - явно заявляє conflict of interest або попередню участь.
+
+Pre-Verdict Review Package має містити actor map: conversion operator,
+correction actors, source/version adjudicators, proposed fidelity reviewer і
+methodology author/reviser participation. Final Pilot Review Record має
+містити:
+
+- `reviewer_id`;
+- reviewer independence statement;
+- явні non-identity checks проти conversion operator, actors усіх material
+  corrections і застосовних source/version adjudicators;
+- disclosed prior participation та conflicts;
+- reference на conflict-exception record, якщо він існує.
+
+Якщо conflict exception об’єктивно неминучий, repository-authorized
+adjudicator має до verdict схвалити traceable exception record із reason,
+scope, safeguards, `decision_by`, `authority_basis` і `decision_date`.
+Exception reviewer не описується як fully independent, а final verdict
+потребує countersignature іншого uninvolved reviewer або adjudicator.
 
 Для технічних S0/S1 checks допускається automated verification, але фінальний
 pilot verdict залишається review-рішенням.
@@ -602,12 +650,14 @@ pilot verdict залишається review-рішенням.
 5. Немає migration discrepancy з `fidelity_effect: blocking` або
    `undetermined`.
 6. Кожен migration discrepancy має gate-relevant resolved state за Taxonomy
-   §7.3.
+   §7.5.
 7. Усі corrections verified; correction provenance повний.
 8. Немає неврахованої uncertainty щодо faithful representation.
 9. Candidate не містить translation або intellectual revision.
 10. Faithfully preserved source/intellectual issues мають `severity: null`,
     verified preservation і accepted deferral disposition.
+11. Кожен gate-relevant closed record має terminal accepted disposition;
+    routing disposition не задовольняє closure.
 
 **Residual non-blocking item** — gate-relevant resolved record, який не
 потребує correction, але має залишитися явно розкритим у Final Pilot Review
@@ -637,8 +687,9 @@ disposition `corrected_representation` accepted, record став `resolved`.
 
 - виконано всі common mandatory conditions; і
 - існує щонайменше один residual non-blocking item; і
-- кожен такий item має `fidelity_effect: non_blocking`, accepted disposition,
-  owner, verification provenance та final `resolved` або `deferred` status.
+- кожен такий item має `fidelity_effect: non_blocking`, terminal accepted
+  disposition, owner, verification provenance та final `resolved` або
+  `deferred` status.
 
 **Worked example:** source містить очевидний typo. Candidate відтворює його
 без змін. Source Defect має `record_kind: source_issue`, `severity: null`,
@@ -656,7 +707,7 @@ discrepancies відсутні. Verdict:
 - Pre-Verdict Review Package неповний;
 - хоча б одна застосовна category не перевірена;
 - існує blocking або undetermined discrepancy;
-- record не має accepted final disposition або final lifecycle state;
+- record не має accepted terminal disposition або final lifecycle state;
 - є невиправлений S2 або нерозв’язаний S3–S5;
 - candidate містить omission, addition або semantic change;
 - correction не verified або виконана поза authority;
@@ -747,6 +798,8 @@ Final Pilot Review Record містить:
   `disposition_date`, `verification_by` і `verification_date` для всіх records;
 - residual non-blocking items;
 - reviewer independence statement;
+- actor map, non-identity checks, disclosed conflicts і exception reference,
+  якщо застосовно;
 - final verdict;
 - verdict authority, date і evidence reference;
 - canonical-status statement.
@@ -768,7 +821,7 @@ Fidelity cycle завершений лише коли:
 - candidate і review evidence ідентифіковані;
 - усі categories перевірені;
 - кожна migration discrepancy має class, S0–S5, final record status і accepted
-  disposition;
+  terminal disposition;
 - кожен faithfully preserved source/intellectual issue має `severity: null`,
   verified preservation і accepted deferral;
 - усі blocking items закриті або процес завершено з `FAIL`;

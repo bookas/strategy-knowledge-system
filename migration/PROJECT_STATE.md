@@ -987,10 +987,21 @@ Independent methodology review завершено з результатом:
 
 **METHODOLOGY REVIEW: REVISE AND RE-REVIEW**
 
-Accepted findings F-01–F-05 є обов’язковими revision inputs. Controlled
-revision виконано; обидва artifacts залишаються `candidate` і потребують
-нового immutable review baseline, independent re-review та adjudication до
-початку RQ-01 pilot. Git commit candidate version сам по собі не є approval.
+Adjudication прийняло findings F-01–F-05 як required revision input. Після
+цього виконано first controlled revision і створено
+immutable candidate review baseline:
+
+`23166af810d950059aa0495e5699e195d9448059`
+
+Independent methodology re-review цього exact baseline завершено з
+результатом:
+
+**METHODOLOGY RE-REVIEW: REVISE AND RE-REVIEW**
+
+Accepted findings R2-F01–R2-F05 є inputs для поточної second controlled
+revision. Обидва artifacts залишаються `candidate`; methodology не approved,
+а RQ-01 pilot не authorized. Git commit candidate version сам по собі не є
+approval.
 
 # 18. Migration Restrictions
 
@@ -1012,9 +1023,15 @@ Following the established Part 01 migration baseline and the accepted first
 Codex Repository Comprehension Gate, the remaining pre-pilot controls are:
 
 Методологічний design для OQ-059 та OQ-060 залишається у статусі `candidate`.
-Поточний pre-pilot control — завершити controlled revision, зафіксувати exact
-candidate в immutable Git review baseline, провести independent re-review та
-отримати traceable approval decision.
+Поточний control — завершити second controlled revision за R2-F01–R2-F05.
+
+Після цього ще потрібні:
+
+1. immutable revised candidate baseline;
+2. independent methodology re-review round 2;
+3. final adjudication і traceable methodology approval або новий revision
+   decision;
+4. окрема RQ-01 Pilot Entry Gate evaluation.
 
 The post-migration source-of-truth hierarchy preserved as OQ-062 also remains
 unresolved and must be settled before canonical promotion.

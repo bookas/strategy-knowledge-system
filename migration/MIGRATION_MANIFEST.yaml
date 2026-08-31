@@ -51,9 +51,9 @@ migration_control_artifacts:
     status: "candidate"
     repository_path: "methodology/migration/migration-fidelity-protocol-v1.md"
     open_question: "OQ-059"
-    reviewed_candidate_sha256: "01F9248BD4B9001D3B2BCB33BAF54131F181F169F280DCE9CA0ACEFE5D69C365"
-    review_status: "revise_and_re_review"
-    approval_status: "pending_re_review"
+    current_reviewed_candidate_sha256: "F9E436C7CDE669B960F4DE1F3D8337575DFD5792962A972406F78EDF3274279C"
+    review_status: "second_controlled_revision"
+    approval_status: "not_approved"
 
   discrepancy_taxonomy:
     artifact_id: "SKS-MIG-DISC-001"
@@ -61,9 +61,9 @@ migration_control_artifacts:
     status: "candidate"
     repository_path: "methodology/migration/migration-discrepancy-taxonomy-v1.md"
     open_question: "OQ-060"
-    reviewed_candidate_sha256: "A3E2BE1D738CFDB07DBB6288A4D4B34179AE2B5044085E52BA1BAC1971505F0E"
-    review_status: "revise_and_re_review"
-    approval_status: "pending_re_review"
+    current_reviewed_candidate_sha256: "C94DA8F0E71EE265311F1DB72FF1CB7D81660826C3946910D8322830E7CC9F9D"
+    review_status: "second_controlled_revision"
+    approval_status: "not_approved"
 
   relationship:
     protocol_uses_taxonomy: true
@@ -105,6 +105,23 @@ migration_control_artifacts:
       - accepted
       - rejected
       - superseded
+    disposition_type:
+      - routing
+      - terminal
+    routing_disposition:
+      - requires_correction
+      - requires_human_review
+      - requires_source_adjudication
+      - requires_version_adjudication
+      - rejected_correction
+      - controlled_revision_required
+    terminal_disposition:
+      - accepted_no_change
+      - corrected_representation
+      - source_preserved_issue_deferred
+      - reclassified
+      - false_positive
+      - not_applicable
     intellectual_issue_status:
       - observed
       - recorded
@@ -121,11 +138,24 @@ migration_control_artifacts:
       decision_status: "accepted_as_required_revision_input"
       approval_effect: "none"
 
+    - review_id: "migration-methodology-review-002"
+      reviewed_baseline_kind: "immutable_git_commit"
+      immutable_git_baseline: true
+      baseline_commit: "23166af810d950059aa0495e5699e195d9448059"
+      protocol_sha256: "F9E436C7CDE669B960F4DE1F3D8337575DFD5792962A972406F78EDF3274279C"
+      taxonomy_sha256: "C94DA8F0E71EE265311F1DB72FF1CB7D81660826C3946910D8322830E7CC9F9D"
+      decision: "revise_and_re_review"
+      decision_status: "accepted_as_required_second_revision_input"
+      approval_effect: "none"
+
   current_revision:
-    status: "ready_for_immutable_review_baseline"
-    protocol_sha256: "F9E436C7CDE669B960F4DE1F3D8337575DFD5792962A972406F78EDF3274279C"
-    taxonomy_sha256: "C94DA8F0E71EE265311F1DB72FF1CB7D81660826C3946910D8322830E7CC9F9D"
-    immutable_git_baseline: false
+    status: "second_controlled_revision_in_progress"
+    source_review_id: "migration-methodology-review-002"
+    source_baseline_commit: "23166af810d950059aa0495e5699e195d9448059"
+    source_baseline_immutable: true
+    source_protocol_sha256: "F9E436C7CDE669B960F4DE1F3D8337575DFD5792962A972406F78EDF3274279C"
+    source_taxonomy_sha256: "C94DA8F0E71EE265311F1DB72FF1CB7D81660826C3946910D8322830E7CC9F9D"
+    revised_candidate_immutable_git_baseline: false
     approval_status: "not_approved"
     rq01_pilot_entry_authorized: false
 
@@ -577,15 +607,22 @@ process_progress:
   completed:
     - "Commit migration package and source DOCX baseline."
     - "Run Codex read-only repository comprehension test; externally adjudicated PASS WITH FINDINGS — ACCEPTED."
-    - "Створено candidate Migration Fidelity Protocol v1 для OQ-059."
-    - "Створено candidate Migration Discrepancy Taxonomy v1 для OQ-060."
+    - "Створено initial candidate Migration Fidelity Protocol v1 і Migration Discrepancy Taxonomy v1."
+    - "Проведено first independent methodology review: REVISE AND RE-REVIEW."
+    - "Adjudication прийняло findings F-01–F-05 як required revision input."
+    - "Виконано first controlled methodology revision за findings F-01–F-05."
+    - "Зафіксовано immutable candidate review baseline commit 23166af810d950059aa0495e5699e195d9448059."
+    - "Проведено independent methodology re-review; result: REVISE AND RE-REVIEW."
 
   current:
-    - "Зафіксувати revised methodology candidates в immutable Git review baseline і передати exact hashes на independent re-review."
+    - "Виконати second controlled methodology revision за accepted findings R2-F01–R2-F05."
 
   pending:
+    - "Зафіксувати second revised methodology candidates в immutable Git review baseline."
+    - "Провести independent methodology re-review round 2 для exact revised commit і hashes."
+    - "Отримати final adjudication та traceable methodology approval або новий revision decision."
+    - "Провести RQ-01 Pilot Entry Gate evaluation; conversion залишається неавторизованою до PASS."
     - "Define the post-migration source-of-truth hierarchy preserved as OQ-062 before canonical promotion."
-    - "Begin controlled RQ-01 DOCX-to-Markdown migration pilot."
 
   prohibited_before_pre_pilot_controls:
     - "Bulk DOCX-to-Markdown migration."

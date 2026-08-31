@@ -4,8 +4,8 @@ artifact_type: migration_control_methodology
 title: "Таксономія розбіжностей міграції v1"
 version: "1.0"
 status: candidate
-review_status: revise_and_re_review
-approval_status: pending_re_review
+review_status: second_controlled_revision
+approval_status: not_approved
 language: uk
 open_question: OQ-060
 used_by: "methodology/migration/migration-fidelity-protocol-v1.md"
@@ -181,11 +181,15 @@ evidence виконаної перевірки.
 - `detection_stage`;
 - `owner`;
 - `correction_authority`;
+- `correction_by` — actor, який виконав correction, або `null`;
 - `proposed_disposition`;
 - `accepted_disposition` — `null`, доки рішення не прийнято;
+- `disposition_type` — `routing` або `terminal` для proposed/accepted value;
 - `disposition_status` — `proposed`, `accepted`, `rejected` або `superseded`;
 - `disposition_by` — `null`, доки disposition не прийнято;
 - `disposition_date` — `null`, доки disposition не прийнято;
+- `disposition_history` — append-only history proposed, routing, downstream і
+  terminal decisions;
 - `record_status`;
 - `resolution_evidence`, якщо закрито;
 - `verification_by` — `null`, якщо verification ще не виконано або не
@@ -194,6 +198,7 @@ evidence виконаної перевірки.
   застосовується;
 - `intellectual_issue_status` — лише для `intellectual_issue`;
 - `adjudication_reference`, якщо потрібне;
+- `downstream_decision_reference`, якщо routing виконано;
 - `controlled_revision_reference`, якщо issue передано далі.
 
 Location має бути достатньо точною для повторного знаходження проблеми:
@@ -201,28 +206,63 @@ section/heading, paragraph, table/cell, footnote або інший стабіл�
 
 ## 7. Disposition vocabulary
 
-Рекомендовані machine-readable values:
+### 7.1 Routing dispositions
+
+Routing disposition визначає наступну дію, але не закриває record:
+
+- `requires_correction`;
+- `requires_human_review`;
+- `requires_source_adjudication`;
+- `requires_version_adjudication`;
+- `rejected_correction`;
+- `controlled_revision_required`.
+
+Accepted routing disposition може співіснувати лише з non-terminal
+`record_status`: `correction_required`, `disposition_pending` або
+`adjudication_required`. Воно не може співіснувати з `resolved` чи `deferred`
+і ніколи не задовольняє fidelity gate closure.
+
+Downstream requirement:
+
+- `requires_correction` → correction, independent verification і terminal
+  disposition;
+- `requires_human_review` → traceable human decision, після якого приймається
+  terminal disposition або новий routing step;
+- source/version adjudication routes → adjudication decision із reference,
+  після якого приймається terminal disposition;
+- `rejected_correction` → нова correction, accepted no-change decision або
+  adjudication, а потім terminal disposition;
+- `controlled_revision_required` → documented handoff; migration record може
+  завершитися лише окремим terminal disposition
+  `source_preserved_issue_deferred` після verified preservation.
+
+### 7.2 Terminal dispositions
+
+Terminal disposition описує завершений migration outcome:
 
 - `accepted_no_change` — verified non-semantic difference;
 - `corrected_representation` — representation відновлено за source;
 - `source_preserved_issue_deferred` — source issue збережено й передано далі;
-- `requires_human_review`;
-- `requires_source_adjudication`;
-- `requires_version_adjudication`;
 - `reclassified`;
 - `false_positive`;
-- `not_applicable`;
-- `rejected_correction` — запропонована correction порушувала fidelity;
-- `controlled_revision_required`.
+- `not_applicable`.
 
-Disposition не вважається завершеним без evidence і reviewer attribution.
+Terminal disposition може співіснувати з `resolved` або `deferred` лише після
+виконання gate-relevant closure conditions у §7.5. Для `reclassified`
+обов’язковий linked replacement record; для
+`source_preserved_issue_deferred` обов’язкові verified preservation і
+downstream handoff.
 
-### 7.1 Disposition status
+Жоден disposition не вважається завершеним без evidence і reviewer
+attribution.
+
+### 7.3 Disposition status
 
 - `proposed` — існує лише proposed disposition; gate-relevant рішення ще
   немає.
-- `accepted` — уповноважена особа прийняла `accepted_disposition` і вказала
-  `disposition_by` та `disposition_date`.
+- `accepted` — уповноважена особа прийняла routing або terminal
+  `accepted_disposition` і вказала `disposition_by` та `disposition_date`;
+  accepted routing value не означає closure.
 - `rejected` — proposed disposition відхилено; record залишається unresolved до
   нового proposal або adjudication.
 - `superseded` — попереднє proposal замінено новим із збереженням provenance.
@@ -232,15 +272,15 @@ Disposition acceptance authority:
 - Fidelity reviewer може прийняти representation disposition для S0–S4 лише
   після потрібної verification.
 - Source/version ambiguity, policy conflict або будь-який record із
-  `adjudication_required` може отримати accepted disposition лише через
-  traceable adjudication.
+  `adjudication_required` може отримати terminal accepted disposition лише
+  після traceable adjudication.
 - Fidelity reviewer може прийняти deferral faithfully preserved
   source/intellectual issue тільки як migration disposition. Це не є
   інтелектуальним verdict щодо самого issue.
 - `disposition_by` і, якщо застосовно, `adjudication_reference` мають однозначно
   ідентифікувати authority.
 
-### 7.2 Мінімальний record lifecycle
+### 7.4 Мінімальний record lifecycle
 
 `record_status` використовує лише такі values:
 
@@ -280,23 +320,36 @@ Classified
 → Disposition Pending
 → Deferred
 
-### 7.3 Gate-relevant resolved state
+Routing disposition залишає record у non-terminal state. Перехід до
+`resolved` або `deferred` дозволений лише після downstream action і прийняття
+terminal disposition.
+
+### 7.5 Gate-relevant resolved state
 
 Record є gate-relevant resolved лише якщо:
 
 1. `fidelity_effect` не дорівнює `undetermined`.
-2. `accepted_disposition` заповнено.
-3. `disposition_status: accepted`.
-4. `disposition_by`, `disposition_date` та `owner` заповнено.
-5. `record_status` дорівнює `resolved` або `deferred`.
-6. Для correction або exact-preservation claim заповнено `verification_by`,
+2. `accepted_disposition` належить до terminal dispositions із §7.2.
+3. `disposition_type: terminal`.
+4. `disposition_status: accepted`.
+5. `disposition_by`, `disposition_date` та `owner` заповнено.
+6. `record_status` дорівнює `resolved` або `deferred`.
+7. Для correction або exact-preservation claim заповнено `verification_by`,
    `verification_date` і `resolution_evidence`.
-7. Для `adjudication_required` існує `adjudication_reference`.
-8. Для deferred intellectual issue вказано `intellectual_issue_status` і, якщо
+8. Якщо record проходив routing, downstream decision/action завершено й
+   `downstream_decision_reference` заповнено.
+9. Для source/version adjudication існує `adjudication_reference`.
+10. Для deferred intellectual issue вказано `intellectual_issue_status` і, якщо
    вже створено, `controlled_revision_reference`.
+11. Для material correction `verification_by` не дорівнює `correction_by`.
 
-Сам запис proposed disposition або зміна `record_status` без цих полів не
-закриває discrepancy для gate.
+Proposed disposition, accepted routing disposition або зміна `record_status`
+без цих полів не закриває discrepancy для gate.
+
+У class definitions нижче поле **Required disposition** може називати
+первинний routing outcome. Якщо назване value належить до §7.1, воно визначає
+лише наступну дію; після неї record все одно потребує terminal accepted
+disposition із §7.2.
 
 ## 8. Класи розбіжностей
 
@@ -691,7 +744,7 @@ confirmation.
 2. Відкрита S2 migration discrepancy блокує verdict до correction/re-review
    або accepted reclassification.
 3. S3 migration discrepancy блокує, доки fidelity risk не отримав accepted
-   disposition.
+   terminal disposition.
 4. Source Defect і Potential Intellectual Issue мають `severity: null`, не
    виправляються в migration і не блокують fidelity після verified exact
    preservation та accepted deferral.
@@ -699,8 +752,9 @@ confirmation.
    отримує окремий linked migration discrepancy record із S0–S5.
 6. `PASS WITH NON-BLOCKING DISCREPANCIES` можливий лише за gate-relevant
    resolved records і повного evidence.
-7. Record із `fidelity_effect: undetermined`, `disposition_status`, відмінним
-   від `accepted`, або non-final `record_status` блокує verdict.
+7. Record із `fidelity_effect: undetermined`, `disposition_type`, відмінним від
+   `terminal`, `disposition_status`, відмінним від `accepted`, або non-final
+   `record_status` блокує verdict.
 8. Закритий record не можна видаляти; provenance зберігається.
 
 ## 10. Machine-readable record example
@@ -728,17 +782,21 @@ detected_by: "<actor-or-role>"
 detection_stage: "fidelity_review"
 owner: "<actor-or-role>"
 correction_authority: "operator_with_review"
+correction_by: null
 proposed_disposition: "corrected_representation"
 accepted_disposition: null
+disposition_type: "terminal"
 disposition_status: "proposed"
 disposition_by: null
 disposition_date: null
+disposition_history: []
 record_status: "correction_required"
 resolution_evidence: []
 verification_by: null
 verification_date: null
 intellectual_issue_status: null
 adjudication_reference: null
+downstream_decision_reference: null
 controlled_revision_reference: null
 ```
 
@@ -757,7 +815,7 @@ Keys та enum-like values є stable technical identifiers. Описові value
 7. Виконати дозволену correction або передати record на review/adjudication.
 8. Провести verification і заповнити verification provenance.
 9. Прийняти або відхилити disposition через уповноважене рішення.
-10. Перевести record у `resolved` або `deferred` лише після виконання §7.3.
+10. Перевести record у `resolved` або `deferred` лише після виконання §7.5.
 11. Передати повний log до Fidelity Protocol для final verdict.
 
 ## 12. Межа між migration і intellectual revision
