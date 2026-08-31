@@ -1,0 +1,29 @@
+# Normalize text files to LF in the repository
+* text=auto
+
+# Knowledge system source files
+*.md   text eol=lf
+*.yaml text eol=lf
+*.yml  text eol=lf
+*.json text eol=lf
+*.txt  text eol=lf
+*.csv  text eol=lf
+
+# Shell / scripts
+*.sh   text eol=lf
+*.py   text eol=lf
+
+# Windows-specific scripts
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+# Binary/document artifacts
+*.docx binary
+*.xlsx binary
+*.pptx binary
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
