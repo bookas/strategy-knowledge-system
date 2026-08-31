@@ -266,4 +266,8 @@ Explicit documented decision
 9. Что является canonical source на текущей стадии.
 10. Какие изменения запрещены до окончания миграции.
 
-После прохождения этого Gate можно переходить к формализации repository architecture и migration pilot RQ-01.
+Після проходження цього історичного phase Gate можна переходити до формалізації
+repository architecture та підготовки migration pilot RQ-01. Це не є чинною
+operational authorization на conversion: її визначають live Manifest, Project
+State та окремий RQ-01 Pilot Entry Gate; до його `PASS` RQ-01 залишається
+неавторизованим.

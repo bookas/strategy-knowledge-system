@@ -5,7 +5,7 @@ manifest:
   area: "Strategy Knowledge Book"
   part: "Part 01 — Strategy"
   purpose: "Machine-readable migration inventory for source research artifacts."
-  migration_stage: "post-final-methodology-review-pre-governance-consistency-review"
+  migration_stage: "post-controlled-governance-correction-pre-confirmation-review"
   status: "in-progress"
 
   baseline:
@@ -37,6 +37,13 @@ governance:
     intended_future_working_format: "Markdown"
     markdown_is_canonical_immediately_after_conversion: false
     canonical_promotion_requires_fidelity_validation: true
+    fidelity_pass_implies_canonical_status: false
+    canonical_promotion_requires_separate_authority_and_provenance: true
+
+  review_state_semantics:
+    methodology_artifact_front_matter_review_status: "artifact_version_provenance"
+    live_process_review_state_source: "migration/MIGRATION_MANIFEST.yaml"
+    artifact_front_matter_alone_establishes_current_review_or_approval_state: false
 
   intellectual_revision_during_migration: false
 
@@ -188,7 +195,7 @@ migration_control_artifacts:
     revised_taxonomy_sha256: "239FE10DFCC5831D2B01CEFDDEE8A04BF86D76DD73E4CB02717F5A0B703CDF72"
     final_narrow_review_id: "migration-methodology-review-003"
     final_narrow_review_status: "completed"
-    current_process_stage: "post_final_methodology_review_pre_governance_consistency_review"
+    current_process_stage: "post_controlled_governance_correction_pre_confirmation_review"
     approval_status: "not_approved"
     rq01_pilot_entry_authorized: false
 
@@ -214,8 +221,19 @@ migration_status_values:
   - fidelity_review
   - fidelity_pass
   - fidelity_fail
-  - canonical_candidate
+
+canonical_status_values:
+  - historical_docx_baseline
+  - superseded_historical_artifact
+  - not_canonical
+  - promotion_pending
   - canonical
+
+status_dimension_policy:
+  migration_status_tracks: "лише conversion та fidelity lifecycle"
+  canonical_status_tracks: "окремий canonical-promotion lifecycle"
+  fidelity_pass_automatically_changes_canonical_status: false
+  canonical_promotion_requires_separate_authority_and_provenance: true
 
 artifact_status_values:
   - current
@@ -649,12 +667,14 @@ process_progress:
     - "Виконано second controlled methodology revision за findings R2-F01–R2-F05."
     - "Зафіксовано immutable revised candidate baseline commit 56d0f5391aa000560baad6d66a50a8b129d633ae."
     - "Проведено final narrow methodology re-review: Protocol APPROVE; Taxonomy APPROVE; metadata synchronization required."
+    - "Проведено repository governance consistency review: REVISE; findings GOV-001–GOV-004 accepted for controlled correction."
+    - "Виконано authorized controlled governance consistency correction за findings GOV-001–GOV-004."
 
   current:
-    - "Підготувати repository governance consistency review після factual process metadata synchronization."
+    - "Підготувати narrow governance confirmation review після controlled correction."
 
   pending:
-    - "Провести repository governance consistency review."
+    - "Провести narrow governance confirmation review після controlled correction."
     - "Отримати final methodology adjudication та traceable approval або новий revision decision."
     - "Провести final adjudication OQ-059 та OQ-060, якщо це визначено governance process."
     - "Провести RQ-01 Pilot Entry Gate evaluation; conversion залишається неавторизованою до PASS."

@@ -56,9 +56,14 @@ Release status:
 
 **Part 01 has not yet been released as v1.0.**
 
-Current readiness:
+Historical Part 01 phase-readiness assessment:
 
 **Ready for controlled migration, controlled revision, consolidated synthesis, and final Part 01 gate.**
+
+Це формулювання фіксує історичну phase readiness, а не чинну operational
+authorization. Поточні повноваження визначають live Manifest, цей Project State
+та застосовний Entry Gate. Методологію формально не схвалено, RQ-01 Pilot Entry
+Gate не пройдено, а RQ-01 conversion залишається неавторизованою.
 
 # 3. Part 01 Purpose
 
@@ -1048,23 +1053,29 @@ Codex Repository Comprehension Gate, the remaining pre-pilot controls are:
 
 Методологічний design для OQ-059 та OQ-060 залишається у статусі `candidate`.
 Second controlled revision, immutable baseline `56d0f53` і final narrow
-methodology re-review завершено. Поточний process stage — підготовка repository
-governance consistency review.
+methodology re-review завершено. Repository governance consistency review також
+завершено з verdict `REVISE`; findings GOV-001–GOV-004 прийнято для цієї
+controlled governance correction і виправлено. Поточний process stage —
+підготовка narrow governance confirmation review.
 
 Наступні controls:
 
-1. repository governance consistency review;
+1. narrow governance confirmation review після завершення authorized
+   corrections;
 2. final methodology adjudication і traceable approval або новий revision
    decision;
 3. final adjudication OQ-059/OQ-060, якщо це визначено governance process;
 4. окрема RQ-01 Pilot Entry Gate evaluation.
 
-The post-migration source-of-truth hierarchy preserved as OQ-062 also remains
-unresolved and must be settled before canonical promotion.
+Post-migration source-of-truth hierarchy, збережена як OQ-062, також лишається
+невирішеною. Сам по собі цей open question не забороняє faithful RQ-01 candidate
+conversion після майбутнього чинного Pilot Entry Gate, але має бути вирішений
+до canonical promotion; до того часу candidate Markdown залишається
+noncanonical.
 
-This state update does not authorize RQ-01 conversion. A controlled RQ-01
-migration pilot may begin only after its required pre-pilot controls are
-defined and approved.
+Це оновлення state не авторизує RQ-01 conversion. Controlled RQ-01 migration
+pilot може початися лише після визначення й схвалення обов’язкових pre-pilot
+controls та verdict `PASS` його Pilot Entry Gate.
 
 # 20. State Snapshot Summary
 

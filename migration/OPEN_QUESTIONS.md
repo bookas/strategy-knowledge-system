@@ -1748,6 +1748,15 @@ Original DOCX remains historical baseline.
 
 Future canonical Markdown requires fidelity approval.
 
+## Governance / Gate Classification
+
+OQ-062 залишається відкладеним і невирішеним. Сам по собі він не забороняє
+faithful DOCX → Markdown candidate conversion після чинного RQ-01 Pilot Entry
+Gate. Будь-який отриманий candidate Markdown залишається noncanonical.
+
+OQ-062 блокує canonical promotion, доки post-migration source-of-truth
+hierarchy не буде явно adjudicated.
+
 ## Revisit
 
 Before canonical promotion of RQ-01.
@@ -1896,7 +1905,12 @@ The following questions are most likely to block near-term migration or Part 01 
 
 - OQ-059 — Migration Fidelity Threshold
 - OQ-060 — Migration Discrepancy Classification
-- OQ-062 — Post-migration Source-of-Truth hierarchy
+
+## Блокування Canonical Promotion
+
+- OQ-062 — Post-migration Source-of-Truth hierarchy (`Deferred` / невирішене;
+  саме по собі не блокує faithful candidate conversion після чинного RQ-01
+  Pilot Entry Gate)
 
 ## Part 01 Release Blocking
 
