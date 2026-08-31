@@ -62,8 +62,9 @@ Historical Part 01 phase-readiness assessment:
 
 Це формулювання фіксує історичну phase readiness, а не чинну operational
 authorization. Поточні повноваження визначають live Manifest, цей Project State
-та застосовний Entry Gate. Методологію формально не схвалено, RQ-01 Pilot Entry
-Gate не пройдено, а RQ-01 conversion залишається неавторизованою.
+та застосовний Entry Gate. Migration-control methodology формально схвалено,
+але RQ-01 Pilot Entry Gate не пройдено, а RQ-01 conversion залишається
+неавторизованою.
 
 # 3. Part 01 Purpose
 
@@ -981,7 +982,7 @@ Not yet started.
 
 Migration-control methodology:
 
-Створено два candidate artifacts:
+Створено й final methodology adjudication схвалено два artifacts:
 
 - [`Migration Fidelity Protocol v1`](../methodology/migration/migration-fidelity-protocol-v1.md),
   пов’язаний з OQ-059;
@@ -1015,10 +1016,16 @@ recommendations:
 - Migration Discrepancy Taxonomy v1 — `APPROVE`.
 
 Final review verdict залишився `REVISE AND RE-REVIEW` виключно через stale
-process metadata R2-F04/R2-F05, яке синхронізується цією зміною. Review
-recommendation не є approval: обидва artifacts залишаються `candidate`,
-methodology не approved, а RQ-01 pilot не authorized. Git commit candidate
-version сам по собі не є approval.
+process metadata R2-F04/R2-F05. На тому етапі review recommendation не було
+approval: обидва artifacts залишалися `candidate`, а Git commit candidate
+version сам по собі не надавав approval.
+
+Після controlled governance correction narrow Governance Confirmation Review
+повернув `PASS`. Final methodology adjudication від `2026-08-31` окремим
+Methodology Approval Record `methodology-approval-001` схвалило обидва exact
+artifacts у baseline `755255560207f3f0f8ab925a5be895c340875ee3` з їхніми
+зафіксованими SHA-256. Це adjudication, а не попередня review recommendation, є
+approval act. Approval не авторизує RQ-01 conversion або canonical promotion.
 
 Completed methodology chronology:
 
@@ -1031,6 +1038,10 @@ Completed methodology chronology:
 7. controlled methodology revision #2;
 8. immutable revised candidate baseline `56d0f53`;
 9. final narrow methodology re-review.
+10. controlled governance correction і narrow governance confirmation review
+    з verdict `PASS`;
+11. final methodology adjudication та Methodology Approval Record
+    `methodology-approval-001`.
 
 # 18. Migration Restrictions
 
@@ -1051,21 +1062,17 @@ Migration and intellectual revision remain separate.
 Following the established Part 01 migration baseline and the accepted first
 Codex Repository Comprehension Gate, the remaining pre-pilot controls are:
 
-Методологічний design для OQ-059 та OQ-060 залишається у статусі `candidate`.
-Second controlled revision, immutable baseline `56d0f53` і final narrow
-methodology re-review завершено. Repository governance consistency review також
-завершено з verdict `REVISE`; findings GOV-001–GOV-004 прийнято для цієї
-controlled governance correction і виправлено. Поточний process stage —
-підготовка narrow governance confirmation review.
+Методологію для OQ-059 та OQ-060 схвалено через Methodology Approval Record
+`methodology-approval-001`; обидва open questions adjudicated як sufficiently
+operationalized і мають статус `Resolved`. Governance consistency correction
+завершено та підтверджено narrow confirmation review з verdict `PASS`.
+Поточний process stage — підготовка окремої RQ-01 Pilot Entry Gate evaluation.
 
 Наступні controls:
 
-1. narrow governance confirmation review після завершення authorized
-   corrections;
-2. final methodology adjudication і traceable approval або новий revision
-   decision;
-3. final adjudication OQ-059/OQ-060, якщо це визначено governance process;
-4. окрема RQ-01 Pilot Entry Gate evaluation.
+1. окрема RQ-01 Pilot Entry Gate evaluation;
+2. у разі `PASS` — окрема traceable authorization для faithful RQ-01 candidate
+   conversion у межах Entry Gate Decision Record.
 
 Post-migration source-of-truth hierarchy, збережена як OQ-062, також лишається
 невирішеною. Сам по собі цей open question не забороняє faithful RQ-01 candidate
@@ -1073,9 +1080,10 @@ conversion після майбутнього чинного Pilot Entry Gate, а
 до canonical promotion; до того часу candidate Markdown залишається
 noncanonical.
 
-Це оновлення state не авторизує RQ-01 conversion. Controlled RQ-01 migration
-pilot може початися лише після визначення й схвалення обов’язкових pre-pilot
-controls та verdict `PASS` його Pilot Entry Gate.
+Methodology approval не авторизує RQ-01 conversion. Воно дозволяє лише
+підготувати й провести окрему RQ-01 Pilot Entry Gate evaluation. Controlled
+RQ-01 migration pilot може початися лише після verdict `PASS` і traceable Entry
+Gate Decision Record.
 
 # 20. State Snapshot Summary
 

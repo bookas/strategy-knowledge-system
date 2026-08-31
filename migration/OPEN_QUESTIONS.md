@@ -1619,7 +1619,7 @@ Structured knowledge design.
 # OQ-059 — What Is the Correct Migration Fidelity Threshold?
 
 **Priority:** P1  
-**Status:** Partially Resolved
+**Status:** Resolved
 
 ## Question
 
@@ -1639,13 +1639,15 @@ What constitutes a sufficient DOCX → Markdown fidelity PASS?
 - review sections;
 - ordering.
 
-## Remaining Issue
+## Historical Remaining Issue
 
-Need clear handling of formatting that has no semantic importance.
+На момент первинної фіксації питання залишалося незрозумілим, як обробляти
+formatting без semantic importance. Схвалений Protocol операціоналізував цю
+межу; historical uncertainty збережено тут як provenance.
 
 ## Результат методологічного проєктування v1
 
-Створено candidate artifact:
+На етапі методологічного проєктування створено candidate artifact:
 
 [`Migration Fidelity Protocol v1`](../methodology/migration/migration-fidelity-protocol-v1.md)
 
@@ -1653,20 +1655,34 @@ Protocol визначає десять обов’язкових fidelity catego
 correction і re-review rules, reviewer independence, три fidelity verdicts та
 окремий RQ-01 Pilot Entry Gate.
 
-Питання має статус `Partially Resolved`, оскільки operational threshold уже
-визначено, але artifact ще потребує окремого review/approval і перевірки в
-RQ-01 pilot. До approval OQ-059 залишається pre-pilot blocking question.
+До final adjudication питання мало статус `Partially Resolved`: operational
+threshold уже було визначено, але artifact ще потребував окремого
+review/approval і перевірки в RQ-01 pilot.
+
+## Final Adjudication
+
+Final methodology adjudication від `2026-08-31` схвалило exact Migration
+Fidelity Protocol v1 за Methodology Approval Record
+`methodology-approval-001`, immutable Git baseline
+`755255560207f3f0f8ab925a5be895c340875ee3` і SHA-256
+`CFD075517C19BF467E11382A75274B7A69A0E3C1D05F8B1A9F73C4632BBA6490`.
+
+Adjudication визначило, що Migration Fidelity Threshold достатньо
+операціоналізовано для використання в RQ-01 pilot. OQ-059 тому має статус
+`Resolved`. Майбутні empirical findings pilot можуть створити підставу для
+controlled revision, але не є невиконаною передумовою цієї resolution.
 
 ## Revisit
 
-Before RQ-01 migration pilot.
+Лише якщо RQ-01 pilot виявить material methodology defect, що потребує renewed
+review та adjudication.
 
 ---
 
 # OQ-060 — How Should Migration Discrepancies Be Classified?
 
 **Priority:** P2  
-**Status:** Partially Resolved
+**Status:** Resolved
 
 ## Question
 
@@ -1682,7 +1698,7 @@ Should migration findings distinguish:
 
 ## Результат методологічного проєктування v1
 
-Створено candidate artifact:
+На етапі методологічного проєктування створено candidate artifact:
 
 [`Migration Discrepancy Taxonomy v1`](../methodology/migration/migration-discrepancy-taxonomy-v1.md)
 
@@ -1690,14 +1706,27 @@ Taxonomy визначає класи A–O, severity S0–S5, correction authori
 record fields, disposition vocabulary та критичну межу між representation
 error і Potential Intellectual Issue.
 
-Питання має статус `Partially Resolved`, оскільки класифікацію вже
-операціоналізовано, але artifact ще потребує окремого review/approval і
-перевірки на фактичних discrepancies RQ-01 pilot. До approval OQ-060
-залишається pre-pilot blocking question.
+До final adjudication питання мало статус `Partially Resolved`: класифікацію
+вже було операціоналізовано, але artifact ще потребував окремого
+review/approval і перевірки на фактичних discrepancies RQ-01 pilot.
+
+## Final Adjudication
+
+Final methodology adjudication від `2026-08-31` схвалило exact Migration
+Discrepancy Taxonomy v1 за Methodology Approval Record
+`methodology-approval-001`, immutable Git baseline
+`755255560207f3f0f8ab925a5be895c340875ee3` і SHA-256
+`239FE10DFCC5831D2B01CEFDDEE8A04BF86D76DD73E4CB02717F5A0B703CDF72`.
+
+Adjudication визначило, що Migration Discrepancy Classification достатньо
+операціоналізовано для використання в RQ-01 pilot. OQ-060 тому має статус
+`Resolved`. Майбутні empirical findings pilot можуть створити підставу для
+controlled revision, але не є невиконаною передумовою цієї resolution.
 
 ## Revisit
 
-Before RQ-01 migration pilot.
+Лише якщо RQ-01 pilot виявить material methodology defect, що потребує renewed
+review та adjudication.
 
 ---
 
@@ -1899,12 +1928,16 @@ Part 01 Exit Gate.
 
 # 4. Current Blocking Questions
 
-The following questions are most likely to block near-term migration or Part 01 release if left unresolved.
+Наведені нижче classifications відрізняють колишні migration blockers, уже
+вирішені для operational use, від питань, які досі блокують canonical promotion
+або Part 01 release.
 
-## Migration Blocking
+## Колишні Migration Blockers, Вирішені для Operational Use
 
-- OQ-059 — Migration Fidelity Threshold
-- OQ-060 — Migration Discrepancy Classification
+- OQ-059 — Migration Fidelity Threshold (`Resolved` через final methodology
+  adjudication; більше не блокує Pilot Entry Gate evaluation)
+- OQ-060 — Migration Discrepancy Classification (`Resolved` через final
+  methodology adjudication; більше не блокує Pilot Entry Gate evaluation)
 
 ## Блокування Canonical Promotion
 

@@ -5,7 +5,7 @@ manifest:
   area: "Strategy Knowledge Book"
   part: "Part 01 — Strategy"
   purpose: "Machine-readable migration inventory for source research artifacts."
-  migration_stage: "post-controlled-governance-correction-pre-confirmation-review"
+  migration_stage: "post-final-methodology-adjudication-pre-rq01-entry-gate"
   status: "in-progress"
 
   baseline:
@@ -55,28 +55,31 @@ migration_control_artifacts:
   fidelity_protocol:
     artifact_id: "SKS-MIG-FID-001"
     version: "v1"
-    status: "candidate"
+    status: "approved"
     repository_path: "methodology/migration/migration-fidelity-protocol-v1.md"
     open_question: "OQ-059"
     current_reviewed_candidate_sha256: "CFD075517C19BF467E11382A75274B7A69A0E3C1D05F8B1A9F73C4632BBA6490"
     review_status: "final_narrow_review_completed"
     review_recommendation: "approve"
-    approval_status: "not_approved"
+    approval_status: "approved"
+    approval_record_id: "methodology-approval-001"
 
   discrepancy_taxonomy:
     artifact_id: "SKS-MIG-DISC-001"
     version: "v1"
-    status: "candidate"
+    status: "approved"
     repository_path: "methodology/migration/migration-discrepancy-taxonomy-v1.md"
     open_question: "OQ-060"
     current_reviewed_candidate_sha256: "239FE10DFCC5831D2B01CEFDDEE8A04BF86D76DD73E4CB02717F5A0B703CDF72"
     review_status: "final_narrow_review_completed"
     review_recommendation: "approve"
-    approval_status: "not_approved"
+    approval_status: "approved"
+    approval_record_id: "methodology-approval-001"
 
   relationship:
     protocol_uses_taxonomy: true
     taxonomy_defines_fidelity_verdict_independently: false
+    methodology_approved: true
     pilot_entry_authorized: false
     canonical_promotion_authorized: false
 
@@ -137,6 +140,37 @@ migration_control_artifacts:
       - deferred
       - handed_off
 
+  methodology_approval_records:
+    - approval_id: "methodology-approval-001"
+      decision: "approved"
+      decision_by: "Codex acting as repository-authorized adjudicator"
+      authority_basis: "Explicit repository authorization in the FINAL METHODOLOGY ADJUDICATION mandate"
+      exact_git_commit: "755255560207f3f0f8ab925a5be895c340875ee3"
+      decision_date: "2026-08-31"
+      review_recommendation_is_approval: false
+      adjudication_is_approval_act: true
+      governance_confirmation_result: "PASS"
+      review_adjudication_references:
+        - "migration-methodology-review-003"
+        - "GOVERNANCE CONFIRMATION REVIEW: PASS"
+        - "FINAL METHODOLOGY ADJUDICATION"
+      artifacts:
+        - artifact_id: "SKS-MIG-FID-001"
+          version: "v1"
+          artifact_sha256: "CFD075517C19BF467E11382A75274B7A69A0E3C1D05F8B1A9F73C4632BBA6490"
+          decision: "approved"
+          adjudication_decision: "APPROVE"
+        - artifact_id: "SKS-MIG-DISC-001"
+          version: "v1"
+          artifact_sha256: "239FE10DFCC5831D2B01CEFDDEE8A04BF86D76DD73E4CB02717F5A0B703CDF72"
+          decision: "approved"
+          adjudication_decision: "APPROVE"
+      accepted_findings_disposition: "Усі accepted methodology findings виправлено; governance consistency підтверджено verdict PASS."
+      approval_scope: "Лише exact artifacts, hashes і immutable Git baseline, названі в цьому record."
+      material_change_policy: "Майбутні material methodology changes потребують renewed review та adjudication."
+      rq01_pilot_entry_authorized_by_this_record: false
+      canonical_promotion_authorized_by_this_record: false
+
   review_rounds:
     - review_id: "migration-methodology-review-001"
       baseline_status: "historical_superseded_review_baseline"
@@ -195,8 +229,9 @@ migration_control_artifacts:
     revised_taxonomy_sha256: "239FE10DFCC5831D2B01CEFDDEE8A04BF86D76DD73E4CB02717F5A0B703CDF72"
     final_narrow_review_id: "migration-methodology-review-003"
     final_narrow_review_status: "completed"
-    current_process_stage: "post_controlled_governance_correction_pre_confirmation_review"
-    approval_status: "not_approved"
+    current_process_stage: "post_final_methodology_adjudication_pre_rq01_entry_gate"
+    approval_status: "approved"
+    approval_record_id: "methodology-approval-001"
     rq01_pilot_entry_authorized: false
 
 paths:
@@ -669,14 +704,14 @@ process_progress:
     - "Проведено final narrow methodology re-review: Protocol APPROVE; Taxonomy APPROVE; metadata synchronization required."
     - "Проведено repository governance consistency review: REVISE; findings GOV-001–GOV-004 accepted for controlled correction."
     - "Виконано authorized controlled governance consistency correction за findings GOV-001–GOV-004."
+    - "Проведено narrow governance confirmation review: PASS."
+    - "Final methodology adjudication схвалило Protocol і Taxonomy exact baseline 755255560207f3f0f8ab925a5be895c340875ee3 через Methodology Approval Record methodology-approval-001."
+    - "OQ-059 та OQ-060 adjudicated як sufficiently operationalized і переведено у статус Resolved."
 
   current:
-    - "Підготувати narrow governance confirmation review після controlled correction."
+    - "Підготувати та провести окрему RQ-01 Pilot Entry Gate evaluation; conversion залишається неавторизованою до PASS."
 
   pending:
-    - "Провести narrow governance confirmation review після controlled correction."
-    - "Отримати final methodology adjudication та traceable approval або новий revision decision."
-    - "Провести final adjudication OQ-059 та OQ-060, якщо це визначено governance process."
     - "Провести RQ-01 Pilot Entry Gate evaluation; conversion залишається неавторизованою до PASS."
     - "Define the post-migration source-of-truth hierarchy preserved as OQ-062 before canonical promotion."
 
