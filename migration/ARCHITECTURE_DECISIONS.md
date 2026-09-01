@@ -1508,6 +1508,65 @@ A materially justified challenge should instead create a review finding.
 
 ---
 
+# ADR-051 — Use a Lean Batch Pipeline After the RQ-01 Migration Pilot
+
+**Status:** Accepted
+
+## Context
+
+RQ-01 completed the controlled DOCX → Markdown pilot with verdict `PASS WITH
+NON-BLOCKING DISCREPANCIES`. The pilot showed that deterministic identity,
+text, structure, table and reference checks can carry routine comparison cost,
+while full visual and exhaustive manual comparison add value primarily when a
+risk signal is present.
+
+## Decision
+
+Approve Lean Migration Pipeline v2 as the scoped operational profile for
+legacy DOCX → noncanonical Markdown migration RQ-02–RQ-11 and authorize those
+artifacts as one migration series. Do not repeat per-chapter Entry Gates or
+methodology approvals while source class, methodology, authority and risk
+conditions remain unchanged.
+
+The standard flow is:
+
+Source identity
+→ Deterministic conversion
+→ Automated fidelity checks
+→ Independent difference-focused review
+→ Correction only for material discrepancies
+→ Fidelity closure
+→ Commit
+
+Full visual QA, exhaustive manual comparison and separate adjudication are
+risk-triggered. Escalation is required only for ambiguous/changed source
+identity, unsupported or complex DOCX structures, automated material
+differences, semantic uncertainty from independent review, or material
+methodology change.
+
+## Governance Boundary
+
+This scoped v2 profile governs routine comparison mechanics for RQ-02–RQ-11
+where they differ from the RQ-01 pilot procedure. Migration Fidelity Protocol
+v1 and Migration Discrepancy Taxonomy v1 continue to govern preservation,
+discrepancy classification, correction provenance, reviewer independence and
+the separation of fidelity from canonical promotion.
+
+RQ-01 remains noncanonical. OQ-062 remains unresolved. Translation, theory
+revision, research-content changes and canonical promotion are not authorized.
+
+## Consequences
+
+- a reusable deterministic converter/checker is the normal execution control;
+- each source receives an identity and complexity screen, not a new Entry Gate;
+- each candidate still receives independent difference-focused review and a
+  fidelity closure record;
+- any escalation trigger pauses the affected artifact without automatically
+  pausing unaffected artifacts in the series;
+- canonical promotion remains a separate future governance action.
+
+---
+
 # 4. Current Decision Summary
 
 ## Accepted Core Decisions

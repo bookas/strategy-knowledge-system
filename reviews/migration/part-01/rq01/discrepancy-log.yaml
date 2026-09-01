@@ -1,7 +1,7 @@
 log:
   log_id: "RQ01-MIG-DISCREPANCY-LOG-001"
   rq_id: "RQ-01"
-  status: "initialized_empty"
+  status: "fidelity_review_complete_pass_with_non_blocking_discrepancies"
   taxonomy:
     artifact_id: "SKS-MIG-DISC-001"
     version: "v1"
@@ -19,12 +19,29 @@ log:
     size_bytes: 50707
   candidate_identity:
     repository_path: "knowledge-books/strategy/part-01/chapters/RQ01_Nature.md"
-    sha256: null
-    git_or_worktree_identity: null
+    sha256: "BA8B7A503C75C2EA0988C67D8B82352B10A379934E0F54571E74F6036FED8CDA"
+    git_or_worktree_identity: "git_worktree_blob:44f3b4c5d2dafbd24955d6e033342a9b988e658c"
     canonical_status: "not_canonical"
   authorization:
-    rq01_pilot_entry_authorized: false
+    rq01_pilot_entry_authorized: true
+    entry_gate_decision_id: "rq01-pilot-entry-gate-001"
     canonical_promotion_authorized: false
+  conversion_execution:
+    exact_git_baseline: "8dc8ca6f122ee57e85c0eba0a2bc0302a6ee9036"
+    converter_role: "Codex Conversion Operator"
+    actual_execution_identity_context: "OpenAI Codex primary task context (/root), acting solely as the authorized RQ-01 Conversion Operator"
+    execution_date: "2026-08-31"
+    evidence_package: "reviews/migration/part-01/rq01/conversion-evidence.json"
+    fidelity_verdict_issued: false
+  independent_fidelity_review:
+    reviewer_identity: "OpenAI Codex isolated review context (/root/rq01_independent_fidelity_review), acting solely as Independent Fidelity Reviewer"
+    independence_statement: "Fresh isolated review context; not the Conversion Operator and not an author of candidate content or corrections."
+    review_date: "2026-08-31"
+    reviewer_verdict: "CONDITIONAL PASS"
+    protocol_verdict: "RQ-01 PILOT FIDELITY: PASS WITH NON-BLOCKING DISCREPANCIES"
+    material_discrepancies: 0
+    correction_required: false
+    final_pilot_review_record: "reviews/migration/part-01/rq01/final-pilot-review-record.yaml"
 
 mandate_field_mapping:
   taxonomy_class: "class"
@@ -85,4 +102,174 @@ entry_schema:
   downstream_decision_reference: "downstream decision reference or null"
   controlled_revision_reference: "controlled revision reference or null"
 
-entries: []
+entries:
+  - discrepancy_id: "RQ01-MIG-N-001"
+    rq_id: "RQ-01"
+    record_kind: "migration_discrepancy"
+    artifact_id: "STR-P01-RQ01"
+    source_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ01_Nature_v1.docx"
+    source_baseline_sha: "8dc8ca6f122ee57e85c0eba0a2bc0302a6ee9036"
+    source_hash: "sha256:81639A1143B98E7CFC763910760613458A10BF83ED732CE360FF0DA11A05CD36; git_blob:b86a93605a785f179c8c461e38d604056f9e2672"
+    target_path: "knowledge-books/strategy/part-01/chapters/RQ01_Nature.md"
+    source_identity: "Exact authorized source path, SHA-256, Git blob and 50,707-byte size reverified before and after conversion."
+    candidate_identity: "sha256:BA8B7A503C75C2EA0988C67D8B82352B10A379934E0F54571E74F6036FED8CDA; git_worktree_blob:44f3b4c5d2dafbd24955d6e033342a9b988e658c"
+    class: "N"
+    secondary_classes: []
+    severity: "S1"
+    fidelity_effect: "non_blocking"
+    source_location: "Repeated header and footer on all 11 source pages"
+    target_location: "Opening identity block and non-body page-furniture disposition in conversion evidence"
+    source_observation: "Source repeats 'STRATEGY KNOWLEDGE BOOK | PART 01 | RQ-01 NATURE' in the header and 'Учебная исследовательская версия • v1.0 • 30.08.2026 | [page]' in the footer."
+    target_observation: "Candidate does not repeat Word page furniture per rendered page; identity/version content remains in the opening source content, and exact header/footer text is preserved in conversion evidence."
+    migration_fidelity_risk: "Repeated provenance or version identity could be overlooked if the page-furniture disposition were not verified."
+    evidence:
+      - "reviews/migration/part-01/rq01/conversion-evidence.json#evidence_package.conversion_evidence.formatting_and_page_furniture"
+      - "11/11 source pages and 11/11 candidate QA pages inspected by Conversion Operator"
+    detected_by: "OpenAI Codex primary task context (/root), acting solely as the authorized RQ-01 Conversion Operator"
+    detected_date: "2026-08-31"
+    detection_stage: "conversion"
+    owner: "Independent Fidelity Reviewer"
+    correction_required: false
+    correction_authority: "human_review"
+    correction_by: null
+    correction_date: null
+    verification_required: true
+    verification_by: "OpenAI Codex isolated review context (/root/rq01_independent_fidelity_review), acting solely as Independent Fidelity Reviewer"
+    verification_date: "2026-08-31"
+    proposed_disposition: "accepted_no_change"
+    accepted_disposition: "accepted_no_change"
+    disposition_type: "terminal"
+    disposition_status: "accepted"
+    disposition_by: "OpenAI Codex isolated review context (/root/rq01_independent_fidelity_review), acting solely as Independent Fidelity Reviewer"
+    disposition_date: "2026-08-31"
+    disposition_history:
+      - action: "proposed"
+        disposition: "accepted_no_change"
+        by: "Codex Conversion Operator"
+        date: "2026-08-31"
+      - action: "verified_and_accepted"
+        disposition: "accepted_no_change"
+        by: "OpenAI Codex isolated review context (/root/rq01_independent_fidelity_review), acting solely as Independent Fidelity Reviewer"
+        date: "2026-08-31"
+        evidence: "Independent normalized text/structure review confirmed page furniture is non-body normalization and all knowledge-bearing identity/version content is preserved."
+    record_status: "resolved"
+    resolution_evidence: "reviews/migration/part-01/rq01/final-pilot-review-record.yaml#final_pilot_review_record.discrepancy_final_snapshot"
+    intellectual_issue_status: null
+    adjudication_required: false
+    adjudication_reference: null
+    downstream_decision_reference: null
+    controlled_revision_reference: null
+
+  - discrepancy_id: "RQ01-MIG-N-002"
+    rq_id: "RQ-01"
+    record_kind: "migration_discrepancy"
+    artifact_id: "STR-P01-RQ01"
+    source_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ01_Nature_v1.docx"
+    source_baseline_sha: "8dc8ca6f122ee57e85c0eba0a2bc0302a6ee9036"
+    source_hash: "sha256:81639A1143B98E7CFC763910760613458A10BF83ED732CE360FF0DA11A05CD36; git_blob:b86a93605a785f179c8c461e38d604056f9e2672"
+    target_path: "knowledge-books/strategy/part-01/chapters/RQ01_Nature.md"
+    source_identity: "Exact authorized source path, SHA-256, Git blob and 50,707-byte size reverified before and after conversion."
+    candidate_identity: "sha256:BA8B7A503C75C2EA0988C67D8B82352B10A379934E0F54571E74F6036FED8CDA; git_worktree_blob:44f3b4c5d2dafbd24955d6e033342a9b988e658c"
+    class: "N"
+    secondary_classes: []
+    severity: "S0"
+    fidelity_effect: "non_blocking"
+    source_location: "Document-wide Word paragraph styles, list styles, direct emphasis, blank paragraphs and explicit cover page break"
+    target_location: "Document-wide Markdown headings, lists, emphasis, whitespace and HTML page-break div"
+    source_observation: "Source uses Word Heading 1/2, List Bullet/Number, direct bold/italic formatting, layout blank paragraphs and one explicit page break."
+    target_observation: "Candidate maps the same hierarchy, displayed list numbering and emphasis to Markdown; redundant layout-only blank paragraphs are omitted and the cover break is represented by an HTML page-break div."
+    migration_fidelity_risk: "Markdown syntax or whitespace normalization could alter hierarchy, list semantics, emphasis or the cover/content boundary."
+    evidence:
+      - "reviews/migration/part-01/rq01/conversion-evidence.json#evidence_package.conversion_evidence.mapping"
+      - "Source/candidate counts: H1 20/20, H2 12/12, bullets 31/31, numbered 25/25 with displayed sequence 1-25"
+    detected_by: "OpenAI Codex primary task context (/root), acting solely as the authorized RQ-01 Conversion Operator"
+    detected_date: "2026-08-31"
+    detection_stage: "conversion"
+    owner: "Independent Fidelity Reviewer"
+    correction_required: false
+    correction_authority: "human_review"
+    correction_by: null
+    correction_date: null
+    verification_required: true
+    verification_by: "OpenAI Codex isolated review context (/root/rq01_independent_fidelity_review), acting solely as Independent Fidelity Reviewer"
+    verification_date: "2026-08-31"
+    proposed_disposition: "accepted_no_change"
+    accepted_disposition: "accepted_no_change"
+    disposition_type: "terminal"
+    disposition_status: "accepted"
+    disposition_by: "OpenAI Codex isolated review context (/root/rq01_independent_fidelity_review), acting solely as Independent Fidelity Reviewer"
+    disposition_date: "2026-08-31"
+    disposition_history:
+      - action: "proposed"
+        disposition: "accepted_no_change"
+        by: "Codex Conversion Operator"
+        date: "2026-08-31"
+      - action: "verified_and_accepted"
+        disposition: "accepted_no_change"
+        by: "OpenAI Codex isolated review context (/root/rq01_independent_fidelity_review), acting solely as Independent Fidelity Reviewer"
+        date: "2026-08-31"
+        evidence: "Independent normalized comparison confirmed heading hierarchy, 31 bullets, numbered sequence 1-25, emphasis and cover boundary without semantic change."
+    record_status: "resolved"
+    resolution_evidence: "reviews/migration/part-01/rq01/final-pilot-review-record.yaml#final_pilot_review_record.discrepancy_final_snapshot"
+    intellectual_issue_status: null
+    adjudication_required: false
+    adjudication_reference: null
+    downstream_decision_reference: null
+    controlled_revision_reference: null
+
+  - discrepancy_id: "RQ01-MIG-N-003"
+    rq_id: "RQ-01"
+    record_kind: "migration_discrepancy"
+    artifact_id: "STR-P01-RQ01"
+    source_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ01_Nature_v1.docx"
+    source_baseline_sha: "8dc8ca6f122ee57e85c0eba0a2bc0302a6ee9036"
+    source_hash: "sha256:81639A1143B98E7CFC763910760613458A10BF83ED732CE360FF0DA11A05CD36; git_blob:b86a93605a785f179c8c461e38d604056f9e2672"
+    target_path: "knowledge-books/strategy/part-01/chapters/RQ01_Nature.md"
+    source_identity: "Exact authorized source path, SHA-256, Git blob and 50,707-byte size reverified before and after conversion."
+    candidate_identity: "sha256:BA8B7A503C75C2EA0988C67D8B82352B10A379934E0F54571E74F6036FED8CDA; git_worktree_blob:44f3b4c5d2dafbd24955d6e033342a9b988e658c"
+    class: "N"
+    secondary_classes: []
+    severity: "S1"
+    fidelity_effect: "non_blocking"
+    source_location: "Source tables 1-6: 54 rows, 160 cells, no horizontal or vertical merges"
+    target_location: "Candidate Markdown tables 1-6"
+    source_observation: "Word stores visual table widths, borders and page-flow geometry for six rectangular tables."
+    target_observation: "Candidate uses standard rectangular Markdown tables; all 54 rows and 160 cells remain in source order, with identical per-table normalized cell-text hashes."
+    migration_fidelity_risk: "Word visual geometry is not reproduced; reviewer must verify that Markdown row/column relationships and meaning remain equivalent."
+    evidence:
+      - "reviews/migration/part-01/rq01/conversion-evidence.json#evidence_package.conversion_evidence.tables"
+      - "Per-table source/candidate cell-text hashes and row/column-order checks match for all six tables"
+    detected_by: "OpenAI Codex primary task context (/root), acting solely as the authorized RQ-01 Conversion Operator"
+    detected_date: "2026-08-31"
+    detection_stage: "conversion"
+    owner: "Independent Fidelity Reviewer"
+    correction_required: false
+    correction_authority: "human_review"
+    correction_by: null
+    correction_date: null
+    verification_required: true
+    verification_by: "OpenAI Codex isolated review context (/root/rq01_independent_fidelity_review), acting solely as Independent Fidelity Reviewer"
+    verification_date: "2026-08-31"
+    proposed_disposition: "accepted_no_change"
+    accepted_disposition: "accepted_no_change"
+    disposition_type: "terminal"
+    disposition_status: "accepted"
+    disposition_by: "OpenAI Codex isolated review context (/root/rq01_independent_fidelity_review), acting solely as Independent Fidelity Reviewer"
+    disposition_date: "2026-08-31"
+    disposition_history:
+      - action: "proposed"
+        disposition: "accepted_no_change"
+        by: "Codex Conversion Operator"
+        date: "2026-08-31"
+      - action: "verified_and_accepted"
+        disposition: "accepted_no_change"
+        by: "OpenAI Codex isolated review context (/root/rq01_independent_fidelity_review), acting solely as Independent Fidelity Reviewer"
+        date: "2026-08-31"
+        evidence: "Independent table comparison confirmed six tables, 54 rows, 160 cells, source order and all row/column relationships; visual geometry is non-semantic here."
+    record_status: "resolved"
+    resolution_evidence: "reviews/migration/part-01/rq01/final-pilot-review-record.yaml#final_pilot_review_record.discrepancy_final_snapshot"
+    intellectual_issue_status: null
+    adjudication_required: false
+    adjudication_reference: null
+    downstream_decision_reference: null
+    controlled_revision_reference: null

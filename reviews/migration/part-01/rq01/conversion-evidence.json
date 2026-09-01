@@ -1,0 +1,1923 @@
+{
+  "evidence_package": {
+    "evidence_id": "RQ01-MIG-CONVERSION-EVIDENCE-001",
+    "rq_id": "RQ-01",
+    "status": "conversion_operator_complete_pending_independent_fidelity_review",
+    "candidate_status": "noncanonical_migration_candidate",
+    "execution_date": "2026-08-31",
+    "source_facts": {
+      "repository_path": "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ01_Nature_v1.docx",
+      "sha256": "81639A1143B98E7CFC763910760613458A10BF83ED732CE360FF0DA11A05CD36",
+      "git_blob": "b86a93605a785f179c8c461e38d604056f9e2672",
+      "size_bytes": 50707,
+      "exact_git_baseline": "8dc8ca6f122ee57e85c0eba0a2bc0302a6ee9036",
+      "migration_baseline": "c0116d3",
+      "ordinary_read": "succeeded",
+      "ooxml_package_entries": 19,
+      "ooxml_readability": "succeeded",
+      "inventory": {
+        "package_entries": 19,
+        "body_direct_paragraphs_total": 156,
+        "body_direct_paragraphs_nonempty": 149,
+        "body_paragraphs_excluding_heading_and_list": 117,
+        "style_counts_nonempty": {
+          "Normal": 61,
+          "heading 1": 20,
+          "List Bullet": 31,
+          "heading 2": 12,
+          "List Number": 25
+        },
+        "heading_counts": {
+          "heading 1": 20,
+          "heading 2": 12
+        },
+        "list_format_counts": {},
+        "list_paragraphs": 0,
+        "tables": 6,
+        "table_rows": 54,
+        "table_physical_cells": 160,
+        "table_effective_grid_cells": 160,
+        "table_paragraphs": 160,
+        "table_nonempty_paragraphs": 160,
+        "grid_spans": 0,
+        "vertical_merges": 0,
+        "direct_bold_runs_body": 13,
+        "direct_italic_runs_body": 1,
+        "external_hyperlinks": [],
+        "header_footer": {
+          "word/footer1.xml": [
+            "Учебная исследовательская версия • v1.0 • 30.08.2026   |   "
+          ],
+          "word/header1.xml": [
+            "STRATEGY KNOWLEDGE BOOK  |  PART 01  |  RQ-01 NATURE"
+          ]
+        },
+        "images": 0,
+        "drawings": 0,
+        "vml_objects": 0,
+        "textboxes": 0,
+        "equations": 0,
+        "footnotes_part": false,
+        "endnotes_part": false,
+        "comments_part": false,
+        "comment_anchors": 0,
+        "tracked_insertions": 0,
+        "tracked_deletions": 0,
+        "fields": [],
+        "section_properties": 1,
+        "explicit_page_breaks": 1
+      }
+    },
+    "methodology": {
+      "fidelity_protocol_sha256": "CFD075517C19BF467E11382A75274B7A69A0E3C1D05F8B1A9F73C4632BBA6490",
+      "discrepancy_taxonomy_sha256": "239FE10DFCC5831D2B01CEFDDEE8A04BF86D76DD73E4CB02717F5A0B703CDF72",
+      "entry_gate_decision_id": "rq01-pilot-entry-gate-001"
+    },
+    "conversion_evidence": {
+      "converter_role": "Codex Conversion Operator",
+      "actual_execution_identity_context": "OpenAI Codex primary task context (/root), acting solely as the authorized RQ-01 Conversion Operator",
+      "method": "Deterministic OOXML body-order extraction and source-style-to-Markdown mapping; no OCR, translation, paraphrase, summarization, or research editing.",
+      "tools": [
+        {
+          "tool": "Python",
+          "version": "3.12.13"
+        },
+        {
+          "tool": "lxml",
+          "version": "6.1.1"
+        },
+        {
+          "tool": "zipfile",
+          "version": "Python 3.12.13 standard library"
+        },
+        {
+          "tool": "Microsoft Word",
+          "version": "16.0.20326.20112",
+          "use": "read-only source PDF export for visual inspection"
+        },
+        {
+          "tool": "pypdfium2/PDFium",
+          "version": "5.13.0",
+          "use": "temporary PDF page rasterization"
+        },
+        {
+          "tool": "marked",
+          "version": "17.0.5",
+          "use": "temporary GFM candidate rendering"
+        },
+        {
+          "tool": "Microsoft Edge",
+          "version": "152.0.4191.53",
+          "use": "isolated headless candidate PDF rendering"
+        }
+      ],
+      "target": {
+        "repository_path": "knowledge-books/strategy/part-01/chapters/RQ01_Nature.md",
+        "sha256": "BA8B7A503C75C2EA0988C67D8B82352B10A379934E0F54571E74F6036FED8CDA",
+        "git_worktree_blob": "44f3b4c5d2dafbd24955d6e033342a9b988e658c",
+        "size_bytes": 37159,
+        "line_count": 320,
+        "canonical_status": "not_canonical"
+      },
+      "mapping": {
+        "ordered_source_block_count": 162,
+        "order_preserved": true,
+        "complete_ordered_block_map": [
+          {
+            "source_order": 1,
+            "source_kind": "paragraph",
+            "source_index": 1,
+            "source_style": "Normal",
+            "candidate_line_start": 1,
+            "candidate_line_end": 4,
+            "source_text_sha256": "347B81DB7CB71DBCB247AD2179009AD247512708B51B4AD610A1DBFCA373A4C8"
+          },
+          {
+            "source_order": 2,
+            "source_kind": "paragraph",
+            "source_index": 2,
+            "source_style": "Normal",
+            "candidate_line_start": 5,
+            "candidate_line_end": 6,
+            "source_text_sha256": "5961C5DD1638AE73BB68C3F7A89766F55018624628C7CB91EF405DA34A545F11"
+          },
+          {
+            "source_order": 3,
+            "source_kind": "paragraph",
+            "source_index": 3,
+            "source_style": "Normal",
+            "candidate_line_start": 7,
+            "candidate_line_end": 8,
+            "source_text_sha256": "10DE1F161572C161EA78648BEA3B3A58861C6CBC9C6F27FC4B649CA71FA4C637"
+          },
+          {
+            "source_order": 4,
+            "source_kind": "paragraph",
+            "source_index": 4,
+            "source_style": "Normal",
+            "candidate_line_start": 9,
+            "candidate_line_end": 10,
+            "source_text_sha256": "3F58ECA3AD0BCEF6858E58580D37EEFC77AFC7392CC471FEABC84C90064F6AFE"
+          },
+          {
+            "source_order": 5,
+            "source_kind": "paragraph",
+            "source_index": 5,
+            "source_style": "Normal",
+            "candidate_line_start": 11,
+            "candidate_line_end": 12,
+            "source_text_sha256": "AE8B01A22EAB2EE9DB4A24AEF76A3D66DD692531B0327FFCD4671EF1960827CF"
+          },
+          {
+            "source_order": 6,
+            "source_kind": "paragraph",
+            "source_index": 6,
+            "source_style": "Normal",
+            "candidate_line_start": 13,
+            "candidate_line_end": 16,
+            "source_text_sha256": "01BA4719C80B6FE911B091A7C05124B64EEECE964E09C058EF8F9805DACA546B"
+          },
+          {
+            "source_order": 7,
+            "source_kind": "paragraph",
+            "source_index": 7,
+            "source_style": "heading 1",
+            "candidate_line_start": 17,
+            "candidate_line_end": 18,
+            "source_text_sha256": "904D6A6578DCC344F2A526B4E499A41877137AE1935FC208280A419E9DE3DF7A"
+          },
+          {
+            "source_order": 8,
+            "source_kind": "paragraph",
+            "source_index": 8,
+            "source_style": "Normal",
+            "candidate_line_start": 19,
+            "candidate_line_end": 20,
+            "source_text_sha256": "3432B586996392521D75414EE66C046A5349D28548343B9FCE9A80D6AB895A69"
+          },
+          {
+            "source_order": 9,
+            "source_kind": "table",
+            "source_index": 1,
+            "source_style": null,
+            "candidate_line_start": 21,
+            "candidate_line_end": 35,
+            "source_text_sha256": "338E64FE9B019901F0C959F59E72A0D5AD1887CEEF89BEDC61BE9B9775E12FCE"
+          },
+          {
+            "source_order": 10,
+            "source_kind": "paragraph",
+            "source_index": 9,
+            "source_style": "Normal",
+            "candidate_line_start": 36,
+            "candidate_line_end": 36,
+            "source_text_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+          },
+          {
+            "source_order": 11,
+            "source_kind": "paragraph",
+            "source_index": 10,
+            "source_style": "heading 1",
+            "candidate_line_start": 36,
+            "candidate_line_end": 37,
+            "source_text_sha256": "F8411F6A574AFA0FC1B35E28AFCAB4121FE2D18DBAEA83430CA35E742A4ECD95"
+          },
+          {
+            "source_order": 12,
+            "source_kind": "paragraph",
+            "source_index": 11,
+            "source_style": "Normal",
+            "candidate_line_start": 38,
+            "candidate_line_end": 39,
+            "source_text_sha256": "9EC8704220BDC523C342A112C3B67B0F34749B26B83AE9F760F9309B07CBEF2F"
+          },
+          {
+            "source_order": 13,
+            "source_kind": "paragraph",
+            "source_index": 12,
+            "source_style": "Normal",
+            "candidate_line_start": 40,
+            "candidate_line_end": 41,
+            "source_text_sha256": "DD69238B22D9031E963D48C5D0F229FF7EFAB8ECC16168886F598828C1858DEC"
+          },
+          {
+            "source_order": 14,
+            "source_kind": "paragraph",
+            "source_index": 13,
+            "source_style": "heading 1",
+            "candidate_line_start": 42,
+            "candidate_line_end": 43,
+            "source_text_sha256": "794795DDBF11E0D0A3F161B4C1A526420EAFDBEBAE21320E0E28CEBAF7675828"
+          },
+          {
+            "source_order": 15,
+            "source_kind": "paragraph",
+            "source_index": 14,
+            "source_style": "Normal",
+            "candidate_line_start": 44,
+            "candidate_line_end": 45,
+            "source_text_sha256": "7EDA0F120CA49F1495F7D83254A02E7CD32659B4322637F0A88340E0A0C598B5"
+          },
+          {
+            "source_order": 16,
+            "source_kind": "paragraph",
+            "source_index": 15,
+            "source_style": "List Bullet",
+            "candidate_line_start": 46,
+            "candidate_line_end": 46,
+            "source_text_sha256": "FAF538B2B55DA28D1DB12C3BE664DFD0ED5F820FE7D655FDB22E83E0EFA91983"
+          },
+          {
+            "source_order": 17,
+            "source_kind": "paragraph",
+            "source_index": 16,
+            "source_style": "List Bullet",
+            "candidate_line_start": 47,
+            "candidate_line_end": 47,
+            "source_text_sha256": "2EB99E998023AF1A260FE1EF56C7DB2FEC3C60650CF7C4C63845CC52CA9C428A"
+          },
+          {
+            "source_order": 18,
+            "source_kind": "paragraph",
+            "source_index": 17,
+            "source_style": "List Bullet",
+            "candidate_line_start": 48,
+            "candidate_line_end": 48,
+            "source_text_sha256": "7A42247D9CF6B2A73D0443D7FD6A93A5627722C8D6BFAF483DCD2D9579010014"
+          },
+          {
+            "source_order": 19,
+            "source_kind": "paragraph",
+            "source_index": 18,
+            "source_style": "List Bullet",
+            "candidate_line_start": 49,
+            "candidate_line_end": 49,
+            "source_text_sha256": "4A1097616134FCF85BD53435DF8C0CE61203610CF77F4BA5312623F7E758C484"
+          },
+          {
+            "source_order": 20,
+            "source_kind": "paragraph",
+            "source_index": 19,
+            "source_style": "List Bullet",
+            "candidate_line_start": 50,
+            "candidate_line_end": 50,
+            "source_text_sha256": "F585BB27BDB3E61E1CA71E509A84D43CEB536952C23616B0E53452D02354906E"
+          },
+          {
+            "source_order": 21,
+            "source_kind": "paragraph",
+            "source_index": 20,
+            "source_style": "List Bullet",
+            "candidate_line_start": 51,
+            "candidate_line_end": 51,
+            "source_text_sha256": "3BCB2233178BECA1242A5C26A159ECD803565466F9D0B95A12891D6D2F5EF24B"
+          },
+          {
+            "source_order": 22,
+            "source_kind": "paragraph",
+            "source_index": 21,
+            "source_style": "List Bullet",
+            "candidate_line_start": 52,
+            "candidate_line_end": 52,
+            "source_text_sha256": "F9F1407620080855FE844D7333FC98C09DB3A55F986983705126371B01F4FDE1"
+          },
+          {
+            "source_order": 23,
+            "source_kind": "paragraph",
+            "source_index": 22,
+            "source_style": "heading 1",
+            "candidate_line_start": 54,
+            "candidate_line_end": 55,
+            "source_text_sha256": "AC24AE59587D80CC8359823F77148437EF53C418E851C424B359F6E7499A9DFC"
+          },
+          {
+            "source_order": 24,
+            "source_kind": "paragraph",
+            "source_index": 23,
+            "source_style": "Normal",
+            "candidate_line_start": 56,
+            "candidate_line_end": 57,
+            "source_text_sha256": "1DA9A9D10609377A1882E8E1CA7D429AC7F2D0612B551600E4BA883BCD4C4F39"
+          },
+          {
+            "source_order": 25,
+            "source_kind": "paragraph",
+            "source_index": 24,
+            "source_style": "Normal",
+            "candidate_line_start": 58,
+            "candidate_line_end": 59,
+            "source_text_sha256": "D9C39976C50443A370ED06173A9B49186BF9735D3B0F21A3287022D42D393A5D"
+          },
+          {
+            "source_order": 26,
+            "source_kind": "paragraph",
+            "source_index": 25,
+            "source_style": "Normal",
+            "candidate_line_start": 60,
+            "candidate_line_end": 61,
+            "source_text_sha256": "DC0350A61386E2EFCFA73484839C569A627BDB0E2671DDA690A98B5629DA10FB"
+          },
+          {
+            "source_order": 27,
+            "source_kind": "paragraph",
+            "source_index": 26,
+            "source_style": "heading 1",
+            "candidate_line_start": 62,
+            "candidate_line_end": 63,
+            "source_text_sha256": "6E14B63C0774C96482AC6E11C09D0CD28143F9A603C4DBE9C58E61CD4107C5CA"
+          },
+          {
+            "source_order": 28,
+            "source_kind": "paragraph",
+            "source_index": 27,
+            "source_style": "heading 2",
+            "candidate_line_start": 64,
+            "candidate_line_end": 65,
+            "source_text_sha256": "7966BF7A82B72A6F57987AC719C71E6D601154467BF33151381115DFFE67BBFA"
+          },
+          {
+            "source_order": 29,
+            "source_kind": "paragraph",
+            "source_index": 28,
+            "source_style": "Normal",
+            "candidate_line_start": 66,
+            "candidate_line_end": 67,
+            "source_text_sha256": "0756B8FB2165AFD7E18803B7F151E268CF7964765A52887057A4806CA961524A"
+          },
+          {
+            "source_order": 30,
+            "source_kind": "paragraph",
+            "source_index": 29,
+            "source_style": "Normal",
+            "candidate_line_start": 68,
+            "candidate_line_end": 69,
+            "source_text_sha256": "A468F3906B16F8EDFD113E3D469DDA3C877A0C313224DA82677FF526DCE06F8B"
+          },
+          {
+            "source_order": 31,
+            "source_kind": "paragraph",
+            "source_index": 30,
+            "source_style": "heading 2",
+            "candidate_line_start": 70,
+            "candidate_line_end": 71,
+            "source_text_sha256": "BE66385556BBA8D4DD0532A0498362844EF766074A04FB17E482A3B18E56701F"
+          },
+          {
+            "source_order": 32,
+            "source_kind": "paragraph",
+            "source_index": 31,
+            "source_style": "Normal",
+            "candidate_line_start": 72,
+            "candidate_line_end": 73,
+            "source_text_sha256": "1080CC2E7CECED207F9CE729386DE58E8B744A9ED22643665494EA60DBD5DA40"
+          },
+          {
+            "source_order": 33,
+            "source_kind": "paragraph",
+            "source_index": 32,
+            "source_style": "Normal",
+            "candidate_line_start": 74,
+            "candidate_line_end": 75,
+            "source_text_sha256": "D0EED04AA7612F9B04A130050F7E179C0C001D29DE2C73BBBA2495C52E61FF10"
+          },
+          {
+            "source_order": 34,
+            "source_kind": "paragraph",
+            "source_index": 33,
+            "source_style": "heading 2",
+            "candidate_line_start": 76,
+            "candidate_line_end": 77,
+            "source_text_sha256": "1251931D2ADC2B2F2308E8C8927A8414860465798D82298140884D268E94AD61"
+          },
+          {
+            "source_order": 35,
+            "source_kind": "paragraph",
+            "source_index": 34,
+            "source_style": "Normal",
+            "candidate_line_start": 78,
+            "candidate_line_end": 79,
+            "source_text_sha256": "877CB4EFAAD6AD8886699B0C782ADA2418538EEBDE9D3CA08351148B416D8A18"
+          },
+          {
+            "source_order": 36,
+            "source_kind": "paragraph",
+            "source_index": 35,
+            "source_style": "Normal",
+            "candidate_line_start": 80,
+            "candidate_line_end": 81,
+            "source_text_sha256": "1962AC81343DFFD1988B36C04D206CBD8B9820B851F0B15CDD0FA85979CE01EC"
+          },
+          {
+            "source_order": 37,
+            "source_kind": "paragraph",
+            "source_index": 36,
+            "source_style": "heading 2",
+            "candidate_line_start": 82,
+            "candidate_line_end": 83,
+            "source_text_sha256": "5F699B43B718990EC30FF787BFA2192B0B1EBFB04DB84671B6CD98A3752269A3"
+          },
+          {
+            "source_order": 38,
+            "source_kind": "paragraph",
+            "source_index": 37,
+            "source_style": "Normal",
+            "candidate_line_start": 84,
+            "candidate_line_end": 85,
+            "source_text_sha256": "B55D02063B3F27207100D1E3ABA60821E4E8D14FFAB78510371697B0A37710DF"
+          },
+          {
+            "source_order": 39,
+            "source_kind": "paragraph",
+            "source_index": 38,
+            "source_style": "Normal",
+            "candidate_line_start": 86,
+            "candidate_line_end": 87,
+            "source_text_sha256": "2DE7357367FC1F1FEA885053025CFD0372BD135A8CEEC9B6F586658E9C88A579"
+          },
+          {
+            "source_order": 40,
+            "source_kind": "paragraph",
+            "source_index": 39,
+            "source_style": "Normal",
+            "candidate_line_start": 88,
+            "candidate_line_end": 89,
+            "source_text_sha256": "6852D688A51A21F97D8D092A765A52F24D91386B47F6BB7FB659035CC67796B2"
+          },
+          {
+            "source_order": 41,
+            "source_kind": "paragraph",
+            "source_index": 40,
+            "source_style": "Normal",
+            "candidate_line_start": 90,
+            "candidate_line_end": 91,
+            "source_text_sha256": "EE20FBFC571D020115593D4743D8D32B5D95B19EDA4466BDA71E683C6A8F67DD"
+          },
+          {
+            "source_order": 42,
+            "source_kind": "paragraph",
+            "source_index": 41,
+            "source_style": "heading 2",
+            "candidate_line_start": 92,
+            "candidate_line_end": 93,
+            "source_text_sha256": "846B8326B643B09698A143641ECE58573F13B4A1DD4B13661D6E19F53503443B"
+          },
+          {
+            "source_order": 43,
+            "source_kind": "paragraph",
+            "source_index": 42,
+            "source_style": "Normal",
+            "candidate_line_start": 94,
+            "candidate_line_end": 95,
+            "source_text_sha256": "584E761910486AFC250AB270C51F86DF33A6AB31096D3F12E0A50445CC8FE461"
+          },
+          {
+            "source_order": 44,
+            "source_kind": "paragraph",
+            "source_index": 43,
+            "source_style": "Normal",
+            "candidate_line_start": 96,
+            "candidate_line_end": 97,
+            "source_text_sha256": "2FB937969A8E9292CE28B6C85D07F90C41A082136CD8DE963F75CA3B5FD41481"
+          },
+          {
+            "source_order": 45,
+            "source_kind": "paragraph",
+            "source_index": 44,
+            "source_style": "Normal",
+            "candidate_line_start": 98,
+            "candidate_line_end": 99,
+            "source_text_sha256": "4E938B3A77631AE4B0A5976ACAC331B906C16AA039B97CA55AEFA891F388DDE0"
+          },
+          {
+            "source_order": 46,
+            "source_kind": "paragraph",
+            "source_index": 45,
+            "source_style": "heading 2",
+            "candidate_line_start": 100,
+            "candidate_line_end": 101,
+            "source_text_sha256": "32962B496243C1F6400BCBDD292C2DBF0A489869B5FAC03E96813F411424BC80"
+          },
+          {
+            "source_order": 47,
+            "source_kind": "paragraph",
+            "source_index": 46,
+            "source_style": "Normal",
+            "candidate_line_start": 102,
+            "candidate_line_end": 103,
+            "source_text_sha256": "5BC2EA5A45840DAE543F56DD0E4CD04A2EC1134340545E382F9AB754DDBF6F83"
+          },
+          {
+            "source_order": 48,
+            "source_kind": "paragraph",
+            "source_index": 47,
+            "source_style": "Normal",
+            "candidate_line_start": 104,
+            "candidate_line_end": 105,
+            "source_text_sha256": "609DDFB90A7C6351B53940D6A104A343B7F5B93D3B61C95DE53FF37989DA2514"
+          },
+          {
+            "source_order": 49,
+            "source_kind": "paragraph",
+            "source_index": 48,
+            "source_style": "Normal",
+            "candidate_line_start": 106,
+            "candidate_line_end": 107,
+            "source_text_sha256": "30376DD2DC30299ED36B9F956C373A1F52B4BF3C3D3D608F214845DBFC4C0A23"
+          },
+          {
+            "source_order": 50,
+            "source_kind": "paragraph",
+            "source_index": 49,
+            "source_style": "heading 2",
+            "candidate_line_start": 108,
+            "candidate_line_end": 109,
+            "source_text_sha256": "86C694C6BE61DD525B83F4B0551DB2CC6F79220B7B78630D9FF742EC1D8F7D70"
+          },
+          {
+            "source_order": 51,
+            "source_kind": "paragraph",
+            "source_index": 50,
+            "source_style": "Normal",
+            "candidate_line_start": 110,
+            "candidate_line_end": 111,
+            "source_text_sha256": "E98BBC1CE8086471E47DFE2E75A0ADA8BC9455BF1999045A6E7B5E672E29C0FA"
+          },
+          {
+            "source_order": 52,
+            "source_kind": "paragraph",
+            "source_index": 51,
+            "source_style": "Normal",
+            "candidate_line_start": 112,
+            "candidate_line_end": 113,
+            "source_text_sha256": "E0DBC58B3C5166CF96DB7F302CB2FE911E12FB707F84BEF6522BADE0EA017240"
+          },
+          {
+            "source_order": 53,
+            "source_kind": "paragraph",
+            "source_index": 52,
+            "source_style": "heading 2",
+            "candidate_line_start": 114,
+            "candidate_line_end": 115,
+            "source_text_sha256": "5095D2FC15FB4E2BD80F8B34C28BC8330ADC5A417602A3F58DF542312D544506"
+          },
+          {
+            "source_order": 54,
+            "source_kind": "paragraph",
+            "source_index": 53,
+            "source_style": "Normal",
+            "candidate_line_start": 116,
+            "candidate_line_end": 117,
+            "source_text_sha256": "82817A6431B44DA0659E5D18BB3A7FA9A75818EC67E01E4E9F11CB02B34D15B1"
+          },
+          {
+            "source_order": 55,
+            "source_kind": "paragraph",
+            "source_index": 54,
+            "source_style": "Normal",
+            "candidate_line_start": 118,
+            "candidate_line_end": 119,
+            "source_text_sha256": "FE1F76037D00EA1C7D29CA5C393F80FD78E1CD877A1D7E01F1D84B22B51DB782"
+          },
+          {
+            "source_order": 56,
+            "source_kind": "paragraph",
+            "source_index": 55,
+            "source_style": "heading 1",
+            "candidate_line_start": 120,
+            "candidate_line_end": 121,
+            "source_text_sha256": "8D039E7D9C7B67CF21600FC303ACDD4E3475311BF0456802AA24AE1B69FEC6B6"
+          },
+          {
+            "source_order": 57,
+            "source_kind": "table",
+            "source_index": 2,
+            "source_style": null,
+            "candidate_line_start": 122,
+            "candidate_line_end": 133,
+            "source_text_sha256": "BD7193E0280C5C54DB50D4EFBC52385D2F05D8E6DD8566DB2BEDB46783A7048B"
+          },
+          {
+            "source_order": 58,
+            "source_kind": "paragraph",
+            "source_index": 56,
+            "source_style": "Normal",
+            "candidate_line_start": 134,
+            "candidate_line_end": 134,
+            "source_text_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+          },
+          {
+            "source_order": 59,
+            "source_kind": "paragraph",
+            "source_index": 57,
+            "source_style": "heading 1",
+            "candidate_line_start": 134,
+            "candidate_line_end": 135,
+            "source_text_sha256": "A59CB3DAE3407C9C01412A592755BBA16F65FACE240CCA0E9E917FDB762AA45E"
+          },
+          {
+            "source_order": 60,
+            "source_kind": "paragraph",
+            "source_index": 58,
+            "source_style": "heading 2",
+            "candidate_line_start": 136,
+            "candidate_line_end": 137,
+            "source_text_sha256": "D7C3641172D6A0CE81C8A29E10B1D83075FA5CE5ABA1D4CA36C4D6157EBFFF96"
+          },
+          {
+            "source_order": 61,
+            "source_kind": "paragraph",
+            "source_index": 59,
+            "source_style": "Normal",
+            "candidate_line_start": 138,
+            "candidate_line_end": 139,
+            "source_text_sha256": "BF620E1933FB9F98022D70F35CE90B27FF51211296F34AAEA93D8EE2E2A4C048"
+          },
+          {
+            "source_order": 62,
+            "source_kind": "paragraph",
+            "source_index": 60,
+            "source_style": "heading 2",
+            "candidate_line_start": 140,
+            "candidate_line_end": 141,
+            "source_text_sha256": "B97E49B709D7ADC8BCDB7FF8EB7C09E082C002F44E313CD6A9CCFA05FC494602"
+          },
+          {
+            "source_order": 63,
+            "source_kind": "paragraph",
+            "source_index": 61,
+            "source_style": "Normal",
+            "candidate_line_start": 142,
+            "candidate_line_end": 143,
+            "source_text_sha256": "35C61C6FCD9EC6D3131D49E26683C2766EA81A9E4624146E802F90FBBBCBFEA5"
+          },
+          {
+            "source_order": 64,
+            "source_kind": "paragraph",
+            "source_index": 62,
+            "source_style": "heading 2",
+            "candidate_line_start": 144,
+            "candidate_line_end": 145,
+            "source_text_sha256": "C0DD7D2521E2C278DE6984272DF26C32F2DBC5325F41C6138147025FB866440F"
+          },
+          {
+            "source_order": 65,
+            "source_kind": "paragraph",
+            "source_index": 63,
+            "source_style": "Normal",
+            "candidate_line_start": 146,
+            "candidate_line_end": 147,
+            "source_text_sha256": "07838BEA7968D9FC5948183C9D174352E508E1791CE5165C89F7E92950E57E75"
+          },
+          {
+            "source_order": 66,
+            "source_kind": "paragraph",
+            "source_index": 64,
+            "source_style": "heading 2",
+            "candidate_line_start": 148,
+            "candidate_line_end": 149,
+            "source_text_sha256": "8D90869E296B2C57334AAB0AC1C23718FF848762D566CC4FCDACACB1DB422A0E"
+          },
+          {
+            "source_order": 67,
+            "source_kind": "paragraph",
+            "source_index": 65,
+            "source_style": "Normal",
+            "candidate_line_start": 150,
+            "candidate_line_end": 151,
+            "source_text_sha256": "E11EF902AA87A5A0330EA5989A24EAFDCC475A7D5D58A8250DBF7B9E3986EE6D"
+          },
+          {
+            "source_order": 68,
+            "source_kind": "paragraph",
+            "source_index": 66,
+            "source_style": "heading 1",
+            "candidate_line_start": 152,
+            "candidate_line_end": 153,
+            "source_text_sha256": "B62402E44B3DF7C6297F678918873A64C5C69B94D4F1192A17D8D9FCD237406C"
+          },
+          {
+            "source_order": 69,
+            "source_kind": "paragraph",
+            "source_index": 67,
+            "source_style": "Normal",
+            "candidate_line_start": 154,
+            "candidate_line_end": 155,
+            "source_text_sha256": "C7B03E99513B5D4D94292AC61DECA78635A12CE020E7FD9F5AA256D527582EE0"
+          },
+          {
+            "source_order": 70,
+            "source_kind": "paragraph",
+            "source_index": 68,
+            "source_style": "List Number",
+            "candidate_line_start": 156,
+            "candidate_line_end": 156,
+            "source_text_sha256": "DF81392D31DBF0709323432ADCB369D4096B4218CE52C43352DD8DC86D072127"
+          },
+          {
+            "source_order": 71,
+            "source_kind": "paragraph",
+            "source_index": 69,
+            "source_style": "List Number",
+            "candidate_line_start": 157,
+            "candidate_line_end": 157,
+            "source_text_sha256": "BD2CBFDEA76D2C12250F263A4CBAD322746D3C60AA670721CBC98DEDA9320892"
+          },
+          {
+            "source_order": 72,
+            "source_kind": "paragraph",
+            "source_index": 70,
+            "source_style": "List Number",
+            "candidate_line_start": 158,
+            "candidate_line_end": 158,
+            "source_text_sha256": "70B31B347AE25A2654E7D6B9DE59FA95D32D3AA1C2C3CC20657425731FD99EB5"
+          },
+          {
+            "source_order": 73,
+            "source_kind": "paragraph",
+            "source_index": 71,
+            "source_style": "List Number",
+            "candidate_line_start": 159,
+            "candidate_line_end": 159,
+            "source_text_sha256": "5EBEC3CD009BE68DB8B78C922BD15807C6A8CB5EEF2001764FB1E862EF1E5916"
+          },
+          {
+            "source_order": 74,
+            "source_kind": "paragraph",
+            "source_index": 72,
+            "source_style": "List Number",
+            "candidate_line_start": 160,
+            "candidate_line_end": 160,
+            "source_text_sha256": "8762E435662A70EC77435F6A77F93EEC87ED470B205A3AE62AE5486CB6A572B0"
+          },
+          {
+            "source_order": 75,
+            "source_kind": "paragraph",
+            "source_index": 73,
+            "source_style": "List Number",
+            "candidate_line_start": 161,
+            "candidate_line_end": 161,
+            "source_text_sha256": "E77D49E5F147175FFA89FA74C91D80E1463648DD5610D0144BFD2C885468807A"
+          },
+          {
+            "source_order": 76,
+            "source_kind": "paragraph",
+            "source_index": 74,
+            "source_style": "List Number",
+            "candidate_line_start": 162,
+            "candidate_line_end": 162,
+            "source_text_sha256": "A9A5F6120E892912828214A20CEAE8AE8C7F02DBAA37F101716B6CFC18263088"
+          },
+          {
+            "source_order": 77,
+            "source_kind": "paragraph",
+            "source_index": 75,
+            "source_style": "List Number",
+            "candidate_line_start": 163,
+            "candidate_line_end": 163,
+            "source_text_sha256": "3324EB57A88DE0F63CFF83272DCF82218563327C2F4F9081EE3F9213EAD6BA6A"
+          },
+          {
+            "source_order": 78,
+            "source_kind": "paragraph",
+            "source_index": 76,
+            "source_style": "heading 1",
+            "candidate_line_start": 165,
+            "candidate_line_end": 166,
+            "source_text_sha256": "32D1F0F558F2A1577B4212D065C00B8DCD2E17C76A0F9A609342129854587786"
+          },
+          {
+            "source_order": 79,
+            "source_kind": "paragraph",
+            "source_index": 77,
+            "source_style": "List Bullet",
+            "candidate_line_start": 167,
+            "candidate_line_end": 167,
+            "source_text_sha256": "7F9E6F8E3F486AB3858B5116824A719D61847891DFE4F548CCFED18FD36B0A23"
+          },
+          {
+            "source_order": 80,
+            "source_kind": "paragraph",
+            "source_index": 78,
+            "source_style": "List Bullet",
+            "candidate_line_start": 168,
+            "candidate_line_end": 168,
+            "source_text_sha256": "96AB08328F4ED5C8D676121D612E6ED43B97C62F7D84202F9CAB41B60AEA9420"
+          },
+          {
+            "source_order": 81,
+            "source_kind": "paragraph",
+            "source_index": 79,
+            "source_style": "List Bullet",
+            "candidate_line_start": 169,
+            "candidate_line_end": 169,
+            "source_text_sha256": "163159EAA4918CCBE25B9D353A7F6EBEB8DF0AE6B3F6942BFCD33123993FB91C"
+          },
+          {
+            "source_order": 82,
+            "source_kind": "paragraph",
+            "source_index": 80,
+            "source_style": "List Bullet",
+            "candidate_line_start": 170,
+            "candidate_line_end": 170,
+            "source_text_sha256": "9CF31CAE035CDC12C8EF3ED488E1F03D8121C400F3F01A4A8B45074C8C68E180"
+          },
+          {
+            "source_order": 83,
+            "source_kind": "paragraph",
+            "source_index": 81,
+            "source_style": "List Bullet",
+            "candidate_line_start": 171,
+            "candidate_line_end": 171,
+            "source_text_sha256": "B2B54FF58AD7EAD5AC4CE939D01D6290409B112BDCB1692F2F6714F2FB67BE33"
+          },
+          {
+            "source_order": 84,
+            "source_kind": "paragraph",
+            "source_index": 82,
+            "source_style": "List Bullet",
+            "candidate_line_start": 172,
+            "candidate_line_end": 172,
+            "source_text_sha256": "41157C188435E95613971AEB8EF319CDA02F0F00B5C894BE5057C0771FC6178A"
+          },
+          {
+            "source_order": 85,
+            "source_kind": "paragraph",
+            "source_index": 83,
+            "source_style": "List Bullet",
+            "candidate_line_start": 173,
+            "candidate_line_end": 173,
+            "source_text_sha256": "03B441B6387DADF1CA56B82C39D83747647731A32FDE706DBBECCC200D180F23"
+          },
+          {
+            "source_order": 86,
+            "source_kind": "paragraph",
+            "source_index": 84,
+            "source_style": "heading 1",
+            "candidate_line_start": 175,
+            "candidate_line_end": 176,
+            "source_text_sha256": "2D4D04F662432F14483D428E97A27EA1AAD175B8A654D1EDC3D3B3EEE4BEA4E1"
+          },
+          {
+            "source_order": 87,
+            "source_kind": "paragraph",
+            "source_index": 85,
+            "source_style": "Normal",
+            "candidate_line_start": 177,
+            "candidate_line_end": 178,
+            "source_text_sha256": "F92670B461284ECFB52AE57F70A8E1C0484D01A4AEEC4D78A57DEECC3F6BC297"
+          },
+          {
+            "source_order": 88,
+            "source_kind": "paragraph",
+            "source_index": 86,
+            "source_style": "Normal",
+            "candidate_line_start": 179,
+            "candidate_line_end": 180,
+            "source_text_sha256": "63C4642144C3B25ECA30C0651CEF74EC7D852410412A154353D90ABAECDF0E0B"
+          },
+          {
+            "source_order": 89,
+            "source_kind": "paragraph",
+            "source_index": 87,
+            "source_style": "Normal",
+            "candidate_line_start": 181,
+            "candidate_line_end": 182,
+            "source_text_sha256": "377631617D4B1EA4BD282010CD0CA4B27EF8FEBD385F70D9A394B9649DCEE075"
+          },
+          {
+            "source_order": 90,
+            "source_kind": "paragraph",
+            "source_index": 88,
+            "source_style": "heading 1",
+            "candidate_line_start": 183,
+            "candidate_line_end": 184,
+            "source_text_sha256": "243CEB50CE13B0DC11784928F1098496BC29B9F8B2E2C7C87081A7B3B33B602E"
+          },
+          {
+            "source_order": 91,
+            "source_kind": "paragraph",
+            "source_index": 89,
+            "source_style": "Normal",
+            "candidate_line_start": 185,
+            "candidate_line_end": 186,
+            "source_text_sha256": "38CB7E18F9663966FB7BE26534CF32FA21E4EAD5F35678817876EB54262EB0F0"
+          },
+          {
+            "source_order": 92,
+            "source_kind": "table",
+            "source_index": 3,
+            "source_style": null,
+            "candidate_line_start": 187,
+            "candidate_line_end": 193,
+            "source_text_sha256": "F303EC7C3FB9CBFDB0506EAE9AA983BA9691F9C66861AC4993B6CF241CBFF0CF"
+          },
+          {
+            "source_order": 93,
+            "source_kind": "paragraph",
+            "source_index": 90,
+            "source_style": "Normal",
+            "candidate_line_start": 194,
+            "candidate_line_end": 194,
+            "source_text_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+          },
+          {
+            "source_order": 94,
+            "source_kind": "paragraph",
+            "source_index": 91,
+            "source_style": "heading 1",
+            "candidate_line_start": 194,
+            "candidate_line_end": 195,
+            "source_text_sha256": "B6897F753EA0606D3BB3A9EC835EB947BABA789FFD217AF39696F174E0ED3C11"
+          },
+          {
+            "source_order": 95,
+            "source_kind": "table",
+            "source_index": 4,
+            "source_style": null,
+            "candidate_line_start": 196,
+            "candidate_line_end": 205,
+            "source_text_sha256": "4DA3BF8C10D20655613605FB07FC2987CD68A4CAA7ADE6E35D7F7AFDBA82585D"
+          },
+          {
+            "source_order": 96,
+            "source_kind": "paragraph",
+            "source_index": 92,
+            "source_style": "Normal",
+            "candidate_line_start": 206,
+            "candidate_line_end": 206,
+            "source_text_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+          },
+          {
+            "source_order": 97,
+            "source_kind": "paragraph",
+            "source_index": 93,
+            "source_style": "heading 1",
+            "candidate_line_start": 206,
+            "candidate_line_end": 207,
+            "source_text_sha256": "36B0EB0F40F0E9FDFF50FA0B72327D888811A9AD27C89D55AB986E26888AAD37"
+          },
+          {
+            "source_order": 98,
+            "source_kind": "paragraph",
+            "source_index": 94,
+            "source_style": "List Number",
+            "candidate_line_start": 208,
+            "candidate_line_end": 208,
+            "source_text_sha256": "ABCF29F7EB6CFDC3E317722D454FF974C44D751DB3B00C186411B310E2270DA2"
+          },
+          {
+            "source_order": 99,
+            "source_kind": "paragraph",
+            "source_index": 95,
+            "source_style": "List Number",
+            "candidate_line_start": 209,
+            "candidate_line_end": 209,
+            "source_text_sha256": "B7E24D715351382D5FB20172094BB37A86E9ED7C49EBFADDE8C78E86286AD089"
+          },
+          {
+            "source_order": 100,
+            "source_kind": "paragraph",
+            "source_index": 96,
+            "source_style": "List Number",
+            "candidate_line_start": 210,
+            "candidate_line_end": 210,
+            "source_text_sha256": "6740160B7E78FC2C9F9BF5BAD9D618E0D26386304CBE9DE785200138355619EC"
+          },
+          {
+            "source_order": 101,
+            "source_kind": "paragraph",
+            "source_index": 97,
+            "source_style": "List Number",
+            "candidate_line_start": 211,
+            "candidate_line_end": 211,
+            "source_text_sha256": "7A55729A34611EE4AB38A88CF0D784ACD10A631EF62DDBBF42861477B71309EA"
+          },
+          {
+            "source_order": 102,
+            "source_kind": "paragraph",
+            "source_index": 98,
+            "source_style": "List Number",
+            "candidate_line_start": 212,
+            "candidate_line_end": 212,
+            "source_text_sha256": "588057C45FC4EB204DE56BA802724F69F031B2CE57DA06A00654D45B5F9222B6"
+          },
+          {
+            "source_order": 103,
+            "source_kind": "paragraph",
+            "source_index": 99,
+            "source_style": "List Number",
+            "candidate_line_start": 213,
+            "candidate_line_end": 213,
+            "source_text_sha256": "9E75763FD5B965BB86A19E84A7FF1FA19EB0A0B4D99678AFB3D17BCB2831548E"
+          },
+          {
+            "source_order": 104,
+            "source_kind": "paragraph",
+            "source_index": 100,
+            "source_style": "List Number",
+            "candidate_line_start": 214,
+            "candidate_line_end": 214,
+            "source_text_sha256": "AC1034173979C7080CD4D50D66A27FC17B6C6C986659B1A6576064A412742CCF"
+          },
+          {
+            "source_order": 105,
+            "source_kind": "paragraph",
+            "source_index": 101,
+            "source_style": "List Number",
+            "candidate_line_start": 215,
+            "candidate_line_end": 215,
+            "source_text_sha256": "6E23BE099D10278C04EF0823F3D71FBECBFF6A40DCF585535ABD2664F1C524BC"
+          },
+          {
+            "source_order": 106,
+            "source_kind": "paragraph",
+            "source_index": 102,
+            "source_style": "List Number",
+            "candidate_line_start": 216,
+            "candidate_line_end": 216,
+            "source_text_sha256": "D61B7D3A0722B62E46495F9018634EC7A46F374B40949C74BA833D4670B5D3C0"
+          },
+          {
+            "source_order": 107,
+            "source_kind": "paragraph",
+            "source_index": 103,
+            "source_style": "List Number",
+            "candidate_line_start": 217,
+            "candidate_line_end": 217,
+            "source_text_sha256": "5525628F59E0E7561C01D1B12630F91B233B4C5FAEA757C38922C32769999D86"
+          },
+          {
+            "source_order": 108,
+            "source_kind": "paragraph",
+            "source_index": 104,
+            "source_style": "Normal",
+            "candidate_line_start": 219,
+            "candidate_line_end": 220,
+            "source_text_sha256": "F865B8046CEB2A565A66578D4926D44C290FA75D8A20C7BEFDC9E57B0906A0F1"
+          },
+          {
+            "source_order": 109,
+            "source_kind": "paragraph",
+            "source_index": 105,
+            "source_style": "heading 1",
+            "candidate_line_start": 221,
+            "candidate_line_end": 222,
+            "source_text_sha256": "844A9017E1330ABDC20A4E631C6C5D0F1D8032CD538D2F132D59E74C79148B76"
+          },
+          {
+            "source_order": 110,
+            "source_kind": "paragraph",
+            "source_index": 106,
+            "source_style": "List Bullet",
+            "candidate_line_start": 223,
+            "candidate_line_end": 223,
+            "source_text_sha256": "3E81F1EECFF221C8A7720EB940C0DF4CBB587A90F2F524219098FB554AFB301D"
+          },
+          {
+            "source_order": 111,
+            "source_kind": "paragraph",
+            "source_index": 107,
+            "source_style": "List Bullet",
+            "candidate_line_start": 224,
+            "candidate_line_end": 224,
+            "source_text_sha256": "9F5017F4F8935A8548929137533C8109405092264C5A53FEFC88AABE58C3646F"
+          },
+          {
+            "source_order": 112,
+            "source_kind": "paragraph",
+            "source_index": 108,
+            "source_style": "List Bullet",
+            "candidate_line_start": 225,
+            "candidate_line_end": 225,
+            "source_text_sha256": "7CA7D2CA5E7FC38D865FF18E5FBDD4DBAA4AEEBE2277589F01C1C7DA1C7D33D1"
+          },
+          {
+            "source_order": 113,
+            "source_kind": "paragraph",
+            "source_index": 109,
+            "source_style": "List Bullet",
+            "candidate_line_start": 226,
+            "candidate_line_end": 226,
+            "source_text_sha256": "D8D67F04CA70D112F3A0BA8C70D1C8A5B0598CDF89F31765F1101042C99C94C7"
+          },
+          {
+            "source_order": 114,
+            "source_kind": "paragraph",
+            "source_index": 110,
+            "source_style": "List Bullet",
+            "candidate_line_start": 227,
+            "candidate_line_end": 227,
+            "source_text_sha256": "F60FC2A3CA777C748125714FE43EA1EF7EE2B35458D527703303CA1DEF638E11"
+          },
+          {
+            "source_order": 115,
+            "source_kind": "paragraph",
+            "source_index": 111,
+            "source_style": "List Bullet",
+            "candidate_line_start": 228,
+            "candidate_line_end": 228,
+            "source_text_sha256": "EADB9CADD5DB1792B96175BDE3457F83A9EE97ED7C2A6FAA79700C2A6776B662"
+          },
+          {
+            "source_order": 116,
+            "source_kind": "paragraph",
+            "source_index": 112,
+            "source_style": "List Bullet",
+            "candidate_line_start": 229,
+            "candidate_line_end": 229,
+            "source_text_sha256": "6FC6770D69C1355D87AA80650569433F4A883D06F66E310AB0701F72CD07CD4C"
+          },
+          {
+            "source_order": 117,
+            "source_kind": "paragraph",
+            "source_index": 113,
+            "source_style": "List Bullet",
+            "candidate_line_start": 230,
+            "candidate_line_end": 230,
+            "source_text_sha256": "4601BB43F3A64B4452975EBBEF4AB207B751CE00457F22683368BC4E701E61B5"
+          },
+          {
+            "source_order": 118,
+            "source_kind": "paragraph",
+            "source_index": 114,
+            "source_style": "List Bullet",
+            "candidate_line_start": 231,
+            "candidate_line_end": 231,
+            "source_text_sha256": "801E12FF5BE32709490185E7763ED769D91FCA845EB354CB64B4558AF4588F2E"
+          },
+          {
+            "source_order": 119,
+            "source_kind": "paragraph",
+            "source_index": 115,
+            "source_style": "heading 1",
+            "candidate_line_start": 233,
+            "candidate_line_end": 234,
+            "source_text_sha256": "3AB3FC8905A8EC3C7A05F36E512E0CBDD039B606F93096045C8D7C4A0C4827CC"
+          },
+          {
+            "source_order": 120,
+            "source_kind": "paragraph",
+            "source_index": 116,
+            "source_style": "Normal",
+            "candidate_line_start": 235,
+            "candidate_line_end": 236,
+            "source_text_sha256": "083BC03665DC589712BAD2CDB1B0E7699E54E4C2CA56D077FF90176DF6797BDD"
+          },
+          {
+            "source_order": 121,
+            "source_kind": "paragraph",
+            "source_index": 117,
+            "source_style": "List Bullet",
+            "candidate_line_start": 237,
+            "candidate_line_end": 237,
+            "source_text_sha256": "BB0689873EBB7608E2DC9CAE810B28DA3083AD8C1DA84373FF5E379657C1F788"
+          },
+          {
+            "source_order": 122,
+            "source_kind": "paragraph",
+            "source_index": 118,
+            "source_style": "List Bullet",
+            "candidate_line_start": 238,
+            "candidate_line_end": 238,
+            "source_text_sha256": "5CBB584E697FB28AA4D013AA50288A81916EE8E83268B3422FF64E1081C1C483"
+          },
+          {
+            "source_order": 123,
+            "source_kind": "paragraph",
+            "source_index": 119,
+            "source_style": "List Bullet",
+            "candidate_line_start": 239,
+            "candidate_line_end": 239,
+            "source_text_sha256": "494A7A3F80A43B59637952A805B9B8A8943ADB38424B3893139DD5B884B9D711"
+          },
+          {
+            "source_order": 124,
+            "source_kind": "paragraph",
+            "source_index": 120,
+            "source_style": "List Bullet",
+            "candidate_line_start": 240,
+            "candidate_line_end": 240,
+            "source_text_sha256": "8E6558A4DB0E279437AEF0F8C1FE90C7799EF018E9474B1463119A25FAF904F1"
+          },
+          {
+            "source_order": 125,
+            "source_kind": "paragraph",
+            "source_index": 121,
+            "source_style": "List Bullet",
+            "candidate_line_start": 241,
+            "candidate_line_end": 241,
+            "source_text_sha256": "6BFC9B9FA409B8D600B786D130047AF5DDD56A1BD9E4E9B97D9F1E8AD4764BB6"
+          },
+          {
+            "source_order": 126,
+            "source_kind": "paragraph",
+            "source_index": 122,
+            "source_style": "List Bullet",
+            "candidate_line_start": 242,
+            "candidate_line_end": 242,
+            "source_text_sha256": "8584B0272A61C2DA3C2DE412415CA825A28FA130C80843657177157DE3A42DF9"
+          },
+          {
+            "source_order": 127,
+            "source_kind": "paragraph",
+            "source_index": 123,
+            "source_style": "List Bullet",
+            "candidate_line_start": 243,
+            "candidate_line_end": 243,
+            "source_text_sha256": "1419352133F76E63B6EF1E2A1B9AFF7A3524132740AC64758808B5006A598F2C"
+          },
+          {
+            "source_order": 128,
+            "source_kind": "paragraph",
+            "source_index": 124,
+            "source_style": "List Bullet",
+            "candidate_line_start": 244,
+            "candidate_line_end": 244,
+            "source_text_sha256": "799F69749F89C0118B9B42739F34B940D8D82E6962377167E6AE265CFE90D8E9"
+          },
+          {
+            "source_order": 129,
+            "source_kind": "paragraph",
+            "source_index": 125,
+            "source_style": "heading 1",
+            "candidate_line_start": 246,
+            "candidate_line_end": 247,
+            "source_text_sha256": "5E187FE2F9241E87636AE6F14E8F13C3EF7580CCB0E5BC78AD786F64E203F5C5"
+          },
+          {
+            "source_order": 130,
+            "source_kind": "paragraph",
+            "source_index": 126,
+            "source_style": "List Number",
+            "candidate_line_start": 248,
+            "candidate_line_end": 248,
+            "source_text_sha256": "04F8F7F7902620F4BBB05AD9B900E15D57900525A89F38E2547055ACC1A0B1AB"
+          },
+          {
+            "source_order": 131,
+            "source_kind": "paragraph",
+            "source_index": 127,
+            "source_style": "List Number",
+            "candidate_line_start": 249,
+            "candidate_line_end": 249,
+            "source_text_sha256": "F1A0D719B36A5C556C87201BC7F1322ADAE610B55DF579D04DB2A8231493BFB7"
+          },
+          {
+            "source_order": 132,
+            "source_kind": "paragraph",
+            "source_index": 128,
+            "source_style": "List Number",
+            "candidate_line_start": 250,
+            "candidate_line_end": 250,
+            "source_text_sha256": "1AC4C6AFEFF8D41C4FDD5650ABF2DAAD4852040F6E22B5119A73ACC5F0CEB2EF"
+          },
+          {
+            "source_order": 133,
+            "source_kind": "paragraph",
+            "source_index": 129,
+            "source_style": "List Number",
+            "candidate_line_start": 251,
+            "candidate_line_end": 251,
+            "source_text_sha256": "D25068105CDF02AC74D9DF81A92674977103155B5F097328880870654EBAE489"
+          },
+          {
+            "source_order": 134,
+            "source_kind": "paragraph",
+            "source_index": 130,
+            "source_style": "List Number",
+            "candidate_line_start": 252,
+            "candidate_line_end": 252,
+            "source_text_sha256": "042AE03473D37E42F9D9C6D4BF5495B7B2F86886165B9FD2FF0E7A8194497D22"
+          },
+          {
+            "source_order": 135,
+            "source_kind": "paragraph",
+            "source_index": 131,
+            "source_style": "List Number",
+            "candidate_line_start": 253,
+            "candidate_line_end": 253,
+            "source_text_sha256": "5BACA94117C6984BAAB3796319718ED910B115EF8A71138870D6C89ABC4605CF"
+          },
+          {
+            "source_order": 136,
+            "source_kind": "paragraph",
+            "source_index": 132,
+            "source_style": "List Number",
+            "candidate_line_start": 254,
+            "candidate_line_end": 254,
+            "source_text_sha256": "54793FD55638B2808DA3E4BDBCA7D1B75293A0909E71A458DD87C170D07415DF"
+          },
+          {
+            "source_order": 137,
+            "source_kind": "paragraph",
+            "source_index": 133,
+            "source_style": "heading 1",
+            "candidate_line_start": 256,
+            "candidate_line_end": 257,
+            "source_text_sha256": "9FCFDAC56C67842934D538A9EEFFE0E086296EBF86762CB54C294DD1A4639FBD"
+          },
+          {
+            "source_order": 138,
+            "source_kind": "table",
+            "source_index": 5,
+            "source_style": null,
+            "candidate_line_start": 258,
+            "candidate_line_end": 268,
+            "source_text_sha256": "0575AEA35B94C2548F2A75E6F7B2F57C41992FA70510B3C0742A29BDD1311D5C"
+          },
+          {
+            "source_order": 139,
+            "source_kind": "paragraph",
+            "source_index": 134,
+            "source_style": "Normal",
+            "candidate_line_start": 269,
+            "candidate_line_end": 269,
+            "source_text_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+          },
+          {
+            "source_order": 140,
+            "source_kind": "paragraph",
+            "source_index": 135,
+            "source_style": "heading 1",
+            "candidate_line_start": 269,
+            "candidate_line_end": 270,
+            "source_text_sha256": "5216F0FA49C4F3FA9EB4C8523B4220F6EAA00B8ADEBE2BADE6E3CD2CFBF1A26C"
+          },
+          {
+            "source_order": 141,
+            "source_kind": "table",
+            "source_index": 6,
+            "source_style": null,
+            "candidate_line_start": 271,
+            "candidate_line_end": 281,
+            "source_text_sha256": "FAF4DCA6753CA8AE8FBF406ED34F20129259E89B684D1C47F548F6CB7BF1A52C"
+          },
+          {
+            "source_order": 142,
+            "source_kind": "paragraph",
+            "source_index": 136,
+            "source_style": "Normal",
+            "candidate_line_start": 282,
+            "candidate_line_end": 282,
+            "source_text_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+          },
+          {
+            "source_order": 143,
+            "source_kind": "paragraph",
+            "source_index": 137,
+            "source_style": "heading 1",
+            "candidate_line_start": 282,
+            "candidate_line_end": 283,
+            "source_text_sha256": "55DFC419BEB4EFF8A3BA456548FAAB170664FBD451432D61BBDEEBE51952BECF"
+          },
+          {
+            "source_order": 144,
+            "source_kind": "paragraph",
+            "source_index": 138,
+            "source_style": "Normal",
+            "candidate_line_start": 284,
+            "candidate_line_end": 285,
+            "source_text_sha256": "3E9AF4DF0392EB912863E2A38FC045C51D01A7A5ED94F6D1A3E61668C6A8F03B"
+          },
+          {
+            "source_order": 145,
+            "source_kind": "paragraph",
+            "source_index": 139,
+            "source_style": "Normal",
+            "candidate_line_start": 286,
+            "candidate_line_end": 287,
+            "source_text_sha256": "B126FC7D0D01A48438802D552237F89E877AD4CB9851F4BBAA559DDF19D8BED6"
+          },
+          {
+            "source_order": 146,
+            "source_kind": "paragraph",
+            "source_index": 140,
+            "source_style": "Normal",
+            "candidate_line_start": 288,
+            "candidate_line_end": 289,
+            "source_text_sha256": "99E925E71F8FCF13686270D58526B636DD68F04623C2A7DEE3A569FB67FA4EC8"
+          },
+          {
+            "source_order": 147,
+            "source_kind": "paragraph",
+            "source_index": 141,
+            "source_style": "Normal",
+            "candidate_line_start": 290,
+            "candidate_line_end": 291,
+            "source_text_sha256": "CD28B33FE0C1514DF772BC6F7D401CD776B16CDA5F7E659B525DCAB3FB2D079A"
+          },
+          {
+            "source_order": 148,
+            "source_kind": "paragraph",
+            "source_index": 142,
+            "source_style": "heading 1",
+            "candidate_line_start": 292,
+            "candidate_line_end": 293,
+            "source_text_sha256": "5080FC5C66B7B21D44B4079E235359BD4AA7123F54DBD201F17C8FA8F2F248E9"
+          },
+          {
+            "source_order": 149,
+            "source_kind": "paragraph",
+            "source_index": 143,
+            "source_style": "Normal",
+            "candidate_line_start": 294,
+            "candidate_line_end": 295,
+            "source_text_sha256": "836B25FA4C89B9D6CF2E8D23368751B01F495059FAB0DF3D2EDE2ABBF47C6178"
+          },
+          {
+            "source_order": 150,
+            "source_kind": "paragraph",
+            "source_index": 144,
+            "source_style": "Normal",
+            "candidate_line_start": 296,
+            "candidate_line_end": 297,
+            "source_text_sha256": "BDF77CB1AFAEF73A7929F705C746870AE94DA0BEE8B4DF94B33BBE7F6A58337A"
+          },
+          {
+            "source_order": 151,
+            "source_kind": "paragraph",
+            "source_index": 145,
+            "source_style": "Normal",
+            "candidate_line_start": 298,
+            "candidate_line_end": 299,
+            "source_text_sha256": "BAA858DB605E06658D651C00977653130CC3D3EA6D081D394FA5BE2CE7E10845"
+          },
+          {
+            "source_order": 152,
+            "source_kind": "paragraph",
+            "source_index": 146,
+            "source_style": "Normal",
+            "candidate_line_start": 300,
+            "candidate_line_end": 301,
+            "source_text_sha256": "355A92EA3AC3479B1F4C259C15443AB133EA9259C315FA4435CA57BF05DF0F05"
+          },
+          {
+            "source_order": 153,
+            "source_kind": "paragraph",
+            "source_index": 147,
+            "source_style": "Normal",
+            "candidate_line_start": 302,
+            "candidate_line_end": 303,
+            "source_text_sha256": "FE68FA44B07C3249BAE7E2E7109DB9C021B8C555C2C9EAF72E4FE08E73145BDD"
+          },
+          {
+            "source_order": 154,
+            "source_kind": "paragraph",
+            "source_index": 148,
+            "source_style": "Normal",
+            "candidate_line_start": 304,
+            "candidate_line_end": 305,
+            "source_text_sha256": "D75579CED1355BC7525A43267406C8D5A9C3B695E318005B57BA4A49D3B476F0"
+          },
+          {
+            "source_order": 155,
+            "source_kind": "paragraph",
+            "source_index": 149,
+            "source_style": "Normal",
+            "candidate_line_start": 306,
+            "candidate_line_end": 307,
+            "source_text_sha256": "F094C06C40DDC4F7F54A1E44D2AF94687C7ED5DB8B95C68D0C4DCC2B50A6D74F"
+          },
+          {
+            "source_order": 156,
+            "source_kind": "paragraph",
+            "source_index": 150,
+            "source_style": "Normal",
+            "candidate_line_start": 308,
+            "candidate_line_end": 309,
+            "source_text_sha256": "E56A4E00D05821CF2157B5AE023553EC64E019C814287E8C8350879EB0149AAB"
+          },
+          {
+            "source_order": 157,
+            "source_kind": "paragraph",
+            "source_index": 151,
+            "source_style": "Normal",
+            "candidate_line_start": 310,
+            "candidate_line_end": 311,
+            "source_text_sha256": "84DC11ED05E8F21604498C618E605E372AF2EDD952F5DC3CA79B2FFC6D386F04"
+          },
+          {
+            "source_order": 158,
+            "source_kind": "paragraph",
+            "source_index": 152,
+            "source_style": "Normal",
+            "candidate_line_start": 312,
+            "candidate_line_end": 313,
+            "source_text_sha256": "9DE9649B53C4ACAA0FE8E10394A48F384A8F9B1F32426A5D9074D9CE167845B1"
+          },
+          {
+            "source_order": 159,
+            "source_kind": "paragraph",
+            "source_index": 153,
+            "source_style": "Normal",
+            "candidate_line_start": 314,
+            "candidate_line_end": 315,
+            "source_text_sha256": "C8508FB9A5BC974A5FB86DCECA89D91411C191536D296F15AAC08E963A6187F4"
+          },
+          {
+            "source_order": 160,
+            "source_kind": "paragraph",
+            "source_index": 154,
+            "source_style": "Normal",
+            "candidate_line_start": 316,
+            "candidate_line_end": 317,
+            "source_text_sha256": "05E7AFF2A6D9834FBAFC8F93F5E953727557D285F19F088B453C280CB30D0656"
+          },
+          {
+            "source_order": 161,
+            "source_kind": "paragraph",
+            "source_index": 155,
+            "source_style": "Normal",
+            "candidate_line_start": 318,
+            "candidate_line_end": 319,
+            "source_text_sha256": "0987E3A931F2EF1A08A06FC3E59EFD011219C0896A27FB8EC15265CFACE26332"
+          },
+          {
+            "source_order": 162,
+            "source_kind": "paragraph",
+            "source_index": 156,
+            "source_style": "Normal",
+            "candidate_line_start": 320,
+            "candidate_line_end": 321,
+            "source_text_sha256": "94D3BD5E29631EE5EC492ADCBB27C7279C866A46E75A375024D3FEF398E55462"
+          }
+        ],
+        "source_section_to_candidate_section_map": [
+          {
+            "source_style": "heading 1",
+            "source_heading": "Layer 0 — Паспорт исследовательского блока",
+            "candidate_line": 17,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "1. Как читать этот материал",
+            "candidate_line": 36,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "2. Research Question",
+            "candidate_line": 42,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "3. Почему вопрос «Что такое стратегия?» сложнее, чем кажется",
+            "candidate_line": 54,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "4. Историческая линия: как менялся объект стратегии",
+            "candidate_line": 62,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 2",
+            "source_heading": "4.1. Chandler: цели, действия и ресурсы",
+            "candidate_line": 64,
+            "candidate_markdown_level": 2
+          },
+          {
+            "source_style": "heading 2",
+            "source_heading": "4.2. Andrews: стратегия как паттерн решений",
+            "candidate_line": 70,
+            "candidate_markdown_level": 2
+          },
+          {
+            "source_style": "heading 2",
+            "source_heading": "4.3. Ansoff: направление развития и правила решений",
+            "candidate_line": 76,
+            "candidate_markdown_level": 2
+          },
+          {
+            "source_style": "heading 2",
+            "source_heading": "4.4. Mintzberg: стратегия не обязана быть только планом",
+            "candidate_line": 82,
+            "candidate_markdown_level": 2
+          },
+          {
+            "source_style": "heading 2",
+            "source_heading": "4.5. Porter: позиция, trade-offs и fit",
+            "candidate_line": 92,
+            "candidate_markdown_level": 2
+          },
+          {
+            "source_style": "heading 2",
+            "source_heading": "4.6. Resource-Based View и Dynamic Capabilities",
+            "candidate_line": 100,
+            "candidate_markdown_level": 2
+          },
+          {
+            "source_style": "heading 2",
+            "source_heading": "4.7. Rumelt: diagnosis, guiding policy, coherent action",
+            "candidate_line": 108,
+            "candidate_markdown_level": 2
+          },
+          {
+            "source_style": "heading 2",
+            "source_heading": "4.8. Поле как портфель перспектив",
+            "candidate_line": 114,
+            "candidate_markdown_level": 2
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "5. Карта основных трактовок",
+            "candidate_line": 120,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "6. Где школы действительно спорят",
+            "candidate_line": 134,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 2",
+            "source_heading": "6.1. Намерение vs реализованный паттерн",
+            "candidate_line": 136,
+            "candidate_markdown_level": 2
+          },
+          {
+            "source_style": "heading 2",
+            "source_heading": "6.2. Position vs capability",
+            "candidate_line": 140,
+            "candidate_markdown_level": 2
+          },
+          {
+            "source_style": "heading 2",
+            "source_heading": "6.3. Content vs process",
+            "candidate_line": 144,
+            "candidate_markdown_level": 2
+          },
+          {
+            "source_style": "heading 2",
+            "source_heading": "6.4. Prescription vs description",
+            "candidate_line": 148,
+            "candidate_markdown_level": 2
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "7. Кандидаты на ядро понятия",
+            "candidate_line": 152,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "8. Что не следует слишком рано встраивать в универсальное определение",
+            "candidate_line": 165,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "9. Рабочий синтез RQ-01",
+            "candidate_line": 175,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "10. Наш синтез: четыре слоя для удержания понятия",
+            "candidate_line": 183,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "11. Boundary Cases",
+            "candidate_line": 194,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "12. Типичные ошибки понимания",
+            "candidate_line": 206,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "13. Strategic Critique — вопросы после RQ-01",
+            "candidate_line": 221,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "14. Learning Outcome",
+            "candidate_line": 233,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "15. Self-check — необязательный",
+            "candidate_line": 246,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "16. Open Questions Register",
+            "candidate_line": 256,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "17. Recommended Reading / Listening",
+            "candidate_line": 269,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "18. Вывод RQ-01",
+            "candidate_line": 282,
+            "candidate_markdown_level": 1
+          },
+          {
+            "source_style": "heading 1",
+            "source_heading": "19. Источники",
+            "candidate_line": 292,
+            "candidate_markdown_level": 1
+          }
+        ]
+      },
+      "tables": {
+        "table_count": 6,
+        "total_rows": 54,
+        "total_cells": 160,
+        "merged_cells": 0,
+        "cell_level_operator_comparison": [
+          {
+            "table": 1,
+            "rows": 13,
+            "columns": 2,
+            "cells": 26,
+            "source_cell_text_sha256": "338E64FE9B019901F0C959F59E72A0D5AD1887CEEF89BEDC61BE9B9775E12FCE",
+            "candidate_cell_text_sha256": "338E64FE9B019901F0C959F59E72A0D5AD1887CEEF89BEDC61BE9B9775E12FCE",
+            "cell_text_match": true,
+            "row_and_column_order_match": true
+          },
+          {
+            "table": 2,
+            "rows": 10,
+            "columns": 4,
+            "cells": 40,
+            "source_cell_text_sha256": "BD7193E0280C5C54DB50D4EFBC52385D2F05D8E6DD8566DB2BEDB46783A7048B",
+            "candidate_cell_text_sha256": "BD7193E0280C5C54DB50D4EFBC52385D2F05D8E6DD8566DB2BEDB46783A7048B",
+            "cell_text_match": true,
+            "row_and_column_order_match": true
+          },
+          {
+            "table": 3,
+            "rows": 5,
+            "columns": 3,
+            "cells": 15,
+            "source_cell_text_sha256": "F303EC7C3FB9CBFDB0506EAE9AA983BA9691F9C66861AC4993B6CF241CBFF0CF",
+            "candidate_cell_text_sha256": "F303EC7C3FB9CBFDB0506EAE9AA983BA9691F9C66861AC4993B6CF241CBFF0CF",
+            "cell_text_match": true,
+            "row_and_column_order_match": true
+          },
+          {
+            "table": 4,
+            "rows": 8,
+            "columns": 2,
+            "cells": 16,
+            "source_cell_text_sha256": "4DA3BF8C10D20655613605FB07FC2987CD68A4CAA7ADE6E35D7F7AFDBA82585D",
+            "candidate_cell_text_sha256": "4DA3BF8C10D20655613605FB07FC2987CD68A4CAA7ADE6E35D7F7AFDBA82585D",
+            "cell_text_match": true,
+            "row_and_column_order_match": true
+          },
+          {
+            "table": 5,
+            "rows": 9,
+            "columns": 3,
+            "cells": 27,
+            "source_cell_text_sha256": "0575AEA35B94C2548F2A75E6F7B2F57C41992FA70510B3C0742A29BDD1311D5C",
+            "candidate_cell_text_sha256": "0575AEA35B94C2548F2A75E6F7B2F57C41992FA70510B3C0742A29BDD1311D5C",
+            "cell_text_match": true,
+            "row_and_column_order_match": true
+          },
+          {
+            "table": 6,
+            "rows": 9,
+            "columns": 4,
+            "cells": 36,
+            "source_cell_text_sha256": "FAF4DCA6753CA8AE8FBF406ED34F20129259E89B684D1C47F548F6CB7BF1A52C",
+            "candidate_cell_text_sha256": "FAF4DCA6753CA8AE8FBF406ED34F20129259E89B684D1C47F548F6CB7BF1A52C",
+            "cell_text_match": true,
+            "row_and_column_order_match": true
+          }
+        ]
+      },
+      "citations_and_references": {
+        "citation_marker_count_source": 34,
+        "citation_marker_count_candidate": 34,
+        "citation_marker_sequence_match": true,
+        "reference_entry_count_source": 14,
+        "reference_entry_count_candidate": 14,
+        "doi_sequence_source": [
+          "DOI 10.1002/smj.4250060306",
+          "DOI 10.1002/smj.615"
+        ],
+        "doi_sequence_candidate": [
+          "DOI 10.1002/smj.4250060306",
+          "DOI 10.1002/smj.615"
+        ],
+        "doi_sequence_match": true,
+        "invented_links": 0
+      },
+      "formatting_and_page_furniture": {
+        "heading_1_source_and_candidate": 20,
+        "heading_2_source_and_candidate": 12,
+        "bulleted_items_source_and_candidate": 31,
+        "numbered_items_source_and_candidate": 25,
+        "displayed_number_sequence_preserved": "1-25",
+        "bold_and_italic_direct_run_formatting": "mapped to Markdown emphasis",
+        "explicit_cover_page_break": "represented by an HTML page-break div",
+        "source_header": "STRATEGY KNOWLEDGE BOOK  |  PART 01  |  RQ-01 NATURE",
+        "source_footer": "Учебная исследовательская версия • v1.0 • 30.08.2026   |   dynamic page number",
+        "page_furniture_disposition": "Not repeated as candidate body prose; identity/version remains in the opening source content and exact repeated furniture is preserved in this evidence package and discrepancy log."
+      },
+      "visual_inspection": {
+        "packaged_libreoffice_renderer": "unavailable because LibreOffice is not installed",
+        "source_fallback": "Microsoft Word read-only PDF export",
+        "source_pages": 11,
+        "source_pages_inspected": 11,
+        "candidate_renderer": "marked GFM to local HTML, then isolated headless Microsoft Edge PDF",
+        "candidate_pages": 11,
+        "candidate_pages_inspected": 11,
+        "operator_observation": "All source and candidate pages inspected; headings, lists and six tables are readable, with no clipping, overlap, missing glyphs or broken table structure observed."
+      }
+    },
+    "operator_self_check": {
+      "scope": "mechanical conversion-operator check only; not an independent fidelity verdict",
+      "source_identity_reverified_after_conversion": true,
+      "candidate_exists_at_exact_path": true,
+      "candidate_exists_exactly_once": true,
+      "exact_regeneration_match": true,
+      "no_obvious_source_section_omission": true,
+      "no_added_explanatory_prose": true,
+      "source_language_preserved": true,
+      "translation_performed": false,
+      "intentional_intellectual_revision_performed": false,
+      "independent_fidelity_review_occurred": false,
+      "fidelity_verdict_issued": false
+    },
+    "discrepancies": {
+      "log_path": "reviews/migration/part-01/rq01/discrepancy-log.yaml",
+      "recorded_ids": [
+        "RQ01-MIG-N-001",
+        "RQ01-MIG-N-002",
+        "RQ01-MIG-N-003"
+      ],
+      "fabricated_discrepancies": false
+    },
+    "unresolved_items": [
+      "Independent Fidelity Reviewer must verify all class N normalization records and the complete Pre-Verdict Review Package.",
+      "Actual independent reviewer identity and independence statement must be recorded in the future review evidence.",
+      "No fidelity verdict or canonical decision exists."
+    ],
+    "governance_boundaries": {
+      "source_docx_authoritative": true,
+      "candidate_canonical": false,
+      "canonical_promotion_authorized": false,
+      "rq02_through_rq11_authorized": false
+    }
+  }
+}

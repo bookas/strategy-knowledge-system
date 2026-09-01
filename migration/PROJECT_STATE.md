@@ -63,10 +63,11 @@ Historical Part 01 phase-readiness assessment:
 Це формулювання фіксує історичну phase readiness, а не чинну operational
 authorization. Поточні повноваження визначають live Manifest, цей Project State
 та застосовний Entry Gate. Migration-control methodology формально схвалено.
-RQ-01 Pilot Entry Gate формально пройдено з verdict `PASS`, і одну faithful
-source-language-preserving conversion авторизовано; conversion ще не виконано,
-candidate Markdown не створено, fidelity verdict не видано, а canonical
-promotion залишається неавторизованою.
+RQ-01 Pilot Entry Gate формально пройдено з verdict `PASS`, авторизовану faithful
+source-language-preserving conversion виконано, а independent fidelity review
+закрито як `PASS WITH NON-BLOCKING DISCREPANCIES`. Candidate correction не
+потрібна; candidate Markdown залишається noncanonical, а canonical promotion —
+неавторизованою.
 
 # 3. Part 01 Purpose
 
@@ -854,7 +855,7 @@ Original DOCX files remain the historical research baseline.
 
 Markdown conversion has not yet been accepted as canonical.
 
-No migrated Markdown chapter should be treated as canonical until fidelity validation is completed.
+No migrated Markdown chapter should be treated as canonical until fidelity validation is completed and separate canonical-promotion authority is recorded.
 
 Migration summaries do not override source research documents.
 
@@ -983,8 +984,12 @@ RQ-01 DOCX → Markdown migration pilot:
 Entry Gate: `PASS`; одна faithful source-language-preserving conversion
 авторизована Entry Gate Decision Record `rq01-pilot-entry-gate-001`.
 
-Execution ще не розпочато. Candidate Markdown не створено, fidelity verdict не
-видано, canonical promotion не авторизовано.
+Execution і independent fidelity review завершено. Reviewer verdict:
+`CONDITIONAL PASS`; protocol-equivalent verdict: `PASS WITH NON-BLOCKING
+DISCREPANCIES`. N-001, N-002 і N-003 verified та accepted_no_change; material
+discrepancies немає, candidate correction не потрібна. Final Pilot Review Record:
+`rq01-final-pilot-review-001`. Candidate Markdown не є canonical, canonical
+promotion не авторизовано.
 
 Migration-control methodology:
 
@@ -1081,10 +1086,16 @@ noncanonical target `knowledge-books/strategy/part-01/chapters/RQ01_Nature.md`.
 
 Поточний execution state:
 
-1. conversion авторизовано, але ще не виконано;
-2. candidate Markdown ще не створено;
-3. fidelity review ще не проведено і fidelity verdict не видано;
-4. canonical promotion не авторизовано.
+1. exact source identity підтверджено, authorized conversion виконано;
+2. exact noncanonical candidate створено та ідентифіковано;
+3. fresh Independent Fidelity Reviewer перевірив normalized text, structure,
+   tables і references та видав `CONDITIONAL PASS`, protocol-equivalent `PASS
+   WITH NON-BLOCKING DISCREPANCIES`;
+4. N-001, N-002 і N-003 verified, accepted_no_change і resolved; material
+   discrepancies та required corrections відсутні;
+5. Final Pilot Review Record `rq01-final-pilot-review-001` закриває pilot
+   fidelity lifecycle;
+6. canonical promotion не авторизовано.
 
 Post-migration source-of-truth hierarchy, збережена як OQ-062, також лишається
 невирішеною. Сам по собі цей open question не забороняє авторизовану faithful
@@ -1094,8 +1105,24 @@ noncanonical.
 
 Methodology approval саме по собі не авторизувало RQ-01 conversion. Чинну вузьку
 authorization створило окреме adjudication через verdict `PASS` і traceable
-Entry Gate Decision Record. Воно не є fidelity verdict і не дозволяє canonical
-promotion або migration RQ-02–RQ-11.
+Entry Gate Decision Record. Завершений fidelity review не дозволяє canonical
+promotion; окрема series authorization для RQ-02–RQ-11 зафіксована нижче.
+
+Retrospective зафіксовано як
+[`Lean Migration Pipeline v2`](../methodology/migration/lean-migration-pipeline-v2-proposal.md).
+Adjudication від `2026-09-01` схвалило її exact artifact hash через approval
+record `lean-migration-pipeline-v2-approval-001`. ADR-051 фіксує v2 як scoped
+operational profile: identity та normalized checks механізуються, independent
+difference-focused review зберігається, а full visual comparison, exhaustive
+manual comparison та separate adjudication застосовуються лише за risk triggers.
+
+RQ-02–RQ-11 авторизовано як одну noncanonical migration series
+`rq02-rq11-lean-series-001`. Repeated per-chapter Entry Gates і methodology
+approvals не потрібні, доки source class, methodology, authority та risk profile
+істотно не змінилися. Minimum reusable deterministic tool:
+`tools/migration/legacy_docx_pipeline.py` (`inventory`, `convert`, `check`).
+Наступна дія — RQ-02 source identity та complexity/risk screen; RQ-02 conversion
+у цьому approval run не виконувалася.
 
 # 20. State Snapshot Summary
 
@@ -1129,7 +1156,13 @@ First Codex Repository Comprehension Gate:
 PASS WITH FINDINGS — ACCEPTED
 
 RQ-01 migration pilot:
-AUTHORIZED — NOT YET STARTED; CANDIDATE NOT CREATED; NO FIDELITY VERDICT
+CLOSED — PASS WITH NON-BLOCKING DISCREPANCIES; NO CORRECTION REQUIRED; CANDIDATE NOT CANONICAL
+
+Lean Migration Pipeline v2:
+APPROVED — RQ-02–RQ-11 SERIES AUTHORIZED; PRE-RQ-02 IDENTITY/RISK SCREEN
+
+Canonical promotion:
+NOT AUTHORIZED; OQ-062 UNRESOLVED
 
 Codex-native research:
 NOT YET STARTED

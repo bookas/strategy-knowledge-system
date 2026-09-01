@@ -5,7 +5,7 @@ manifest:
   area: "Strategy Knowledge Book"
   part: "Part 01 — Strategy"
   purpose: "Machine-readable migration inventory for source research artifacts."
-  migration_stage: "post-rq01-pilot-entry-gate-pre-conversion"
+  migration_stage: "rq02-rq11-series-authorized-pre-rq02-identity-screen"
   status: "in-progress"
 
   baseline:
@@ -76,12 +76,32 @@ migration_control_artifacts:
     approval_status: "approved"
     approval_record_id: "methodology-approval-001"
 
+  lean_migration_pipeline:
+    artifact_id: "SKS-MIG-LEAN-V2-PROPOSAL-001"
+    version: "v2"
+    status: "approved"
+    repository_path: "methodology/migration/lean-migration-pipeline-v2-proposal.md"
+    artifact_sha256: "E1BC0D3961A0FBD0A8D2F345A1CE548E9131C58603E11ABB5B2FF3B10A52D4BC"
+    approval_status: "approved"
+    approval_record_id: "lean-migration-pipeline-v2-approval-001"
+    operational_scope: "RQ-02 through RQ-11 legacy DOCX to noncanonical Markdown migration"
+    reusable_tool:
+      repository_path: "tools/migration/legacy_docx_pipeline.py"
+      version: "1.0.0"
+      sha256: "F6DD4525E717E8E3FC583BAD43DFFBEE8DDEDA52B6AB79D98364F77300C796FA"
+      commands:
+        - "inventory"
+        - "convert"
+        - "check"
+
   relationship:
     protocol_uses_taxonomy: true
     taxonomy_defines_fidelity_verdict_independently: false
     methodology_approved: true
     pilot_entry_authorized: true
     pilot_entry_authorized_scope: "current RQ-01 pilot Entry Gate only"
+    rq02_rq11_series_authorized: true
+    rq02_rq11_series_authorization_id: "rq02-rq11-lean-series-001"
     canonical_promotion_authorized: false
 
   controlled_values:
@@ -172,9 +192,26 @@ migration_control_artifacts:
       rq01_pilot_entry_authorized_by_this_record: false
       canonical_promotion_authorized_by_this_record: false
 
+    - approval_id: "lean-migration-pipeline-v2-approval-001"
+      decision: "approved"
+      decision_by: "Codex acting as repository-authorized adjudicator"
+      authority_basis: "Explicit MIGRATION PILOT — LEAN APPROVAL AND SCALE AUTHORIZATION mandate"
+      decision_date: "2026-09-01"
+      artifact_id: "SKS-MIG-LEAN-V2-PROPOSAL-001"
+      artifact_version: "v2"
+      artifact_repository_path: "methodology/migration/lean-migration-pipeline-v2-proposal.md"
+      artifact_sha256: "E1BC0D3961A0FBD0A8D2F345A1CE548E9131C58603E11ABB5B2FF3B10A52D4BC"
+      governance_review_result: "APPROVED — no blocking inconsistency after scope-limited v2 relationship was made explicit"
+      architecture_decision: "ADR-051"
+      approval_scope: "Legacy DOCX to noncanonical Markdown migration for RQ-02 through RQ-11 only."
+      routine_mechanics_effect: "Lean v2 governs routine comparison mechanics in scope; v1 preservation, discrepancy, independence and canonical-boundary controls remain governing."
+      canonical_promotion_authorized_by_this_record: false
+      translation_or_research_revision_authorized_by_this_record: false
+
   rq01_pilot_entry_gate_decision_records:
     - decision_id: "rq01-pilot-entry-gate-001"
       decision_type: "rq01_pilot_entry_gate_authorization"
+      record_lifecycle_status: "completed_consumed"
       rq_id: "RQ-01"
       decision: "PASS"
       decision_by: "Repository owner explicitly acting as repository-authorized adjudicator"
@@ -190,7 +227,7 @@ migration_control_artifacts:
         size_bytes: 50707
       target:
         path: "knowledge-books/strategy/part-01/chapters/RQ01_Nature.md"
-        status: "noncanonical_candidate_not_created"
+        status_at_decision: "noncanonical_candidate_not_created"
       methodology:
         fidelity_protocol_sha256: "CFD075517C19BF467E11382A75274B7A69A0E3C1D05F8B1A9F73C4632BBA6490"
         discrepancy_taxonomy_sha256: "239FE10DFCC5831D2B01CEFDDEE8A04BF86D76DD73E4CB02717F5A0B703CDF72"
@@ -258,6 +295,83 @@ migration_control_artifacts:
         - "independence requirements cannot be satisfied"
         - "new BLOCKING governance finding appears"
 
+  rq01_final_pilot_review_records:
+    - record_id: "rq01-final-pilot-review-001"
+      record_type: "final_pilot_review"
+      rq_id: "RQ-01"
+      repository_path: "reviews/migration/part-01/rq01/final-pilot-review-record.yaml"
+      status: "completed"
+      review_date: "2026-08-31"
+      reviewer_identity: "OpenAI Codex isolated review context (/root/rq01_independent_fidelity_review), acting solely as Independent Fidelity Reviewer"
+      reviewer_independent_from_converter: true
+      reviewer_reported_verdict: "CONDITIONAL PASS"
+      protocol_verdict: "pass_with_non_blocking_discrepancies"
+      material_discrepancies: 0
+      candidate_correction_required: false
+      discrepancy_dispositions:
+        RQ01-MIG-N-001: "verified_accepted_no_change"
+        RQ01-MIG-N-002: "verified_accepted_no_change"
+        RQ01-MIG-N-003: "verified_accepted_no_change"
+      candidate_canonical_status: "not_canonical"
+      canonical_promotion_authorized: false
+      retrospective:
+        repository_path: "methodology/migration/lean-migration-pipeline-v2-proposal.md"
+        status_at_pilot_closure: "proposed_not_approved"
+        recommendation: "scale_with_conditions"
+        subsequent_approval_record: "lean-migration-pipeline-v2-approval-001"
+
+  migration_series_authorization_records:
+    - authorization_id: "rq02-rq11-lean-series-001"
+      decision: "AUTHORIZED"
+      decision_by: "Codex acting as repository-authorized adjudicator"
+      authority_basis: "Explicit MIGRATION PILOT — LEAN APPROVAL AND SCALE AUTHORIZATION mandate"
+      decision_date: "2026-09-01"
+      architecture_decision: "ADR-051"
+      approved_pipeline:
+        artifact_id: "SKS-MIG-LEAN-V2-PROPOSAL-001"
+        version: "v2"
+        artifact_sha256: "E1BC0D3961A0FBD0A8D2F345A1CE548E9131C58603E11ABB5B2FF3B10A52D4BC"
+        approval_record_id: "lean-migration-pipeline-v2-approval-001"
+      authorized_artifacts:
+        - "STR-P01-RQ02"
+        - "STR-P01-RQ03"
+        - "STR-P01-RQ04"
+        - "STR-P01-RQ05"
+        - "STR-P01-RQ06"
+        - "STR-P01-RQ07"
+        - "STR-P01-RQ08"
+        - "STR-P01-RQ09"
+        - "STR-P01-RQ10"
+        - "STR-P01-RQ11"
+      target_status: "noncanonical"
+      repeated_per_chapter_entry_gate_required: false
+      repeated_per_chapter_methodology_approval_required: false
+      standard_flow:
+        - "source_identity"
+        - "deterministic_conversion"
+        - "automated_fidelity_checks"
+        - "independent_difference_focused_review"
+        - "correction_only_for_material_discrepancies"
+        - "fidelity_closure"
+        - "commit"
+      risk_triggered_only:
+        - "full_visual_qa"
+        - "exhaustive_manual_comparison"
+        - "separate_adjudication"
+      escalation_triggers:
+        - "source_identity_ambiguous_or_changed"
+        - "unsupported_or_complex_docx_structures"
+        - "automated_material_differences"
+        - "independent_review_semantic_uncertainty"
+        - "material_methodology_change"
+      prohibited_scope:
+        - "canonical_promotion"
+        - "translation"
+        - "theory_revision"
+        - "research_content_changes"
+        - "source_docx_modification_or_deletion"
+      oq_062_status: "unresolved"
+
   review_rounds:
     - review_id: "migration-methodology-review-001"
       baseline_status: "historical_superseded_review_baseline"
@@ -316,11 +430,20 @@ migration_control_artifacts:
     revised_taxonomy_sha256: "239FE10DFCC5831D2B01CEFDDEE8A04BF86D76DD73E4CB02717F5A0B703CDF72"
     final_narrow_review_id: "migration-methodology-review-003"
     final_narrow_review_status: "completed"
-    current_process_stage: "post_rq01_pilot_entry_gate_pre_conversion"
+    current_process_stage: "rq02_rq11_series_authorized_pre_rq02_identity_screen"
     approval_status: "approved"
     approval_record_id: "methodology-approval-001"
     rq01_pilot_entry_authorized: true
     rq01_pilot_entry_decision_id: "rq01-pilot-entry-gate-001"
+    rq01_pilot_entry_authorization_consumed: true
+    rq01_pilot_fidelity_closed: true
+    rq01_final_pilot_review_record_id: "rq01-final-pilot-review-001"
+    rq01_fidelity_verdict: "pass_with_non_blocking_discrepancies"
+    rq01_candidate_canonical_status: "not_canonical"
+    rq02_rq11_migration_authorized: true
+    rq02_rq11_series_authorization_id: "rq02-rq11-lean-series-001"
+    lean_migration_pipeline_v2_status: "approved"
+    lean_migration_pipeline_v2_approval_record_id: "lean-migration-pipeline-v2-approval-001"
 
 paths:
   part_root: "knowledge-books/strategy/part-01"
@@ -382,13 +505,19 @@ artifacts:
       repository_path: "knowledge-books/strategy/part-01/chapters/RQ01_Nature.md"
 
     migration:
-      status: "not_started"
+      status: "fidelity_pass"
       pilot: true
       pilot_entry_authorized: true
       pilot_entry_decision_id: "rq01-pilot-entry-gate-001"
       fidelity_audit_required: true
-      fidelity_audit_status: "not_started"
+      fidelity_audit_status: "pass_with_non_blocking_discrepancies"
+      final_pilot_review_record_id: "rq01-final-pilot-review-001"
+      final_pilot_review_record: "reviews/migration/part-01/rq01/final-pilot-review-record.yaml"
+      candidate_sha256: "BA8B7A503C75C2EA0988C67D8B82352B10A379934E0F54571E74F6036FED8CDA"
+      candidate_git_or_worktree_identity: "git_worktree_blob:44f3b4c5d2dafbd24955d6e033342a9b988e658c"
       canonical_status: "historical_docx_baseline"
+      candidate_canonical_status: "not_canonical"
+      canonical_promotion_authorized: false
 
   - id: "STR-P01-RQ02"
     title: "Function of Strategy"
@@ -798,13 +927,20 @@ process_progress:
     - "Final methodology adjudication схвалило Protocol і Taxonomy exact baseline 755255560207f3f0f8ab925a5be895c340875ee3 через Methodology Approval Record methodology-approval-001."
     - "OQ-059 та OQ-060 adjudicated як sufficiently operationalized і переведено у статус Resolved."
     - "RQ-01 Pilot Entry Gate evaluation завершено з CONDITIONAL PASS; pre-conversion conditions SATISFIED; narrow confirmation PASS."
-    - "Final RQ-01 Pilot Entry Gate adjudication за record rq01-pilot-entry-gate-001 надало PASS і вузьку authorization на одну faithful conversion; conversion ще не виконано."
+    - "Final RQ-01 Pilot Entry Gate adjudication за record rq01-pilot-entry-gate-001 надало PASS і вузьку authorization на одну faithful conversion."
+    - "RQ-01 faithful conversion виконано в exact noncanonical target; source identity після conversion залишилася незмінною."
+    - "Independent Fidelity Reviewer видав CONDITIONAL PASS, protocol-equivalent PASS WITH NON-BLOCKING DISCREPANCIES; material discrepancies не виявлено і candidate correction не потрібна."
+    - "N-001, N-002 та N-003 independently verified, accepted_no_change і resolved; створено Final Pilot Review Record rq01-final-pilot-review-001."
+    - "RQ-01 pilot fidelity lifecycle закрито; candidate залишається not_canonical, canonical promotion не авторизовано."
+    - "Lean Migration Pipeline v2 approved за record lean-migration-pipeline-v2-approval-001; ADR-051 фіксує scope-limited routine mechanics."
+    - "RQ-02–RQ-11 authorized як одна noncanonical migration series rq02-rq11-lean-series-001 без repeated per-chapter Entry Gates або methodology approvals."
+    - "Створено deterministic reusable inventory/converter/checker tools/migration/legacy_docx_pipeline.py та успішно перевірено на closed RQ-01 evidence baseline."
 
   current:
-    - "Виконати одну авторизовану faithful source-language-preserving RQ-01 conversion в exact noncanonical target; candidate ще не створено."
+    - "Виконати RQ-02 source identity та complexity/risk screen reusable deterministic tool; це не є conversion або повторним Entry Gate."
 
   pending:
-    - "Після conversion сформувати Pre-Verdict Review Package та провести independent fidelity review; fidelity verdict ще не видано."
+    - "Після clean RQ-02 screen виконати standard Lean v2 flow; RQ-02 conversion не виконувалася в approval run."
     - "Define the post-migration source-of-truth hierarchy preserved as OQ-062 before canonical promotion."
 
   prohibited_during_authorized_rq01_pilot:
