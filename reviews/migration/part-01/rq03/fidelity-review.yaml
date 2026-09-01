@@ -1,0 +1,68 @@
+fidelity_review:
+  record_id: "rq03-fidelity-review-001"
+  rq_id: "RQ-03"
+  record_status: "completed"
+  review_date: "2026-09-01"
+
+  reviewer:
+    role: "Independent Fidelity Reviewer"
+    reviewer_id: "/root/rq03_rq05_fidelity_reviews"
+    independence_statement: "Fresh independent review context; not the Conversion Operator and not an author of the candidate, evidence, or any correction."
+    converter_is_reviewer: false
+    reviewer_authored_candidate: false
+    reviewer_authored_correction: false
+
+  source_identity:
+    manifest_id: "STR-P01-RQ03"
+    version: "v1.1"
+    repository_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ03_Object_Levels_Strategic_Agency_v1_1.docx"
+    git_blob: "7806a3c81e98391d003b2a461908971c69e63a58"
+    sha256: "2A5E56F5D0A8B5E71F7DFE59AD61DA55FC021D93DF896426BDA790C957BBD9AE"
+    size_bytes: 60907
+    unchanged_after_review: true
+
+  candidate_identity:
+    repository_path: "knowledge-books/strategy/part-01/chapters/RQ03_Object_Levels_Strategic_Agency.md"
+    git_worktree_blob: "03aece9b99f5e45f9021408b89d73a1950703cd4"
+    sha256: "DA88322FF4A566AF685E1009A143B24D10C5F098A98FFDF535E77BB47C2C9551"
+    size_bytes: 62359
+
+  evidence_identity:
+    repository_path: "reviews/migration/part-01/rq03/conversion-evidence.json"
+    git_worktree_blob: "c04ed1c54a925a47b9e46bcb003e8eb69945f1a7"
+    sha256: "53993876337D8717352CD7EF83773483462A1B7DD35E705F4E5C7A7FD3EC7B6B"
+    size_bytes: 1384
+
+  checks:
+    identities_independently_recomputed: true
+    source_manifest_path_and_version_match: true
+    automated_check_independently_rerun: true
+    rerun_matches_conversion_evidence: true
+    knowledge_bearing_units: "425 source / 425 candidate; exact normalized order and text match"
+    headings: "38 source / 38 candidate; hierarchy, order, and text match"
+    lists: "51 source / 51 candidate; kind, order, and text match"
+    tables: "18 source / 18 candidate; dimensions, cells, relationships, and order match"
+    citation_markers: "0 source / 0 candidate; exact sequence match"
+    doi_strings: "9 source / 9 candidate; exact sequence match"
+    bold_spans_match: true
+    italic_spans_match: true
+    difference_sample: []
+    risk_triggers: []
+    visual_qa_performed: false
+    visual_qa_reason: "No Lean Migration Pipeline v2 risk trigger or unresolved normalized difference was detected."
+
+  discrepancies:
+    total: 0
+    material: []
+    residual_non_blocking: []
+
+  verdict: "PASS"
+  correction_required: false
+
+  noncanonical_boundary:
+    canonical_promotion_authorized: false
+    fidelity_closure_implies_canonical_promotion: false
+    candidate_status_after_verdict: "not_canonical"
+    oq_062_effect: "OQ-062 remains unresolved and blocks canonical promotion, not this faithful noncanonical migration closure."
+
+  next_action: "Create a focused commit containing the RQ-03 candidate, conversion evidence, and this fidelity-review record as the noncanonical fidelity-closure set; do not modify the source or promote canonical status."

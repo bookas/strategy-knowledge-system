@@ -1,0 +1,45 @@
+{
+  "candidate_identity": {
+    "path": "knowledge-books/strategy/part-01/chapters/RQ08_Causal_Logic.md",
+    "sha256": "23F77BF1C2D45279B7B445568186AEF5FCE0817FABDC884DE210E0120DDD909E",
+    "size_bytes": 49362
+  },
+  "checks": {
+    "bold_spans": true,
+    "citation_markers": true,
+    "doi_strings": true,
+    "heading_hierarchy_and_text": true,
+    "italic_spans": true,
+    "knowledge_bearing_units": true,
+    "list_kind_order_and_text": true,
+    "table_dimensions_cells_and_order": true
+  },
+  "counts": {
+    "candidate_citations": 0,
+    "candidate_dois": 6,
+    "candidate_headings": 58,
+    "candidate_lists": 27,
+    "candidate_tables": 17,
+    "candidate_units": 666,
+    "source_citations": 0,
+    "source_dois": 6,
+    "source_headings": 58,
+    "source_lists": 27,
+    "source_tables": 17,
+    "source_units": 666
+  },
+  "difference_sample": [],
+  "independent_review_required": true,
+  "material_difference_detected": false,
+  "risk_triggered_review_required": false,
+  "risk_triggers": [],
+  "source_identity": {
+    "path": "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ08_Causal_Logic_v1.docx",
+    "sha256": "424956ABD55A66AB990E6D8995434458055472939A774C2932DC639DA6A76F68",
+    "size_bytes": 58105
+  },
+  "tool": {
+    "name": "legacy_docx_pipeline",
+    "version": "1.0.0"
+  }
+}

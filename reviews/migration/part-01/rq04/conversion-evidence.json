@@ -1,0 +1,45 @@
+{
+  "candidate_identity": {
+    "path": "knowledge-books/strategy/part-01/chapters/RQ04_Boundaries_of_Strategy.md",
+    "sha256": "5611C4C50C25B8047C961DA4409B820D21DA252FA013F6E7CD6E8C58ACDE059C",
+    "size_bytes": 60111
+  },
+  "checks": {
+    "bold_spans": true,
+    "citation_markers": true,
+    "doi_strings": true,
+    "heading_hierarchy_and_text": true,
+    "italic_spans": true,
+    "knowledge_bearing_units": true,
+    "list_kind_order_and_text": true,
+    "table_dimensions_cells_and_order": true
+  },
+  "counts": {
+    "candidate_citations": 0,
+    "candidate_dois": 12,
+    "candidate_headings": 43,
+    "candidate_lists": 46,
+    "candidate_tables": 8,
+    "candidate_units": 469,
+    "source_citations": 0,
+    "source_dois": 12,
+    "source_headings": 43,
+    "source_lists": 46,
+    "source_tables": 8,
+    "source_units": 469
+  },
+  "difference_sample": [],
+  "independent_review_required": true,
+  "material_difference_detected": false,
+  "risk_triggered_review_required": false,
+  "risk_triggers": [],
+  "source_identity": {
+    "path": "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ04_Boundaries_of_Strategy_v1.docx",
+    "sha256": "3EF20ABB67188EEC03666D1680F9A37556B772E6A6EFE5E6F4B20CD1E939912B",
+    "size_bytes": 59969
+  },
+  "tool": {
+    "name": "legacy_docx_pipeline",
+    "version": "1.0.0"
+  }
+}

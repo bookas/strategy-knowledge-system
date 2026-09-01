@@ -1,0 +1,45 @@
+{
+  "candidate_identity": {
+    "path": "knowledge-books/strategy/part-01/chapters/RQ10_Uncertainty_Emergence_Adaptation.md",
+    "sha256": "AA435B5675886B3BD10C976537F37AFDA6D4830E9287E0FA91AFEE15102ABC91",
+    "size_bytes": 49479
+  },
+  "checks": {
+    "bold_spans": true,
+    "citation_markers": true,
+    "doi_strings": true,
+    "heading_hierarchy_and_text": true,
+    "italic_spans": true,
+    "knowledge_bearing_units": true,
+    "list_kind_order_and_text": true,
+    "table_dimensions_cells_and_order": true
+  },
+  "counts": {
+    "candidate_citations": 0,
+    "candidate_dois": 7,
+    "candidate_headings": 61,
+    "candidate_lists": 36,
+    "candidate_tables": 18,
+    "candidate_units": 672,
+    "source_citations": 0,
+    "source_dois": 7,
+    "source_headings": 61,
+    "source_lists": 36,
+    "source_tables": 18,
+    "source_units": 672
+  },
+  "difference_sample": [],
+  "independent_review_required": true,
+  "material_difference_detected": false,
+  "risk_triggered_review_required": false,
+  "risk_triggers": [],
+  "source_identity": {
+    "path": "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ10_Uncertainty_Emergence_Adaptation_v1.docx",
+    "sha256": "FC0CFEDEC5B657C99318B02F8664F6234CDC93AE39CB1E2C905E429004272DCB",
+    "size_bytes": 57780
+  },
+  "tool": {
+    "name": "legacy_docx_pipeline",
+    "version": "1.0.0"
+  }
+}

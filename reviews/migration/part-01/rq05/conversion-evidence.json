@@ -1,0 +1,45 @@
+{
+  "candidate_identity": {
+    "path": "knowledge-books/strategy/part-01/chapters/RQ05_Choice_Scarcity_Tradeoffs.md",
+    "sha256": "19126E8A7F187693B3F2763FD24B66BAA81B5C4B8FFD52BED0E39F6AB7DFFF62",
+    "size_bytes": 40817
+  },
+  "checks": {
+    "bold_spans": true,
+    "citation_markers": true,
+    "doi_strings": true,
+    "heading_hierarchy_and_text": true,
+    "italic_spans": true,
+    "knowledge_bearing_units": true,
+    "list_kind_order_and_text": true,
+    "table_dimensions_cells_and_order": true
+  },
+  "counts": {
+    "candidate_citations": 0,
+    "candidate_dois": 6,
+    "candidate_headings": 51,
+    "candidate_lists": 27,
+    "candidate_tables": 15,
+    "candidate_units": 461,
+    "source_citations": 0,
+    "source_dois": 6,
+    "source_headings": 51,
+    "source_lists": 27,
+    "source_tables": 15,
+    "source_units": 461
+  },
+  "difference_sample": [],
+  "independent_review_required": true,
+  "material_difference_detected": false,
+  "risk_triggered_review_required": false,
+  "risk_triggers": [],
+  "source_identity": {
+    "path": "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ05_Choice_Scarcity_Tradeoffs_v1.docx",
+    "sha256": "3BAB6945B5AFBC09141FEC6F04E0F60BDE82D413527955A01E3C6E90DAFCD09B",
+    "size_bytes": 52922
+  },
+  "tool": {
+    "name": "legacy_docx_pipeline",
+    "version": "1.0.0"
+  }
+}

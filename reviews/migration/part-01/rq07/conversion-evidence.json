@@ -1,0 +1,45 @@
+{
+  "candidate_identity": {
+    "path": "knowledge-books/strategy/part-01/chapters/RQ07_Diagnosis_Starting_Point.md",
+    "sha256": "58DB92374FCDD4069633A8ED9E183E8D9BB67495BF6F696E17662E04FC8FECDF",
+    "size_bytes": 53268
+  },
+  "checks": {
+    "bold_spans": true,
+    "citation_markers": true,
+    "doi_strings": true,
+    "heading_hierarchy_and_text": true,
+    "italic_spans": true,
+    "knowledge_bearing_units": true,
+    "list_kind_order_and_text": true,
+    "table_dimensions_cells_and_order": true
+  },
+  "counts": {
+    "candidate_citations": 0,
+    "candidate_dois": 13,
+    "candidate_headings": 64,
+    "candidate_lists": 33,
+    "candidate_tables": 17,
+    "candidate_units": 720,
+    "source_citations": 0,
+    "source_dois": 13,
+    "source_headings": 64,
+    "source_lists": 33,
+    "source_tables": 17,
+    "source_units": 720
+  },
+  "difference_sample": [],
+  "independent_review_required": true,
+  "material_difference_detected": false,
+  "risk_triggered_review_required": false,
+  "risk_triggers": [],
+  "source_identity": {
+    "path": "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ07_Diagnosis_Starting_Point_v1.docx",
+    "sha256": "999225D4F2529193D52C9E303EEE11A3BB3C1196D32BD39F48388DEE465730E6",
+    "size_bytes": 59512
+  },
+  "tool": {
+    "name": "legacy_docx_pipeline",
+    "version": "1.0.0"
+  }
+}

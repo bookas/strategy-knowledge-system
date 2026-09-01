@@ -1,0 +1,62 @@
+fidelity_review:
+  record_id: "rq09-fidelity-review-001"
+  rq_id: "RQ-09"
+  record_status: "completed"
+  review_date: "2026-09-01"
+
+  reviewer:
+    role: "Independent Fidelity Reviewer"
+    reviewer_id: "/root/rq09_rq11_fidelity_reviews"
+    independence_statement: "Fresh independent review context; not the Conversion Operator and not an author of the candidate or any correction."
+
+  identities:
+    source:
+      repository_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ09_Strategic_Coherence_Alignment_v1.docx"
+      version: "v1"
+      git_blob: "ce52066de0bb27a6c849ff2c9d7b2c68357e8df8"
+      sha256: "A22E8B3562795FCE7E549712FE884F22752DE9497EA706778CA308959AA73EA6"
+      size_bytes: 57080
+      unchanged: true
+    candidate:
+      repository_path: "knowledge-books/strategy/part-01/chapters/RQ09_Strategic_Coherence_Alignment.md"
+      git_worktree_blob: "0566ad562e14719255d507cea7af84a0c9fec27d"
+      sha256: "8BB1ABA43D97A76837CB3C2A8327EB8AC00D871FF948C111D30E51B58703260A"
+      size_bytes: 48227
+    evidence:
+      repository_path: "reviews/migration/part-01/rq09/conversion-evidence.json"
+      git_worktree_blob: "b8cc96c5f9ddfec81c27bc2806803ce83dce2746"
+      sha256: "5C9CD9791BAFCB0A2F3E0C995A909F329B6F3AB2F85FEE23740C1C36E159037B"
+      size_bytes: 1380
+
+  checks:
+    manifest_path_and_version_match: true
+    identities_independently_recomputed: true
+    automated_check_independently_rerun: true
+    evidence_matches_fresh_check: true
+    knowledge_bearing_units: "650 source / 650 candidate; exact normalized text and order match"
+    headings: "63 source / 63 candidate; hierarchy, text and order match"
+    lists: "46 source / 46 candidate; kind, text and order match"
+    tables: "17 source / 17 candidate; dimensions, cells, relationships and order match"
+    citation_markers: "0 source / 0 candidate; exact sequence match"
+    doi_strings: "7 source / 7 candidate; exact sequence match"
+    bold_spans_match: true
+    italic_spans_match: true
+    source_language_preserved: true
+    material_difference_detected: false
+    difference_sample: []
+    risk_triggers: []
+    visual_qa_performed: false
+    visual_qa_reason: "No Lean Migration Pipeline v2 trigger or unresolved normalized difference."
+
+  discrepancies:
+    total: 0
+    material: []
+    residual_non_blocking: []
+
+  protocol_verdict: "PASS"
+  correction_required: false
+  noncanonical_boundary:
+    canonical_promotion_authorized: false
+    candidate_status_after_verdict: "not_canonical"
+    fidelity_closure_implies_canonical_promotion: false
+  next_action: "Include the RQ-09 candidate, conversion evidence, and this review in the focused noncanonical fidelity-closure commit; do not modify the source or promote canonical status."

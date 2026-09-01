@@ -1,0 +1,45 @@
+{
+  "candidate_identity": {
+    "path": "knowledge-books/strategy/part-01/chapters/RQ03_Object_Levels_Strategic_Agency.md",
+    "sha256": "DA88322FF4A566AF685E1009A143B24D10C5F098A98FFDF535E77BB47C2C9551",
+    "size_bytes": 62359
+  },
+  "checks": {
+    "bold_spans": true,
+    "citation_markers": true,
+    "doi_strings": true,
+    "heading_hierarchy_and_text": true,
+    "italic_spans": true,
+    "knowledge_bearing_units": true,
+    "list_kind_order_and_text": true,
+    "table_dimensions_cells_and_order": true
+  },
+  "counts": {
+    "candidate_citations": 0,
+    "candidate_dois": 9,
+    "candidate_headings": 38,
+    "candidate_lists": 51,
+    "candidate_tables": 18,
+    "candidate_units": 425,
+    "source_citations": 0,
+    "source_dois": 9,
+    "source_headings": 38,
+    "source_lists": 51,
+    "source_tables": 18,
+    "source_units": 425
+  },
+  "difference_sample": [],
+  "independent_review_required": true,
+  "material_difference_detected": false,
+  "risk_triggered_review_required": false,
+  "risk_triggers": [],
+  "source_identity": {
+    "path": "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ03_Object_Levels_Strategic_Agency_v1_1.docx",
+    "sha256": "2A5E56F5D0A8B5E71F7DFE59AD61DA55FC021D93DF896426BDA790C957BBD9AE",
+    "size_bytes": 60907
+  },
+  "tool": {
+    "name": "legacy_docx_pipeline",
+    "version": "1.0.0"
+  }
+}

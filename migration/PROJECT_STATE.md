@@ -977,7 +977,9 @@ Not yet authorized.
 
 Bulk DOCX → Markdown migration:
 
-Not yet started.
+Completed for the authorized primary RQ-01–RQ-11 legacy series. All candidates
+passed fidelity closure and remain noncanonical. Meta/review legacy artifacts
+outside `rq02-rq11-lean-series-001` were not included in this batch.
 
 RQ-01 DOCX → Markdown migration pilot:
 
@@ -1121,10 +1123,11 @@ RQ-02–RQ-11 авторизовано як одну noncanonical migration seri
 approvals не потрібні, доки source class, methodology, authority та risk profile
 істотно не змінилися. Minimum reusable deterministic tool:
 `tools/migration/legacy_docx_pipeline.py` (`inventory`, `convert`, `check`).
-RQ-02 source identity/risk screen, deterministic conversion, automated checks і
-independent difference-focused review завершено. Verdict: `PASS`; discrepancies
-відсутні, correction не потрібна. Candidate залишається noncanonical. Поточна
-дія — Lean v2 series execution RQ-03–RQ-11.
+RQ-02–RQ-11 source identity/risk screens, deterministic conversions, automated
+checks і independent difference-focused reviews завершено. Кожен RQ отримав
+`PASS`; discrepancies відсутні, corrections не потрібні, visual QA не triggered.
+Усі candidates залишаються noncanonical. Поточна process boundary — OQ-062 і
+окреме майбутнє canonical-promotion authority.
 
 # 20. State Snapshot Summary
 
@@ -1161,7 +1164,7 @@ RQ-01 migration pilot:
 CLOSED — PASS WITH NON-BLOCKING DISCREPANCIES; NO CORRECTION REQUIRED; CANDIDATE NOT CANONICAL
 
 Lean Migration Pipeline v2:
-APPROVED — RQ-02 CLOSED WITH PASS; RQ-03–RQ-11 SERIES EXECUTION
+APPROVED — RQ-01–RQ-11 LEGACY FIDELITY MIGRATION COMPLETE; ALL CANDIDATES NONCANONICAL
 
 Canonical promotion:
 NOT AUTHORIZED; OQ-062 UNRESOLVED

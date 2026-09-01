@@ -1,0 +1,45 @@
+{
+  "candidate_identity": {
+    "path": "knowledge-books/strategy/part-01/chapters/RQ09_Strategic_Coherence_Alignment.md",
+    "sha256": "8BB1ABA43D97A76837CB3C2A8327EB8AC00D871FF948C111D30E51B58703260A",
+    "size_bytes": 48227
+  },
+  "checks": {
+    "bold_spans": true,
+    "citation_markers": true,
+    "doi_strings": true,
+    "heading_hierarchy_and_text": true,
+    "italic_spans": true,
+    "knowledge_bearing_units": true,
+    "list_kind_order_and_text": true,
+    "table_dimensions_cells_and_order": true
+  },
+  "counts": {
+    "candidate_citations": 0,
+    "candidate_dois": 7,
+    "candidate_headings": 63,
+    "candidate_lists": 46,
+    "candidate_tables": 17,
+    "candidate_units": 650,
+    "source_citations": 0,
+    "source_dois": 7,
+    "source_headings": 63,
+    "source_lists": 46,
+    "source_tables": 17,
+    "source_units": 650
+  },
+  "difference_sample": [],
+  "independent_review_required": true,
+  "material_difference_detected": false,
+  "risk_triggered_review_required": false,
+  "risk_triggers": [],
+  "source_identity": {
+    "path": "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ09_Strategic_Coherence_Alignment_v1.docx",
+    "sha256": "A22E8B3562795FCE7E549712FE884F22752DE9497EA706778CA308959AA73EA6",
+    "size_bytes": 57080
+  },
+  "tool": {
+    "name": "legacy_docx_pipeline",
+    "version": "1.0.0"
+  }
+}

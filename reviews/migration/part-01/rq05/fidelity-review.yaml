@@ -1,0 +1,68 @@
+fidelity_review:
+  record_id: "rq05-fidelity-review-001"
+  rq_id: "RQ-05"
+  record_status: "completed"
+  review_date: "2026-09-01"
+
+  reviewer:
+    role: "Independent Fidelity Reviewer"
+    reviewer_id: "/root/rq03_rq05_fidelity_reviews"
+    independence_statement: "Fresh independent review context; not the Conversion Operator and not an author of the candidate, evidence, or any correction."
+    converter_is_reviewer: false
+    reviewer_authored_candidate: false
+    reviewer_authored_correction: false
+
+  source_identity:
+    manifest_id: "STR-P01-RQ05"
+    version: "v1"
+    repository_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ05_Choice_Scarcity_Tradeoffs_v1.docx"
+    git_blob: "a6c66f8b8841ac8f2f66c456dc260138277a97c4"
+    sha256: "3BAB6945B5AFBC09141FEC6F04E0F60BDE82D413527955A01E3C6E90DAFCD09B"
+    size_bytes: 52922
+    unchanged_after_review: true
+
+  candidate_identity:
+    repository_path: "knowledge-books/strategy/part-01/chapters/RQ05_Choice_Scarcity_Tradeoffs.md"
+    git_worktree_blob: "724f3825e7f59612d424e88378709d8df88d1c03"
+    sha256: "19126E8A7F187693B3F2763FD24B66BAA81B5C4B8FFD52BED0E39F6AB7DFFF62"
+    size_bytes: 40817
+
+  evidence_identity:
+    repository_path: "reviews/migration/part-01/rq05/conversion-evidence.json"
+    git_worktree_blob: "7d3829e14e6a4ba465f6b6bc98ef9fe71eb7e078"
+    sha256: "C9E6BD586CF9928716D89C78D0A10FD4BCA4093B1C9800AB0783C1456649AB1B"
+    size_bytes: 1372
+
+  checks:
+    identities_independently_recomputed: true
+    source_manifest_path_and_version_match: true
+    automated_check_independently_rerun: true
+    rerun_matches_conversion_evidence: true
+    knowledge_bearing_units: "461 source / 461 candidate; exact normalized order and text match"
+    headings: "51 source / 51 candidate; hierarchy, order, and text match"
+    lists: "27 source / 27 candidate; kind, order, and text match"
+    tables: "15 source / 15 candidate; dimensions, cells, relationships, and order match"
+    citation_markers: "0 source / 0 candidate; exact sequence match"
+    doi_strings: "6 source / 6 candidate; exact sequence match"
+    bold_spans_match: true
+    italic_spans_match: true
+    difference_sample: []
+    risk_triggers: []
+    visual_qa_performed: false
+    visual_qa_reason: "No Lean Migration Pipeline v2 risk trigger or unresolved normalized difference was detected."
+
+  discrepancies:
+    total: 0
+    material: []
+    residual_non_blocking: []
+
+  verdict: "PASS"
+  correction_required: false
+
+  noncanonical_boundary:
+    canonical_promotion_authorized: false
+    fidelity_closure_implies_canonical_promotion: false
+    candidate_status_after_verdict: "not_canonical"
+    oq_062_effect: "OQ-062 remains unresolved and blocks canonical promotion, not this faithful noncanonical migration closure."
+
+  next_action: "Create a focused commit containing the RQ-05 candidate, conversion evidence, and this fidelity-review record as the noncanonical fidelity-closure set; do not modify the source or promote canonical status."

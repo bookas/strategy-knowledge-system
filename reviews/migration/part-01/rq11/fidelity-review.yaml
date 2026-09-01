@@ -1,0 +1,62 @@
+fidelity_review:
+  record_id: "rq11-fidelity-review-001"
+  rq_id: "RQ-11"
+  record_status: "completed"
+  review_date: "2026-09-01"
+
+  reviewer:
+    role: "Independent Fidelity Reviewer"
+    reviewer_id: "/root/rq09_rq11_fidelity_reviews"
+    independence_statement: "Fresh independent review context; not the Conversion Operator and not an author of the candidate or any correction."
+
+  identities:
+    source:
+      repository_path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ11_Strategy_Quality_Failure_v1.docx"
+      version: "v1"
+      git_blob: "468219fb4fe7d164cc96c93c83929c0a3f8a1675"
+      sha256: "A879D4B238AC725219B879E36913E3471C036DDBC1B22B5640F49F540D62B9C2"
+      size_bytes: 52336
+      unchanged: true
+    candidate:
+      repository_path: "knowledge-books/strategy/part-01/chapters/RQ11_Strategy_Quality_Failure.md"
+      git_worktree_blob: "bce1e0e605fae5f85ecc06eae13c7b86d0ff5eff"
+      sha256: "FBEDA375C58D46C9D1AFC52D5E0A9F0A6617D9B68BF89F5CBAA55B32C4508CE2"
+      size_bytes: 37444
+    evidence:
+      repository_path: "reviews/migration/part-01/rq11/conversion-evidence.json"
+      git_worktree_blob: "9b4a91e184e0fcd2914bf0404e8b9d5f15cdb7d8"
+      sha256: "ACDF787F6FB658A2140AC72F8FC2B639E2B37C027AB61BE9D3A5EE0C277261E7"
+      size_bytes: 1370
+
+  checks:
+    manifest_path_and_version_match: true
+    identities_independently_recomputed: true
+    automated_check_independently_rerun: true
+    evidence_matches_fresh_check: true
+    knowledge_bearing_units: "520 source / 520 candidate; exact normalized text and order match"
+    headings: "53 source / 53 candidate; hierarchy, text and order match"
+    lists: "35 source / 35 candidate; kind, text and order match"
+    tables: "17 source / 17 candidate; dimensions, cells, relationships and order match"
+    citation_markers: "0 source / 0 candidate; exact sequence match"
+    doi_strings: "3 source / 3 candidate; exact sequence match"
+    bold_spans_match: true
+    italic_spans_match: true
+    source_language_preserved: true
+    material_difference_detected: false
+    difference_sample: []
+    risk_triggers: []
+    visual_qa_performed: false
+    visual_qa_reason: "No Lean Migration Pipeline v2 trigger or unresolved normalized difference."
+
+  discrepancies:
+    total: 0
+    material: []
+    residual_non_blocking: []
+
+  protocol_verdict: "PASS"
+  correction_required: false
+  noncanonical_boundary:
+    canonical_promotion_authorized: false
+    candidate_status_after_verdict: "not_canonical"
+    fidelity_closure_implies_canonical_promotion: false
+  next_action: "Include the RQ-11 candidate, conversion evidence, and this review in the focused noncanonical fidelity-closure commit; do not modify the source or promote canonical status."

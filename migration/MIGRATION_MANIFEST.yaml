@@ -5,7 +5,7 @@ manifest:
   area: "Strategy Knowledge Book"
   part: "Part 01 — Strategy"
   purpose: "Machine-readable migration inventory for source research artifacts."
-  migration_stage: "rq02-fidelity-closed-rq03-rq11-series-execution"
+  migration_stage: "part01-rq01-rq11-legacy-migration-complete-pre-canonical-promotion"
   status: "in-progress"
 
   baseline:
@@ -430,7 +430,7 @@ migration_control_artifacts:
     revised_taxonomy_sha256: "239FE10DFCC5831D2B01CEFDDEE8A04BF86D76DD73E4CB02717F5A0B703CDF72"
     final_narrow_review_id: "migration-methodology-review-003"
     final_narrow_review_status: "completed"
-    current_process_stage: "rq02_fidelity_closed_rq03_rq11_series_execution"
+    current_process_stage: "part01_rq01_rq11_legacy_migration_complete_pre_canonical_promotion"
     approval_status: "approved"
     approval_record_id: "methodology-approval-001"
     rq01_pilot_entry_authorized: true
@@ -442,6 +442,8 @@ migration_control_artifacts:
     rq01_candidate_canonical_status: "not_canonical"
     rq02_rq11_migration_authorized: true
     rq02_rq11_series_authorization_id: "rq02-rq11-lean-series-001"
+    rq02_rq11_fidelity_closed: true
+    part01_rq01_rq11_legacy_migration_complete: true
     lean_migration_pipeline_v2_status: "approved"
     lean_migration_pipeline_v2_approval_record_id: "lean-migration-pipeline-v2-approval-001"
 
@@ -567,11 +569,19 @@ artifacts:
       repository_path: "knowledge-books/strategy/part-01/chapters/RQ03_Object_Levels_Strategic_Agency.md"
 
     migration:
-      status: "not_started"
+      status: "fidelity_pass"
       pilot: false
+      series_authorization_id: "rq02-rq11-lean-series-001"
       fidelity_audit_required: true
-      fidelity_audit_status: "not_started"
+      fidelity_audit_status: "pass"
+      candidate_sha256: "DA88322FF4A566AF685E1009A143B24D10C5F098A98FFDF535E77BB47C2C9551"
+      candidate_git_or_worktree_identity: "git_worktree_blob:03aece9b99f5e45f9021408b89d73a1950703cd4"
+      conversion_evidence: "reviews/migration/part-01/rq03/conversion-evidence.json"
+      fidelity_review_record: "reviews/migration/part-01/rq03/fidelity-review.yaml"
+      fidelity_review_record_id: "rq03-fidelity-review-001"
       canonical_status: "historical_docx_baseline"
+      candidate_canonical_status: "not_canonical"
+      canonical_promotion_authorized: false
 
     supersedes:
       - "STR-P01-RQ03-OLD"
@@ -593,11 +603,19 @@ artifacts:
       repository_path: "knowledge-books/strategy/part-01/chapters/RQ04_Boundaries_of_Strategy.md"
 
     migration:
-      status: "not_started"
+      status: "fidelity_pass"
       pilot: false
+      series_authorization_id: "rq02-rq11-lean-series-001"
       fidelity_audit_required: true
-      fidelity_audit_status: "not_started"
+      fidelity_audit_status: "pass"
+      candidate_sha256: "5611C4C50C25B8047C961DA4409B820D21DA252FA013F6E7CD6E8C58ACDE059C"
+      candidate_git_or_worktree_identity: "git_worktree_blob:d02e9de49c9ac8d9a029811b386baf311f37e238"
+      conversion_evidence: "reviews/migration/part-01/rq04/conversion-evidence.json"
+      fidelity_review_record: "reviews/migration/part-01/rq04/fidelity-review.yaml"
+      fidelity_review_record_id: "rq04-fidelity-review-001"
       canonical_status: "historical_docx_baseline"
+      candidate_canonical_status: "not_canonical"
+      canonical_promotion_authorized: false
 
   - id: "STR-P01-RQ05"
     title: "Choice, Scarcity & Trade-offs"
@@ -616,11 +634,19 @@ artifacts:
       repository_path: "knowledge-books/strategy/part-01/chapters/RQ05_Choice_Scarcity_Tradeoffs.md"
 
     migration:
-      status: "not_started"
+      status: "fidelity_pass"
       pilot: false
+      series_authorization_id: "rq02-rq11-lean-series-001"
       fidelity_audit_required: true
-      fidelity_audit_status: "not_started"
+      fidelity_audit_status: "pass"
+      candidate_sha256: "19126E8A7F187693B3F2763FD24B66BAA81B5C4B8FFD52BED0E39F6AB7DFFF62"
+      candidate_git_or_worktree_identity: "git_worktree_blob:724f3825e7f59612d424e88378709d8df88d1c03"
+      conversion_evidence: "reviews/migration/part-01/rq05/conversion-evidence.json"
+      fidelity_review_record: "reviews/migration/part-01/rq05/fidelity-review.yaml"
+      fidelity_review_record_id: "rq05-fidelity-review-001"
       canonical_status: "historical_docx_baseline"
+      candidate_canonical_status: "not_canonical"
+      canonical_promotion_authorized: false
 
   - id: "STR-P01-RQ06"
     title: "Strategic Go / No-Go"
@@ -639,11 +665,19 @@ artifacts:
       repository_path: "knowledge-books/strategy/part-01/chapters/RQ06_Strategic_Go_NoGo.md"
 
     migration:
-      status: "not_started"
+      status: "fidelity_pass"
       pilot: false
+      series_authorization_id: "rq02-rq11-lean-series-001"
       fidelity_audit_required: true
-      fidelity_audit_status: "not_started"
+      fidelity_audit_status: "pass"
+      candidate_sha256: "5ACD94ADFC359F82BF9C3AC486815B67B27FB5368C965195CB005435736AA726"
+      candidate_git_or_worktree_identity: "git_worktree_blob:c92a3254413879df06aca438a3c4ab6674bad4dd"
+      conversion_evidence: "reviews/migration/part-01/rq06/conversion-evidence.json"
+      fidelity_review_record: "reviews/migration/part-01/rq06/fidelity-review.yaml"
+      fidelity_review_record_id: "rq06-fidelity-review-001"
       canonical_status: "historical_docx_baseline"
+      candidate_canonical_status: "not_canonical"
+      canonical_promotion_authorized: false
 
   - id: "STR-P01-RQ07"
     title: "Diagnosis & Starting Point"
@@ -662,11 +696,19 @@ artifacts:
       repository_path: "knowledge-books/strategy/part-01/chapters/RQ07_Diagnosis_Starting_Point.md"
 
     migration:
-      status: "not_started"
+      status: "fidelity_pass"
       pilot: false
+      series_authorization_id: "rq02-rq11-lean-series-001"
       fidelity_audit_required: true
-      fidelity_audit_status: "not_started"
+      fidelity_audit_status: "pass"
+      candidate_sha256: "58DB92374FCDD4069633A8ED9E183E8D9BB67495BF6F696E17662E04FC8FECDF"
+      candidate_git_or_worktree_identity: "git_worktree_blob:cd214173500eb28aae3cc1620cb306da2f5f7ea9"
+      conversion_evidence: "reviews/migration/part-01/rq07/conversion-evidence.json"
+      fidelity_review_record: "reviews/migration/part-01/rq07/fidelity-review.yaml"
+      fidelity_review_record_id: "rq07-fidelity-review-001"
       canonical_status: "historical_docx_baseline"
+      candidate_canonical_status: "not_canonical"
+      canonical_promotion_authorized: false
 
   - id: "STR-P01-RQ08"
     title: "Causal Logic"
@@ -685,11 +727,19 @@ artifacts:
       repository_path: "knowledge-books/strategy/part-01/chapters/RQ08_Causal_Logic.md"
 
     migration:
-      status: "not_started"
+      status: "fidelity_pass"
       pilot: false
+      series_authorization_id: "rq02-rq11-lean-series-001"
       fidelity_audit_required: true
-      fidelity_audit_status: "not_started"
+      fidelity_audit_status: "pass"
+      candidate_sha256: "23F77BF1C2D45279B7B445568186AEF5FCE0817FABDC884DE210E0120DDD909E"
+      candidate_git_or_worktree_identity: "git_worktree_blob:c1eac3d410e9658c938dd459d288f8ce94384f6d"
+      conversion_evidence: "reviews/migration/part-01/rq08/conversion-evidence.json"
+      fidelity_review_record: "reviews/migration/part-01/rq08/fidelity-review.yaml"
+      fidelity_review_record_id: "rq08-fidelity-review-001"
       canonical_status: "historical_docx_baseline"
+      candidate_canonical_status: "not_canonical"
+      canonical_promotion_authorized: false
 
   - id: "STR-P01-RQ09"
     title: "Strategic Coherence & Alignment"
@@ -708,11 +758,19 @@ artifacts:
       repository_path: "knowledge-books/strategy/part-01/chapters/RQ09_Strategic_Coherence_Alignment.md"
 
     migration:
-      status: "not_started"
+      status: "fidelity_pass"
       pilot: false
+      series_authorization_id: "rq02-rq11-lean-series-001"
       fidelity_audit_required: true
-      fidelity_audit_status: "not_started"
+      fidelity_audit_status: "pass"
+      candidate_sha256: "8BB1ABA43D97A76837CB3C2A8327EB8AC00D871FF948C111D30E51B58703260A"
+      candidate_git_or_worktree_identity: "git_worktree_blob:0566ad562e14719255d507cea7af84a0c9fec27d"
+      conversion_evidence: "reviews/migration/part-01/rq09/conversion-evidence.json"
+      fidelity_review_record: "reviews/migration/part-01/rq09/fidelity-review.yaml"
+      fidelity_review_record_id: "rq09-fidelity-review-001"
       canonical_status: "historical_docx_baseline"
+      candidate_canonical_status: "not_canonical"
+      canonical_promotion_authorized: false
 
   - id: "STR-P01-RQ10"
     title: "Uncertainty, Emergence & Adaptation"
@@ -731,11 +789,19 @@ artifacts:
       repository_path: "knowledge-books/strategy/part-01/chapters/RQ10_Uncertainty_Emergence_Adaptation.md"
 
     migration:
-      status: "not_started"
+      status: "fidelity_pass"
       pilot: false
+      series_authorization_id: "rq02-rq11-lean-series-001"
       fidelity_audit_required: true
-      fidelity_audit_status: "not_started"
+      fidelity_audit_status: "pass"
+      candidate_sha256: "AA435B5675886B3BD10C976537F37AFDA6D4830E9287E0FA91AFEE15102ABC91"
+      candidate_git_or_worktree_identity: "git_worktree_blob:cbc762c2a279af5adc4b90dd7e677c7df2a0b15a"
+      conversion_evidence: "reviews/migration/part-01/rq10/conversion-evidence.json"
+      fidelity_review_record: "reviews/migration/part-01/rq10/fidelity-review.yaml"
+      fidelity_review_record_id: "rq10-fidelity-review-001"
       canonical_status: "historical_docx_baseline"
+      candidate_canonical_status: "not_canonical"
+      canonical_promotion_authorized: false
 
   - id: "STR-P01-RQ11"
     title: "Strategy Quality & Failure"
@@ -754,11 +820,19 @@ artifacts:
       repository_path: "knowledge-books/strategy/part-01/chapters/RQ11_Strategy_Quality_Failure.md"
 
     migration:
-      status: "not_started"
+      status: "fidelity_pass"
       pilot: false
+      series_authorization_id: "rq02-rq11-lean-series-001"
       fidelity_audit_required: true
-      fidelity_audit_status: "not_started"
+      fidelity_audit_status: "pass"
+      candidate_sha256: "FBEDA375C58D46C9D1AFC52D5E0A9F0A6617D9B68BF89F5CBAA55B32C4508CE2"
+      candidate_git_or_worktree_identity: "git_worktree_blob:bce1e0e605fae5f85ecc06eae13c7b86d0ff5eff"
+      conversion_evidence: "reviews/migration/part-01/rq11/conversion-evidence.json"
+      fidelity_review_record: "reviews/migration/part-01/rq11/fidelity-review.yaml"
+      fidelity_review_record_id: "rq11-fidelity-review-001"
       canonical_status: "historical_docx_baseline"
+      candidate_canonical_status: "not_canonical"
+      canonical_promotion_authorized: false
 
   - id: "STR-P01-META-REVALIDATION-AUDIT"
     title: "Retrospective Revalidation & AI System Audit"
@@ -945,13 +1019,16 @@ process_progress:
     - "Створено deterministic reusable inventory/converter/checker tools/migration/legacy_docx_pipeline.py та успішно перевірено на closed RQ-01 evidence baseline."
     - "RQ-02 deterministic conversion та automated fidelity checks завершено без anomalies; independent difference-focused review видав PASS, correction не потрібна."
     - "RQ-02 noncanonical fidelity lifecycle закрито record rq02-fidelity-review-001."
+    - "RQ-03–RQ-11 пройшли CLEAN inventory/risk screens, deterministic conversion та automated fidelity checks без material differences або escalation triggers."
+    - "Independent difference-focused reviews RQ-03–RQ-11 видали PASS; discrepancies відсутні, corrections не потрібні, visual QA не triggered."
+    - "Authorized primary RQ-01–RQ-11 legacy DOCX migration завершено; усі Markdown candidates залишаються not_canonical."
 
   current:
-    - "Виконати authorized Lean v2 series migration RQ-03–RQ-11 з source-specific escalation containment."
+    - "Зберігати RQ-01–RQ-11 candidates як noncanonical до окремого source-of-truth і canonical-promotion governance action."
 
   pending:
-    - "Для кожного CLEAN RQ-03–RQ-11 виконати deterministic conversion, automated checks, independent difference-focused review і fidelity closure."
     - "Define the post-migration source-of-truth hierarchy preserved as OQ-062 before canonical promotion."
+    - "Evaluate canonical promotion only through separate authority after OQ-062 resolution; no canonical promotion is currently authorized."
 
   prohibited_during_authorized_rq01_pilot:
     - "Bulk DOCX-to-Markdown migration."

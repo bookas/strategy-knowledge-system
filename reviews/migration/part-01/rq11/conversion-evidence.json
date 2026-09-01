@@ -1,0 +1,45 @@
+{
+  "candidate_identity": {
+    "path": "knowledge-books/strategy/part-01/chapters/RQ11_Strategy_Quality_Failure.md",
+    "sha256": "FBEDA375C58D46C9D1AFC52D5E0A9F0A6617D9B68BF89F5CBAA55B32C4508CE2",
+    "size_bytes": 37444
+  },
+  "checks": {
+    "bold_spans": true,
+    "citation_markers": true,
+    "doi_strings": true,
+    "heading_hierarchy_and_text": true,
+    "italic_spans": true,
+    "knowledge_bearing_units": true,
+    "list_kind_order_and_text": true,
+    "table_dimensions_cells_and_order": true
+  },
+  "counts": {
+    "candidate_citations": 0,
+    "candidate_dois": 3,
+    "candidate_headings": 53,
+    "candidate_lists": 35,
+    "candidate_tables": 17,
+    "candidate_units": 520,
+    "source_citations": 0,
+    "source_dois": 3,
+    "source_headings": 53,
+    "source_lists": 35,
+    "source_tables": 17,
+    "source_units": 520
+  },
+  "difference_sample": [],
+  "independent_review_required": true,
+  "material_difference_detected": false,
+  "risk_triggered_review_required": false,
+  "risk_triggers": [],
+  "source_identity": {
+    "path": "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ11_Strategy_Quality_Failure_v1.docx",
+    "sha256": "A879D4B238AC725219B879E36913E3471C036DDBC1B22B5640F49F540D62B9C2",
+    "size_bytes": 52336
+  },
+  "tool": {
+    "name": "legacy_docx_pipeline",
+    "version": "1.0.0"
+  }
+}

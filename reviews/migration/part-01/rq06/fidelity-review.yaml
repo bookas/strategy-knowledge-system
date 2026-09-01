@@ -1,0 +1,62 @@
+fidelity_review:
+  record_id: "rq06-fidelity-review-001"
+  rq_id: "RQ-06"
+  review_date: "2026-09-01"
+
+  reviewer:
+    role: "Independent Fidelity Reviewer"
+    reviewer_id: "/root/rq06_rq08_fidelity_reviews"
+    independence_statement: "Fresh review context; not the Conversion Operator and not an author of the candidate, evidence, or any correction."
+    converter_is_reviewer: false
+    reviewer_authored_candidate: false
+    reviewer_authored_correction: false
+
+  identities:
+    exact_git_baseline: "5c3e87948b76ef173f669ed358b691f3f0a4c657"
+    source:
+      path: "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ06_Strategic_Go_NoGo_v1.docx"
+      sha256: "4E35D0373E6B3536DE8060FF84AF1577E6C33A1A80EEC556724A9033DB3D5DEC"
+      git_blob: "d2bbb207b97b14c8ca0f242a775d5ddef5df89b5"
+      size_bytes: 54994
+    candidate:
+      path: "knowledge-books/strategy/part-01/chapters/RQ06_Strategic_Go_NoGo.md"
+      sha256: "5ACD94ADFC359F82BF9C3AC486815B67B27FB5368C965195CB005435736AA726"
+      git_worktree_blob: "c92a3254413879df06aca438a3c4ab6674bad4dd"
+      size_bytes: 43144
+    evidence:
+      path: "reviews/migration/part-01/rq06/conversion-evidence.json"
+      sha256: "F7119CFB1B6D568B4C3AEBB1E3FB7077766321B8EA77E1591B9B340D5967A4FB"
+      git_worktree_blob: "6069d695dadd3ae66ac1d8b67504291515c21f38"
+      size_bytes: 1356
+
+  checks:
+    identities_independently_recomputed: true
+    manifest_source_and_candidate_match: true
+    automated_check_independently_rerun: true
+    evidence_matches_independent_check: true
+    normalized_units: "553 source / 553 candidate; exact order and text match"
+    headings: "60 source / 60 candidate; hierarchy, order, and text match"
+    lists: "52 source / 52 candidate; kind, order, and text match"
+    tables: "14 source / 14 candidate; dimensions, cells, relationships, and order match"
+    citation_markers: "0 source / 0 candidate"
+    doi_strings: "3 source / 3 candidate; exact sequence match"
+    bold_and_italic_spans_match: true
+    material_difference_detected: false
+    risk_triggers: []
+    visual_qa_performed: false
+    visual_qa_reason: "No Lean Migration Pipeline v2 risk trigger or unexplained normalized difference."
+
+  discrepancies:
+    total: 0
+    material: []
+    residual_non_blocking: []
+
+  verdict: "PASS"
+  correction_required: false
+  noncanonical_boundary:
+    canonical_promotion_authorized: false
+    candidate_status_after_verdict: "not_canonical"
+    fidelity_closure_implies_canonical_promotion: false
+    oq_062_remains_unresolved: true
+
+  next_action: "Create a focused noncanonical fidelity-closure commit containing the RQ-06 candidate, conversion evidence, and this review; do not alter the DOCX, translate, revise theory, or promote canonical status."

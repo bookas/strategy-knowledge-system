@@ -1,0 +1,45 @@
+{
+  "candidate_identity": {
+    "path": "knowledge-books/strategy/part-01/chapters/RQ06_Strategic_Go_NoGo.md",
+    "sha256": "5ACD94ADFC359F82BF9C3AC486815B67B27FB5368C965195CB005435736AA726",
+    "size_bytes": 43144
+  },
+  "checks": {
+    "bold_spans": true,
+    "citation_markers": true,
+    "doi_strings": true,
+    "heading_hierarchy_and_text": true,
+    "italic_spans": true,
+    "knowledge_bearing_units": true,
+    "list_kind_order_and_text": true,
+    "table_dimensions_cells_and_order": true
+  },
+  "counts": {
+    "candidate_citations": 0,
+    "candidate_dois": 3,
+    "candidate_headings": 60,
+    "candidate_lists": 52,
+    "candidate_tables": 14,
+    "candidate_units": 553,
+    "source_citations": 0,
+    "source_dois": 3,
+    "source_headings": 60,
+    "source_lists": 52,
+    "source_tables": 14,
+    "source_units": 553
+  },
+  "difference_sample": [],
+  "independent_review_required": true,
+  "material_difference_detected": false,
+  "risk_triggered_review_required": false,
+  "risk_triggers": [],
+  "source_identity": {
+    "path": "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ06_Strategic_Go_NoGo_v1.docx",
+    "sha256": "4E35D0373E6B3536DE8060FF84AF1577E6C33A1A80EEC556724A9033DB3D5DEC",
+    "size_bytes": 54994
+  },
+  "tool": {
+    "name": "legacy_docx_pipeline",
+    "version": "1.0.0"
+  }
+}
