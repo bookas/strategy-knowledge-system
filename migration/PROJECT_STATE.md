@@ -1121,8 +1121,10 @@ RQ-02–RQ-11 авторизовано як одну noncanonical migration seri
 approvals не потрібні, доки source class, methodology, authority та risk profile
 істотно не змінилися. Minimum reusable deterministic tool:
 `tools/migration/legacy_docx_pipeline.py` (`inventory`, `convert`, `check`).
-Наступна дія — RQ-02 source identity та complexity/risk screen; RQ-02 conversion
-у цьому approval run не виконувалася.
+RQ-02 source identity/risk screen, deterministic conversion, automated checks і
+independent difference-focused review завершено. Verdict: `PASS`; discrepancies
+відсутні, correction не потрібна. Candidate залишається noncanonical. Поточна
+дія — Lean v2 series execution RQ-03–RQ-11.
 
 # 20. State Snapshot Summary
 
@@ -1159,7 +1161,7 @@ RQ-01 migration pilot:
 CLOSED — PASS WITH NON-BLOCKING DISCREPANCIES; NO CORRECTION REQUIRED; CANDIDATE NOT CANONICAL
 
 Lean Migration Pipeline v2:
-APPROVED — RQ-02–RQ-11 SERIES AUTHORIZED; PRE-RQ-02 IDENTITY/RISK SCREEN
+APPROVED — RQ-02 CLOSED WITH PASS; RQ-03–RQ-11 SERIES EXECUTION
 
 Canonical promotion:
 NOT AUTHORIZED; OQ-062 UNRESOLVED

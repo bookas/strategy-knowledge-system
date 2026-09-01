@@ -1,0 +1,112 @@
+{
+  "evidence": {
+    "evidence_id": "RQ02-LEAN-CONVERSION-EVIDENCE-001",
+    "rq_id": "RQ-02",
+    "record_status": "conversion_complete_pending_independent_difference_focused_review",
+    "execution_date": "2026-09-01",
+    "authorization": {
+      "series_id": "rq02-rq11-lean-series-001",
+      "pipeline_artifact_id": "SKS-MIG-LEAN-V2-PROPOSAL-001",
+      "pipeline_version": "v2",
+      "pipeline_approval_record_id": "lean-migration-pipeline-v2-approval-001",
+      "canonical_promotion_authorized": false,
+      "translation_or_research_revision_authorized": false
+    },
+    "execution_baseline": {
+      "git_commit": "2cc0f8a8defb451eb9f59507492744de96dc2871",
+      "working_tree_clean_before_execution": true
+    },
+    "tool": {
+      "repository_path": "tools/migration/legacy_docx_pipeline.py",
+      "name": "legacy_docx_pipeline",
+      "version": "1.0.0",
+      "sha256": "F6DD4525E717E8E3FC583BAD43DFFBEE8DDEDA52B6AB79D98364F77300C796FA",
+      "commands_run": [
+        "inventory",
+        "convert"
+      ]
+    },
+    "source_identity": {
+      "repository_path": "knowledge-books/strategy/part-01/source-docx/current/Strategy_Knowledge_Book_Part01_RQ02_Function_v1.docx",
+      "sha256_before_conversion": "945E213D397C9F7C90628A7D6986007E78B7229CDE62505BBEB7B56E1562DA97",
+      "sha256_after_conversion": "945E213D397C9F7C90628A7D6986007E78B7229CDE62505BBEB7B56E1562DA97",
+      "git_blob": "79653b55ca33fe1c9f7e5470f85fea8ddcfd48cf",
+      "size_bytes": 56831,
+      "source_unchanged": true
+    },
+    "inventory_and_risk_screen": {
+      "body_blocks": 163,
+      "paragraphs": 156,
+      "knowledge_bearing_paragraphs": 148,
+      "headings": 30,
+      "bullets": 16,
+      "numbered_items": 24,
+      "tables": 7,
+      "table_rows": 80,
+      "table_cells": 237,
+      "risk_triggers": [],
+      "supported_for_unattended_conversion": true,
+      "escalation_required": false
+    },
+    "candidate_identity": {
+      "repository_path": "knowledge-books/strategy/part-01/chapters/RQ02_Function.md",
+      "sha256": "99D3C441D0036B0F49ECC7AE1B954E77B1FD2EFCC9E83A7BC6E5FF3666C31387",
+      "git_worktree_blob": "a57a483afe6682b5cb0e71b015ba15d68a72d02b",
+      "size_bytes": 58349,
+      "canonical_status": "not_canonical"
+    },
+    "automated_fidelity_checks": {
+      "knowledge_bearing_units": {
+        "source": 385,
+        "candidate": 385,
+        "match": true
+      },
+      "headings": {
+        "source": 30,
+        "candidate": 30,
+        "hierarchy_order_and_text_match": true
+      },
+      "lists": {
+        "source": 40,
+        "candidate": 40,
+        "kind_order_and_text_match": true
+      },
+      "tables": {
+        "source": 7,
+        "candidate": 7,
+        "dimensions_cells_relationships_and_order_match": true
+      },
+      "citation_markers": {
+        "source": 38,
+        "candidate": 38,
+        "match": true
+      },
+      "doi_strings": {
+        "source": 4,
+        "candidate": 4,
+        "match": true
+      },
+      "bold_spans_match": true,
+      "italic_spans_match": true,
+      "difference_sample": [],
+      "material_difference_detected": false,
+      "risk_triggered_review_required": false
+    },
+    "discrepancies": [],
+    "visual_qa": {
+      "performed": false,
+      "reason": "No Lean v2 visual-risk trigger was detected."
+    },
+    "handoff": {
+      "independent_difference_focused_review_required": true,
+      "candidate_correction_required_at_conversion_stage": false,
+      "fidelity_verdict_issued": false,
+      "next_action": "Independent reviewer verifies exact identities and inspects detected differences; automated difference set is empty."
+    },
+    "elapsed_seconds": {
+      "inventory": 0.412,
+      "conversion_and_automated_checks": 0.247,
+      "tool_total": 0.659
+    }
+  }
+}

@@ -5,7 +5,7 @@ manifest:
   area: "Strategy Knowledge Book"
   part: "Part 01 — Strategy"
   purpose: "Machine-readable migration inventory for source research artifacts."
-  migration_stage: "rq02-rq11-series-authorized-pre-rq02-identity-screen"
+  migration_stage: "rq02-fidelity-closed-rq03-rq11-series-execution"
   status: "in-progress"
 
   baseline:
@@ -430,7 +430,7 @@ migration_control_artifacts:
     revised_taxonomy_sha256: "239FE10DFCC5831D2B01CEFDDEE8A04BF86D76DD73E4CB02717F5A0B703CDF72"
     final_narrow_review_id: "migration-methodology-review-003"
     final_narrow_review_status: "completed"
-    current_process_stage: "rq02_rq11_series_authorized_pre_rq02_identity_screen"
+    current_process_stage: "rq02_fidelity_closed_rq03_rq11_series_execution"
     approval_status: "approved"
     approval_record_id: "methodology-approval-001"
     rq01_pilot_entry_authorized: true
@@ -536,11 +536,19 @@ artifacts:
       repository_path: "knowledge-books/strategy/part-01/chapters/RQ02_Function.md"
 
     migration:
-      status: "not_started"
+      status: "fidelity_pass"
       pilot: false
+      series_authorization_id: "rq02-rq11-lean-series-001"
       fidelity_audit_required: true
-      fidelity_audit_status: "not_started"
+      fidelity_audit_status: "pass"
+      candidate_sha256: "99D3C441D0036B0F49ECC7AE1B954E77B1FD2EFCC9E83A7BC6E5FF3666C31387"
+      candidate_git_or_worktree_identity: "git_worktree_blob:a57a483afe6682b5cb0e71b015ba15d68a72d02b"
+      conversion_evidence: "reviews/migration/part-01/rq02/conversion-evidence.json"
+      fidelity_review_record: "reviews/migration/part-01/rq02/fidelity-review.yaml"
+      fidelity_review_record_id: "rq02-fidelity-review-001"
       canonical_status: "historical_docx_baseline"
+      candidate_canonical_status: "not_canonical"
+      canonical_promotion_authorized: false
 
   - id: "STR-P01-RQ03"
     title: "Object, Levels & Strategic Agency"
@@ -935,12 +943,14 @@ process_progress:
     - "Lean Migration Pipeline v2 approved за record lean-migration-pipeline-v2-approval-001; ADR-051 фіксує scope-limited routine mechanics."
     - "RQ-02–RQ-11 authorized як одна noncanonical migration series rq02-rq11-lean-series-001 без repeated per-chapter Entry Gates або methodology approvals."
     - "Створено deterministic reusable inventory/converter/checker tools/migration/legacy_docx_pipeline.py та успішно перевірено на closed RQ-01 evidence baseline."
+    - "RQ-02 deterministic conversion та automated fidelity checks завершено без anomalies; independent difference-focused review видав PASS, correction не потрібна."
+    - "RQ-02 noncanonical fidelity lifecycle закрито record rq02-fidelity-review-001."
 
   current:
-    - "Виконати RQ-02 source identity та complexity/risk screen reusable deterministic tool; це не є conversion або повторним Entry Gate."
+    - "Виконати authorized Lean v2 series migration RQ-03–RQ-11 з source-specific escalation containment."
 
   pending:
-    - "Після clean RQ-02 screen виконати standard Lean v2 flow; RQ-02 conversion не виконувалася в approval run."
+    - "Для кожного CLEAN RQ-03–RQ-11 виконати deterministic conversion, automated checks, independent difference-focused review і fidelity closure."
     - "Define the post-migration source-of-truth hierarchy preserved as OQ-062 before canonical promotion."
 
   prohibited_during_authorized_rq01_pilot:
